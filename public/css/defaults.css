@@ -1,0 +1,66 @@
+:root {
+  background: #191919;
+  color-scheme: light dark;
+  color: #B4B4B8;
+  font-family: system-ui, Avenir, Helvetica, Arial, sans-serif;
+  font-weight: 400;
+  font-synthesis: none;
+  line-height: 1.5;
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  -webkit-text-size-adjust: 100%;
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: transparent;
+  color: #B4B4B8;
+  height: 100%;
+  font-family: monospace !important;
+  outline: none;
+  overflow: hidden;
+  max-height: 1080px;
+  max-width: 1920px;
+}
+
+*,
+*:focus {
+  outline: 0 !important;
+}
+
+.unselectable,
+.unselectable * {
+  -webkit-user-select: none; /* Safari */
+  -moz-user-select: none; /* Older Firefox */
+  -ms-user-select: none; /* Internet Explorer/Edge */
+  user-select: none; /* Standard syntax */
+}
+
+.z-0 {
+  z-index: 0 !important;
+}
+
+.z-10 {
+  z-index: 10 !important;
+}
+
+.z-100 {
+  z-index: 100 !important;
+}
+
+.z-110 {
+  z-index: 110 !important;
+}
+
+.h-140 {
+  height: 140px;
+}
+
+.h-150 {
+  height: 150px;
+}
