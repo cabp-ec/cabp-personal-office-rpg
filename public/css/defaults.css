@@ -57,10 +57,28 @@ body {
   z-index: 110 !important;
 }
 
+/* WIDTH & HEIGHT */
+.w-100 {
+  width: 100% !important
+}
+
+.vh-100 {
+  height: 100vh;
+}
+
 .h-140 {
   height: 140px;
 }
 
 .h-150 {
   height: 150px;
+}
+
+/* TESTING STUFF */
+.test-border-red {
+  border: 1px dotted red;
+}
+
+.test-border-green {
+  border: 1px dotted green;
 }
