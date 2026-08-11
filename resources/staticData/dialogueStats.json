@@ -1,0 +1,403 @@
+{
+  "introductions": {
+    "mc": [
+      "Hi! I'm Charlie!",
+      "And you are..."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "I'm an investor",
+        "targetTile": [9, 7],
+        "targetScene": "myLittlePitch"
+      },
+      {
+        "id": 2,
+        "text": "I'm a fellow job seeker",
+        "targetTile": [1, 5],
+        "targetScene": "editMode"
+      },
+      {
+        "id": 3,
+        "text": "I'm a C-Suite executive",
+        "targetTile": [1, 5],
+        "targetScene": "readMode"
+      },
+      {
+        "id": 4,
+        "text": "I'm a recruiter/HR person",
+        "targetTile": [1, 5],
+        "targetScene": "readMode"
+      },
+      {
+        "id": 5,
+        "text": "I want to hire your services",
+        "targetTile": [1, 5],
+        "targetScene": "myLittleDemo"
+      },
+      {
+        "id": 6,
+        "text": "Just give me your résumé!",
+        "targetTile": null,
+        "targetScene": null
+      }
+    ]
+  },
+  "hello": {
+    "mc": [
+      "Nice to meet you.",
+      "Please, step into my little office. Let's talk."
+    ],
+    "visitor": []
+  },
+  "welcome": {
+    "mc": [
+      "Welcome!",
+      "In here you'll find all the details about me.",
+      "You can also print a copy of my résumé, just use the printer, it's under the standing desk.",
+      "So, just tell me what you want to know about, and I'll show you..."
+    ],
+    "visitor": []
+  },
+  "ideationRoom": {
+    "mc": [
+      "That's the \"ideation room\" (WC) he he..."
+    ],
+    "visitor": []
+  },
+  "myEducation": {
+    "mc": [
+      "My education history.",
+      "Do you want to see it now...?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "internetSpeed": {
+    "mc": [
+      "My internet connection, it's fast, `x` Mb. for upload and `y` Mb. for download"
+    ],
+    "visitor": []
+  },
+  "contactMe": {
+    "mc": [
+      "If there's something strange in the neighborhood, who you gonna call...?",
+      "Call Charlie, of course! My phone is 888-888",
+      "Drop an e-mail at `contact@carlos-bucheli.com`",
+      "Follow me on LinkedIn: /in/cabp-ec"
+    ],
+    "visitor": []
+  },
+  "fullProfessionalHistory": {
+    "mc": [
+      "Oh, that's my background, my professional history",
+      "It's a long one, you sure you want to see it...?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Show me everything!"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "whatILikeToRead": {
+    "mc": [
+      "My reading nook, it's pretty cozy.",
+      "Here I read all kind of things, science, management, technology, you name it...",
+      "Just take a look at the books on the bookshelf."
+    ],
+    "visitor": []
+  },
+  "musicILike": {
+    "mc": [
+      "Great memories from that concert!",
+      "Let me tell you about my fine musical taste."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Hell yeah!"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "whatImDoingNow": {
+    "mc": [
+      "Let me show you what I'm working on these days."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "recentProfessionalHistory": {
+    "mc": [
+      "Those are my recent projects.",
+      "There are personal, freelance and contractor projects over there.",
+      "Do you want to take a look at those...?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "professionalAchievements": {
+    "mc": [
+      "Those are my professional achievements.",
+      "You know, things I've done that I'm very proud of.",
+      "Let's take a look, shall we?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "myStyle": {
+    "mc": [
+      "Come, have a seat.",
+      "Let's talk about my \"working style\"..."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "productsAndServices": {
+    "mc": [
+      "In this board I keep a visible list of my products and services so customers can know what I can help them with.",
+      "Let me tell you about them."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "myDrinksAndSnacks": {
+    "mc": [
+      "Ah, the \"fuel station\" corner!",
+      "Let me show you."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "standingDesk": {
+    "mc": [
+      "You found it!",
+      "My standing desk.",
+      "The printer is there too, use it to print a copy of my résumé."
+    ],
+    "visitor": []
+  },
+  "bookshelf": {
+    "mc": [
+      "Books, comics and magazines.",
+      "Do you want to take a closer look...?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "myHobbies": {
+    "mc": [
+      "My hobbies.",
+      "Do you want to take a closer look...?"
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "guestBook": {
+    "mc": [
+      "Would you mind signing the guest book before you leave...?",
+      "I'm glad you passed by.",
+      "Let me walk you out."
+    ],
+    "visitor": []
+  },
+  "bonus": {
+    "mc": [
+      "Come, take a look at the view."
+    ],
+    "visitor": [
+      {
+        "id": 1,
+        "text": "Sure thing"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version"
+      }
+    ]
+  },
+  "exit": {
+    "mc": [
+      "Well, this was a cool way to know something about me, was it?",
+      "I'm glad you passed by.",
+      "Let me walk you out."
+    ],
+    "visitor": []
+  }
+}

@@ -4,6 +4,9 @@ import { requiredSpritesheets } from '../../../resources/gameAssets/requiredSpri
 import type { SpritesheetDefinitionInterface } from '../interfaces/SpritesheetDefinitionInterface.ts';
 import { characterAnimations } from '../enums/characterAnimations.ts';
 import CharacterModel from '../models/characterModel/CharacterModel.ts';
+import { spritesheetsKeys } from '../enums/spritesheetsKeys.ts';
+import FApp from '../index.ts';
+import type { VisitorDialogueOptionInterface } from '../interfaces/DialogueSetInterface.ts';
 
 export class IntroductionsScene extends MapScene {
   #spritesheetRefs: Record<string, SpritesheetDefinitionInterface>;
@@ -22,7 +25,7 @@ export class IntroductionsScene extends MapScene {
     this.#spritesheetRefs = requiredSpritesheets;
   }
 
-  #createAnimations(): void {
+  #createCharacterAnimations(): void {
     Object.keys(this.#spritesheetRefs).forEach((key: string) => {
       const animKeyIdleDown = `${ key }-${ characterAnimations.idleDown }`;
       const animKeyWalkDown = `${ key }-${ characterAnimations.walkDown }`;
@@ -48,14 +51,32 @@ export class IntroductionsScene extends MapScene {
     });
   }
 
+  async #createCharacter(): Promise<void> {
+    this.#createCharacterAnimations();
+    const candidate = new CharacterModel('mc', this);
+    const tile = this.tilemap.getTileAt(11, 7)!;
+
+    candidate.create(tile.getLeft(), tile.getTop());
+    await new Promise(resolve => setTimeout(resolve, 500));
+
+    await candidate.walkForward(spritesheetsKeys.candidate, 2);
+    const dialogueOption = FApp.store.ui.value<VisitorDialogueOptionInterface>('currentOption');
+
+    console.warn('dialogueOption', dialogueOption);
+    // FApp.store.dialogues
+
+    await candidate.say([
+      'Hi!',
+      'Carlos Bucheli is my name. But you can call me Charlie.',
+      'And you are...'
+    ]);
+  }
+
   create() {
     this.createMap(this.mapKey);
     this.createLayers();
     this.centerViewPort();
 
-    // Character
-    this.#createAnimations();
-    const candidate = new CharacterModel('mc', this);
-    candidate.create();
+    void this.#createCharacter();
   }
 }
