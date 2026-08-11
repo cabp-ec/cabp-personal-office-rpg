@@ -1,6 +1,6 @@
 import type { Types } from 'phaser';
+import type { AssetDefinitionInterface } from './AssetDefinitionInterface.ts';
 
-export interface SpritesheetDefinitionInterface {
-  asset: string;
+export interface SpritesheetDefinitionInterface extends AssetDefinitionInterface {
   frameConfig: Types.Loader.FileTypes.ImageFrameConfig;
 }

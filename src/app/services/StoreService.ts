@@ -8,18 +8,21 @@ import type { SessionInterface } from '../interfaces/SessionInterface.ts';
 import type { UserEntityInterface } from '../models/user/UserEntityInterface.ts';
 import type { CountryEntityInterface } from '../models/country/CountryEntityInterface.ts';
 import type { NamedEntityInterface } from '../interfaces/NamedEntityInterface.ts';
+import type { DialoguesSetInterface } from '../interfaces/DialogueSetInterface.ts';
 import { PropsStore } from '../stores/props/PropsStore.ts';
 import { EntityStore } from '../stores/EntityStore.ts';
 import { storesAvail } from '../enums/storesAvail.ts';
 import { uiInitialState } from '../../../resources/defaultStates/uiInitialState.ts';
 import { sessionInitialState } from '../../../resources/defaultStates/sessionInitialState.ts';
 import { anonymousUser } from '../../../resources/staticData/anonymousUser.ts';
+import { dialoguesSet } from '../../../resources/staticData/dialoguesSet.ts';
 
 export class StoreService implements ServiceInterface {
   #initialized = false;
   ui: PropsStoreInterface;
   user: PropsStoreInterface;
   session: PropsStoreInterface;
+  dialogues: PropsStoreInterface;
   countries: EntityStore;
   cities: EntityStore;
 
@@ -32,6 +35,7 @@ export class StoreService implements ServiceInterface {
     this.countries = new EntityStore(storesAvail.countries, withEntities<CountryEntityInterface>(), []);
     this.cities = new EntityStore(storesAvail.cities, withEntities<NamedEntityInterface>(), []);
     this.session = new PropsStore(storesAvail.session, withProps<SessionInterface>(sessionInitialState));
+    this.dialogues = new PropsStore(storesAvail.dialogues, withProps<DialoguesSetInterface>(dialoguesSet));
   }
 
   public initialize(initialStateData: InitialStateInterface): void {

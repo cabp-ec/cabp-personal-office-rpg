@@ -1,6 +1,7 @@
 import { AUTO, Game as PhaserGame, Scale, type Types } from 'phaser';
 import type { ServiceInterface } from '../interfaces/ServiceInterface.ts';
 import { PreloadScene } from '../scenes/PreloadScene.ts';
+import { IntroductionsScene } from '../scenes/IntroductionsScene.ts';
 
 export class GameService implements ServiceInterface {
   #game!: PhaserGame;
@@ -33,7 +34,8 @@ export class GameService implements ServiceInterface {
     this.#gameConfig.width = el.offsetWidth;
     this.#gameConfig.height = el.offsetHeight;
     this.#gameConfig.scene = [
-      new PreloadScene()
+      new PreloadScene(),
+      new IntroductionsScene()
     ];
 
     this.#game = new PhaserGame(this.#gameConfig);

@@ -3,5 +3,4 @@ import type { NamedEntityInterface } from '../../interfaces/NamedEntityInterface
 export interface CountryEntityInterface extends NamedEntityInterface {
   dialCode: number;
   alpha3: string;
-  cities: PropertyKey[];
 }

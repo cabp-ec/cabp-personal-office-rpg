@@ -74,6 +74,121 @@ body {
   height: 150px;
 }
 
+/* MARGIN & PADDING */
+.m-0 {
+  margin: 0;
+}
+
+.p-0 {
+  padding: 0;
+}
+
+/* FLEX */
+.d-flex {
+  display: flex;
+}
+
+.align-items-center {
+  align-items: center;
+}
+
+.justify-content-center {
+  justify-content: center;
+}
+
+/* MODAL OVERLAY */
+.full-screen-overlay {
+  background: #000000;
+  background: linear-gradient(0deg, rgba(0, 0, 0, 1) 0%, rgba(0, 0, 0, 0.5) 100%);
+  color: #ffffff;
+  height: 100vh;
+  left: 0;
+  position: fixed;
+  top: 0;
+  width: 100vw;
+}
+
+/* PHASER WRAPPER */
+div.game-wrapper {
+  height: 768px;
+  width: 1024px;
+}
+
+/* DIALOG BOX */
+.dialog {
+  padding-top: 30px;
+  width: 800px;
+
+  /* 1. Fix the container to the viewport */
+  position: fixed;
+  bottom: 40px; /* Distance from the bottom edge of the screen */
+  left: 50%; /* Moves the left edge of the container to the exact middle */
+  transform: translateX(-50%); /* Shifts container back left by half its own width */
+}
+
+.dialog-name {
+  position: absolute;
+  top: 0;
+  left: 20px;
+
+  width: 100px;
+  padding: 4px 10px;
+
+  background: #806451;
+  color: white;
+
+  border: 3px solid #17120f;
+  border-radius: 8px;
+
+  font-family: Georgia, serif;
+  font-size: 20px;
+  font-weight: bold;
+  text-align: center;
+
+  z-index: 2;
+}
+
+.dialog-content {
+  min-height: 100px;
+  padding: 30px 20px 20px;
+
+  background: #f7e8b8;
+  color: #765d4b;
+
+  border: 3px solid #17120f;
+  border-radius: 12px;
+
+  font-family: Georgia, serif;
+  font-size: 22px;
+  line-height: 1.4;
+
+  max-width: 800px;
+  width: 100%; /* Ensures responsiveness on small screens */
+}
+
+.dialog-options {
+  /* 2. Layout structure (remains the same) */
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center; /* Centers items horizontally within the rows */
+  align-items: center; /* Centers items vertically within the rows */
+  gap: 16px;
+}
+
+.dialog-options button {
+  background: #806451;
+  border-radius: 12px;
+  flex: 0 1 calc(33.333% - 16px); /* Target 3 buttons per row, subtracting the gap */
+  min-height: 60px;
+  min-width: 100px; /* Prevents text squishing */
+  padding: 12px 24px;
+
+  font-family: Georgia, serif;
+  font-size: 16px;
+  line-height: 1;
+
+}
+
 /* TESTING STUFF */
 .test-border-red {
   border: 1px dotted red;

@@ -2,6 +2,7 @@ export const storesAvail = {
   ui: 'ui',
   user: 'user',
   session: 'session',
+  dialogues: 'dialogues',
   sports: 'sports',
   countries: 'countries',
   cities: 'cities',

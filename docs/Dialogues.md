@@ -1,6 +1,6 @@
 #cabp #officeRpgCv
 
-## Intro
+## 1. Introductions
 
 **Charlie**
 
@@ -16,26 +16,30 @@
 5. I want to hire your services
 6. I'm a fellow job seeker
 
+---
+## 2. Hello
+
 **Charlie**
 
-- Nice to meet you.
+- Nice to meet you, `[selected_option]`.
 - Please, step into my little office. Let's talk.
 
 ---
-## Inside
+## 3. Welcome
 
 **Charlie**
 
 - Welcome!
-- Just tell me what you want to know about and I'll show you...
+- In here you'll find all the details about me.
+- You can also print a copy of my résumé, just use the printer, it's under the standing desk.
+- So, just tell me what you want to know about, and I'll show you...
 
 ---
-## WC
+## Ideation Room (WC)
 
 **Charlie**
 
-- That's the "ideation room" hehe...
-- Some have called it "the bat-cave"
+- That's the "ideation room" he he...
 
 ---
 ## Titles
@@ -72,7 +76,7 @@
 **Charlie**
 
 - Oh, that's my background, my professional history
-- It's a long one, you sure you wanna see it...?
+- It's a long one, you sure you want to see it...?
 
 **Fulano**
 
@@ -86,8 +90,9 @@
 
 **Charlie**
 
-- My reading nook, here I read all kind of books.
-- If you want to know more, you need to check the bookshelf.
+- My reading nook, it's pretty cozy.
+- Here I read all kind of things, science, management, technology, you name it...
+- Just take a look at the books on the bookshelf.
 
 ---
 ## The Flag
@@ -95,11 +100,11 @@
 **Charlie**
 
 - Great memories from that concert!
-- Let me tell you about my fine musical taste
+- Let me tell you about my fine musical taste.
 
 **Fulano**
 
-1. Hell yea!
+1. Hell yeah!
 2. That's not relevant for me
 3. Nah, that's useless
 4. Just a short version
@@ -119,7 +124,7 @@
 4. Just a short version
 
 ---
-## Papers on the Desk / Stats
+## Papers on the Desk
 
 ---
 ## The Board

@@ -1,0 +1,506 @@
+{
+  "introductions": {
+    "mc": [
+      "Hi!",
+      "Carlos Bucheli is my name. But you can call me Charlie.",
+      "And you are..."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "I'm an investor",
+        "targetTile": [
+          9,
+          7
+        ],
+        "targetScene": "myLittlePitch",
+        "interactionBlocked": false
+      },
+      {
+        "id": 2,
+        "text": "I'm a fellow job seeker",
+        "targetTile": [
+          1,
+          5
+        ],
+        "targetScene": "editMode",
+        "interactionBlocked":  false
+      },
+      {
+        "id": 3,
+        "text": "I'm a C-Suite executive",
+        "targetTile": [
+          1,
+          5
+        ],
+        "targetScene": "readMode",
+        "interactionBlocked":  false
+      },
+      {
+        "id": 4,
+        "text": "I'm a recruiter/HR person",
+        "targetTile": [
+          1,
+          5
+        ],
+        "targetScene": "readMode",
+        "interactionBlocked":  false
+      },
+      {
+        "id": 5,
+        "text": "I want to hire your services",
+        "targetTile": [
+          1,
+          5
+        ],
+        "targetScene": "myLittleDemo",
+        "interactionBlocked":  false
+      },
+      {
+        "id": 6,
+        "text": "Just give me your résumé!",
+        "targetAction": "downloadResume",
+        "interactionBlocked":  false
+      }
+    ]
+  },
+  "hello": {
+    "mc": [
+      "Nice to meet you.",
+      "Please, step into my little office. Let's talk."
+    ],
+    "nn": []
+  },
+  "welcome": {
+    "mc": [
+      "Welcome!",
+      "In here you'll find all the details about me.",
+      "You can also print a copy of my résumé, just use the printer, it's under the standing desk.",
+      "So, just tell me what you want to know about, and I'll show you..."
+    ],
+    "nn": []
+  },
+  "ideationRoom": {
+    "mc": [
+      "That's the \"ideation room\" (WC) he he..."
+    ],
+    "nn": []
+  },
+  "myEducation": {
+    "mc": [
+      "My education history.",
+      "Do you want to see it now...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "internetSpeed": {
+    "mc": [
+      "My internet connection, 333.72 Mbps for download and 248.97 Mbps for upload"
+    ],
+    "nn": []
+  },
+  "contactMe": {
+    "mc": [
+      "If there's something strange, in the neighborhood, who you gonna call?",
+      "Call Charlie, of course! My phone is 888-888",
+      "Checkout my website: https://carlos-bucheli.com",
+      "Drop an e-mail at `contact@carlos-bucheli.com`",
+      "Follow me on LinkedIn: /in/cabp-ec"
+    ],
+    "nn": []
+  },
+  "fullProfessionalHistory": {
+    "mc": [
+      "Oh, that's my background, my professional history.",
+      "It's a long one, you sure you want to see it...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Show me everything!",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "whatILikeToRead": {
+    "mc": [
+      "My reading nook, it's pretty cozy.",
+      "Here I read all kind of things, science, management, technology, you name it...",
+      "Just take a look at the books on the bookshelf."
+    ],
+    "nn": []
+  },
+  "musicILike": {
+    "mc": [
+      "Great memories from that concert!",
+      "Let me tell you about my fine musical taste."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Hell yeah!",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "whatImDoingNow": {
+    "mc": [
+      "Let me show you what I'm working on these days."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "recentProfessionalHistory": {
+    "mc": [
+      "Those are my recent projects.",
+      "There are personal, freelance and contractor projects over there.",
+      "Do you want to take a look at those...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "professionalAchievements": {
+    "mc": [
+      "Those are my professional achievements.",
+      "You know, things I've done that I'm very proud of.",
+      "Let's take a look, shall we?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "myStyle": {
+    "mc": [
+      "Come, have a seat.",
+      "Let's talk about my \"working style\"..."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "productsAndServices": {
+    "mc": [
+      "In this board I keep a visible list of my products and services.",
+      "That way customers can know what I can help them with.",
+      "Let me tell you about them."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "myDrinksAndSnacks": {
+    "mc": [
+      "Ah, the \"fuel station\" corner!",
+      "Let's see what's inside.'."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "standingDesk": {
+    "mc": [
+      "You found it!",
+      "My standing desk.",
+      "The printer is there too, use it to print a copy of my résumé."
+    ],
+    "nn": []
+  },
+  "bookshelf": {
+    "mc": [
+      "Books, comics and magazines.",
+      "Do you want to take a closer look...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "myHobbies": {
+    "mc": [
+      "My hobbies.",
+      "Do you want to take a closer look...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "guestBook": {
+    "mc": [
+      "Would you mind signing the guest book before you leave...?"
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "bonus": {
+    "mc": [
+      "Come, take a look at the view."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me"
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless"
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "exit": {
+    "mc": [
+      "Well, this was a cool way to know something about me, was it?",
+      "I'm glad you passed by.",
+      "Let me walk you out."
+    ],
+    "nn": []
+  }
+}

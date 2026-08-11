@@ -3,10 +3,14 @@ import type { SpritesheetDefinitionInterface } from '../interfaces/SpritesheetDe
 import { BaseScene } from './BaseScene.ts';
 import { requiredImages } from '../../../resources/gameAssets/requiredImages.ts';
 import { requiredSpritesheets } from '../../../resources/gameAssets/requiredSpritesheets.ts';
+import type { AssetDefinitionInterface } from '../interfaces/AssetDefinitionInterface.ts';
+import { IntroductionsScene } from './IntroductionsScene.ts';
+import { requiredMaps } from '../../../resources/gameAssets/requiredMaps.ts';
 
 export class PreloadScene extends BaseScene {
   #imageRefs: Record<string, SpritesheetDefinitionInterface>;
   #spritesheetRefs: Record<string, SpritesheetDefinitionInterface>;
+  #tiledMapRefs: Record<string, AssetDefinitionInterface>;
   public static key = 'PreloadScene';
 
   constructor() {
@@ -14,6 +18,7 @@ export class PreloadScene extends BaseScene {
 
     this.#imageRefs = requiredImages;
     this.#spritesheetRefs = requiredSpritesheets;
+    this.#tiledMapRefs = requiredMaps;
   }
 
   #setPreloadEventListeners() {
@@ -23,8 +28,8 @@ export class PreloadScene extends BaseScene {
     });
 
     this.load.on(Loader.Events.COMPLETE, () => {
-      console.warn('START CINEMATIC SCENE');
-      // this.switchScenes(PreloadScene.key, CinematicScene.key);
+      console.warn('START "INTRODUCTIONS" SCENE');
+      this.switchScenes(PreloadScene.key, IntroductionsScene.key);
     });
   }
 
@@ -41,6 +46,12 @@ export class PreloadScene extends BaseScene {
     Object.keys(this.#spritesheetRefs).forEach((key: string) => {
       const value = this.#spritesheetRefs[key];
       this.load.spritesheet(key, value.asset, value.frameConfig);
+    });
+
+    // Tiled Maps
+    Object.keys(this.#tiledMapRefs).forEach((key: string) => {
+      const value = this.#tiledMapRefs[key];
+      this.load.tilemapTiledJSON(key, value.asset);
     });
   }
 

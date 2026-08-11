@@ -6,6 +6,30 @@ Joseph Campbell’s Hero’s Journey (also known as the Monomyth) is a perfect f
 In our case, we're using the, The Writer's Journey (a.k.a. "12 steps hero's journey"), by Christopher Vogler.
 
 ---
+I architectured and implemented a framework-agnostic Playwright + TypeScript E2E testing and test strategy from scratch.
+
+It includes a database-agnostic data-hydration pipeline paired with local MinIO storage, keeping AWS S3 for production. Also, a sequential test-chaining engine that mirrors end-to-end user journeys.
+
+
+
+During t
+- successfully caught 3 critical production-blocking bugs during initial deployment (GitHub Actions, CI/CD, Gherkin/CucumberJS).
+    
+- 
+- Accelerated local and staging environment setups by
+- integrating a database-agnostic data-hydration pipeline paired with local MinIO storage, keeping AWS S3 for production
+- allowing for isolated, reproducible smoke and regression testing.
+    
+    
+- Introduced automated API contract testing with the PACT framework for a Symfony monolith, establishing the organization’s first-ever API testing layer to prevent breaking changes across integrated services.
+    
+- Served as a technical mentor for QA and developers, delivering structured training on asynchronous programming, modern test design patterns and contract testing.
+    
+
+**
+
+
+---
 ## The Characters
 
 ### Charlie (The Candidate)
@@ -43,20 +67,11 @@ A.K.A. _"Anonymous Visitor"_
 
 ### 2. Call to Adventure
 
-1. Splash Screen (Cinematic)
-2. Dialog
-	1. Candidate: _"Hello, I'm Charlie. Welcome to my little office!"_
-	2. Candidate: _"And you are..."_
-	3. Fulano selects an option:
-		1. I'm a fellow software developer
-		2. I'm a C-Suite executive
-		3. I'm a recruiter/HR professional
-		4. I'm nobody, just a zombie visitor
-	4. Candidate: _"Please, step into my office. Let's talk..."_
+Fulano watches the front of a house and its main door, then Charlie appears and the _"Introductions"_ dialogue starts. (Read [[Dialogues]] for details).
 
 ### 3. Refusal of the Call
 
-Happens by default. If Fulano hesitates he can just wait or leave the website; he can come back any time.
+Happens by default. If Fulano hesitates he can just ignore the candidate and wait or leave the website; he can come back any time.
 
 ### 4. Meeting the Mentor / Supernatural Aid
 
@@ -64,7 +79,7 @@ Happens by default. The game itself is the supernatural aid encouraging the hero
 
 ### 5. Crossing the 1st Threshold
 
-This happens when the player selects an option from the initial dialog.
+This happens when the player selects an option from the initial dialog. Then the _"Hello"_ dialogue starts. (Read [[Dialogues]] for details).
 
 ### 6. Tests, Allies, and Enemies
 
@@ -74,9 +89,13 @@ The only ally is Charlie, the candidate.
 
 Enemies don't exist here, because _"we're family in this company"_...
 
+The _"Welcome"_ dialogue starts. (Read [[Dialogues]] for details).
+
 ### 7. Approach to the Inmost Cave
 
 This happens when the player finds the archive file cabinet, which is where the candidate stores all the history of his past projects and endeavors (dirty little secrets...?).
+
+The _"Welcome"_ dialogue starts. (Read [[Dialogues]] for details).
 
 ### 8. The Ordeal
 

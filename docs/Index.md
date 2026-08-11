@@ -9,6 +9,13 @@
 ---
 ### Drafts
 
+#### Regular Education
+
+We consider _"regular"_: high school → university → magister → doctorate
+
+---
+### Links
+
 - https://opengameart.org/content/lpc-revised-the-office
 - https://opengameart.org/content/cool-school-tileset
 - https://opengameart.org/content/office-stuff
