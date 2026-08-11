@@ -9,58 +9,58 @@
       {
         "id": 1,
         "text": "I'm an investor",
+        "interactionBlocked": false,
         "targetTile": [
           9,
           7
         ],
-        "targetScene": "myLittlePitch",
-        "interactionBlocked": false
+        "targetScene": "myLittlePitch"
       },
       {
         "id": 2,
         "text": "I'm a fellow job seeker",
+        "interactionBlocked": false,
         "targetTile": [
           1,
           5
         ],
-        "targetScene": "editMode",
-        "interactionBlocked":  false
+        "targetScene": "editMode"
       },
       {
         "id": 3,
         "text": "I'm a C-Suite executive",
+        "interactionBlocked": false,
         "targetTile": [
           1,
           5
         ],
-        "targetScene": "readMode",
-        "interactionBlocked":  false
+        "targetScene": "readMode"
       },
       {
         "id": 4,
         "text": "I'm a recruiter/HR person",
+        "interactionBlocked": false,
         "targetTile": [
           1,
           5
         ],
-        "targetScene": "readMode",
-        "interactionBlocked":  false
+        "targetScene": "readMode"
       },
       {
         "id": 5,
         "text": "I want to hire your services",
+        "interactionBlocked": false,
         "targetTile": [
           1,
           5
         ],
-        "targetScene": "myLittleDemo",
-        "interactionBlocked":  false
+        "targetScene": "myLittleDemo"
       },
       {
         "id": 6,
         "text": "Just give me your résumé!",
-        "targetAction": "downloadResume",
-        "interactionBlocked":  false
+        "interactionBlocked": false,
+        "targetAction": "downloadResume"
       }
     ]
   },
@@ -95,20 +95,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": false
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": false
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -140,20 +144,23 @@
       {
         "id": 1,
         "text": "Show me everything!",
-        "targetModal": true,
+        "interactionBlocked": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -177,20 +184,24 @@
       {
         "id": 1,
         "text": "Hell yeah!",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": false
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": false
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -205,20 +216,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -235,20 +250,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -265,20 +284,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -294,20 +317,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -324,20 +351,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -353,20 +384,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -390,20 +425,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -419,20 +458,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -447,20 +490,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -475,20 +522,24 @@
       {
         "id": 1,
         "text": "Sure thing",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
-        "text": "That's not relevant for me"
+        "text": "That's not relevant for me",
+        "interactionBlocked": true
       },
       {
         "id": 3,
-        "text": "Nah, that's useless"
+        "text": "Nah, that's useless",
+        "interactionBlocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
+        "interactionBlocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true

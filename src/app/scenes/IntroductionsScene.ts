@@ -1,12 +1,13 @@
 import { MapScene } from './MapScene.ts';
-import { imagesKeys } from '../enums/imagesKeys.ts';
-import { requiredSpritesheets } from '../../../resources/gameAssets/requiredSpritesheets.ts';
 import type { SpritesheetDefinitionInterface } from '../interfaces/SpritesheetDefinitionInterface.ts';
-import { characterAnimations } from '../enums/characterAnimations.ts';
+import type { DialoguesSetInterface } from '../interfaces/DialogueSetInterface.ts';
 import CharacterModel from '../models/characterModel/CharacterModel.ts';
+import { imagesKeys } from '../enums/imagesKeys.ts';
 import { spritesheetsKeys } from '../enums/spritesheetsKeys.ts';
+import { requiredSpritesheets } from '../../../resources/gameAssets/requiredSpritesheets.ts';
+import { characterAnimations } from '../enums/characterAnimations.ts';
+import { dialoguesSet } from '../../../resources/staticData/dialoguesSet.ts';
 import FApp from '../index.ts';
-import type { VisitorDialogueOptionInterface } from '../interfaces/DialogueSetInterface.ts';
 
 export class IntroductionsScene extends MapScene {
   #spritesheetRefs: Record<string, SpritesheetDefinitionInterface>;
@@ -60,16 +61,9 @@ export class IntroductionsScene extends MapScene {
     await new Promise(resolve => setTimeout(resolve, 500));
 
     await candidate.walkForward(spritesheetsKeys.candidate, 2);
-    const dialogueOption = FApp.store.ui.value<VisitorDialogueOptionInterface>('currentOption');
-
-    console.warn('dialogueOption', dialogueOption);
-    // FApp.store.dialogues
-
-    await candidate.say([
-      'Hi!',
-      'Carlos Bucheli is my name. But you can call me Charlie.',
-      'And you are...'
-    ]);
+    const currentDialogueKey = FApp.store.ui.value<keyof DialoguesSetInterface>('currentDialogueKey');
+    const dialogue = dialoguesSet[currentDialogueKey];
+    await candidate.say(dialogue.mc);
   }
 
   create() {
