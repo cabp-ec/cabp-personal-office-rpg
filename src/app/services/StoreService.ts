@@ -8,7 +8,7 @@ import type { SessionInterface } from '../interfaces/SessionInterface.ts';
 import type { UserEntityInterface } from '../models/user/UserEntityInterface.ts';
 import type { CountryEntityInterface } from '../models/country/CountryEntityInterface.ts';
 import type { NamedEntityInterface } from '../interfaces/NamedEntityInterface.ts';
-import type { DialoguesSetInterface } from '../interfaces/DialogueSetInterface.ts';
+import type { DialoguesSetType } from '../interfaces/DialogueSetType.ts';
 import { PropsStore } from '../stores/props/PropsStore.ts';
 import { EntityStore } from '../stores/EntityStore.ts';
 import { storesAvail } from '../enums/storesAvail.ts';
@@ -35,7 +35,7 @@ export class StoreService implements ServiceInterface {
     this.countries = new EntityStore(storesAvail.countries, withEntities<CountryEntityInterface>(), []);
     this.cities = new EntityStore(storesAvail.cities, withEntities<NamedEntityInterface>(), []);
     this.session = new PropsStore(storesAvail.session, withProps<SessionInterface>(sessionInitialState));
-    this.dialogues = new PropsStore(storesAvail.dialogues, withProps<DialoguesSetInterface>(dialoguesSet));
+    this.dialogues = new PropsStore(storesAvail.dialogues, withProps<DialoguesSetType>(dialoguesSet));
   }
 
   public initialize(initialStateData: InitialStateInterface): void {

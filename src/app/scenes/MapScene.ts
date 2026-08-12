@@ -1,54 +1,74 @@
 import { Tilemaps } from 'phaser';
 import { BaseScene } from './BaseScene.ts';
+import { requiredMaps } from '../../../resources/gameAssets/requiredMaps.ts';
 
 export class MapScene extends BaseScene {
   protected tileSize = 32;
-  protected mapKey: string;
   protected tilemapWidth: number;
   protected tilemapHeight: number;
-  protected tilemap!: Tilemaps.Tilemap;
-  protected layerKeys: string[];
-  protected requiredTilesets: string[][];
+  protected tilemaps: Record<string, Tilemaps.Tilemap>;
+  protected requiredTilesets: Record<string, string[][]>;
+  protected requiredLayers: Record<string, string[]>;
 
-  constructor(sceneKey: string, mapKey: string, layerKeys: string[], requiredTilesets: string[][]) {
+  constructor(
+    sceneKey: string,
+    requiredTilesets: Record<string, string[][]>,
+    requiredLayers: Record<string, string[]>
+  ) {
     super(sceneKey);
 
-    this.mapKey = mapKey;
-    this.layerKeys = layerKeys;
+    this.tilemaps = {};
     this.requiredTilesets = requiredTilesets;
+    this.requiredLayers = requiredLayers;
     this.tilemapWidth = 19 * this.tileSize;
     this.tilemapHeight = 13 * this.tileSize;
   }
 
-  protected createMap(key: string): void {
-    this.tilemap = this.make.tilemap({
-      key,
-      tileWidth: this.tileSize,
-      tileHeight: this.tileSize,
-      width: this.tilemapWidth,
-      height: this.tilemapHeight
-    });
+  #createTiledMaps(): void {
+    const tilemaps: Record<string, Tilemaps.Tilemap> = {};
+
+    for (const key in requiredMaps) {
+      const requiredMap = requiredMaps[key];
+      console.log('Create Map', requiredMap);
+
+      tilemaps[key] = this.make.tilemap({
+        key,
+        tileWidth: this.tileSize,
+        tileHeight: this.tileSize,
+        width: this.tilemapWidth,
+        height: this.tilemapHeight
+      });
+    }
+
+    this.tilemaps = tilemaps;
   }
 
-  protected createLayers(): void {
-    const layers = [];
+  #createTiledMapsLayers(): void {
+    for (const key in requiredMaps) {
+      const tiledMap = this.tilemaps[key];
 
-    this.requiredTilesets.forEach(requiredTileset => {
-      const tileset = this.tilemap.addTilesetImage(requiredTileset[0], requiredTileset[1]);
+      this.requiredTilesets[key].forEach(requiredTileset => {
+        const tileset = tiledMap.addTilesetImage(requiredTileset[0], requiredTileset[1]);
 
-      this.layerKeys.forEach(layerKey => {
-        layers.push(this.tilemap.createLayer(layerKey, tileset!, 0, 0));
+        this.requiredLayers[key].forEach(layerKey => {
+          tiledMap.createLayer(layerKey, tileset!, 0, 0);
+        });
       });
-    });
+    }
+  }
+
+  protected createMaps(): void {
+    this.#createTiledMaps();
+    this.#createTiledMapsLayers();
   }
 
   protected centerViewPort() {
-    const mapWidth = this.tilemap.widthInPixels;
-    const mapHeight = this.tilemap.heightInPixels;
+    const mapWidth = this.tilemaps['cabp_office'].widthInPixels;
+    const mapHeight = this.tilemaps['cabp_office'].heightInPixels;
     const gameWidth = this.scale.width;
     const gameHeight = this.scale.height;
-    const offsetX = (gameWidth - mapWidth) / 2;
-    const offsetY = (gameHeight - mapHeight) / 2;
+    const offsetX = ((gameWidth - mapWidth) / 2) + 12;
+    const offsetY = (gameHeight - mapHeight) / 5;
 
     this.cameras.main.setViewport(offsetX, offsetY, mapWidth, mapHeight);
     this.cameras.main.setBounds(0, 0, mapWidth, mapHeight);

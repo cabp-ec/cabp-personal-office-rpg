@@ -1,6 +1,5 @@
 export const dialoguesKeys = {
   introductions: 'introductions',
-  hello: 'hello',
   welcome: 'welcome',
   ideationRoom: 'ideationRoom',
   myEducation: 'myEducation',
@@ -23,4 +22,4 @@ export const dialoguesKeys = {
   exit: 'exit'
 };
 
-export type dialoguesKeysType = typeof dialoguesKeys[keyof typeof dialoguesKeys];
+export type DialoguesKeysType = typeof dialoguesKeys[keyof typeof dialoguesKeys];

@@ -1,10 +1,10 @@
 import { Loader } from 'phaser';
 import type { SpritesheetDefinitionInterface } from '../interfaces/SpritesheetDefinitionInterface.ts';
+import type { AssetDefinitionInterface } from '../interfaces/gameAssets/AssetDefinitionInterface.ts';
 import { BaseScene } from './BaseScene.ts';
+import { GameScene } from './GameScene.ts';
 import { requiredImages } from '../../../resources/gameAssets/requiredImages.ts';
 import { requiredSpritesheets } from '../../../resources/gameAssets/requiredSpritesheets.ts';
-import type { AssetDefinitionInterface } from '../interfaces/AssetDefinitionInterface.ts';
-import { IntroductionsScene } from './IntroductionsScene.ts';
 import { requiredMaps } from '../../../resources/gameAssets/requiredMaps.ts';
 
 export class PreloadScene extends BaseScene {
@@ -29,7 +29,7 @@ export class PreloadScene extends BaseScene {
 
     this.load.on(Loader.Events.COMPLETE, () => {
       console.warn('START "INTRODUCTIONS" SCENE');
-      this.switchScenes(PreloadScene.key, IntroductionsScene.key);
+      this.switchScenes(PreloadScene.key, GameScene.key);
     });
   }
 

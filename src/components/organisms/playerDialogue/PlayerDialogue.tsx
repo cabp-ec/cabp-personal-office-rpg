@@ -1,5 +1,5 @@
 import type { PlayerDialoguePropsInterface } from './PlayerDialoguePropsInterface.ts';
-import type { DialogueSetInterface } from '../../../app/interfaces/DialogueSetInterface.ts';
+import type { DialogueSetInterface } from '../../../app/interfaces/DialogueSetType.ts';
 
 function PlayerDialogue({ dialogueKey, dialoguesSet, onOptionClick }: PlayerDialoguePropsInterface) {
   if (!dialogueKey) {

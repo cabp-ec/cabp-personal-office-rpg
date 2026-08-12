@@ -1,10 +1,10 @@
-import type { AssetDefinitionInterface } from '../../src/app/interfaces/AssetDefinitionInterface';
+import type { AssetDefinitionInterface } from '../../src/app/interfaces/gameAssets/AssetDefinitionInterface.ts';
 
 export const requiredMaps: Record<string, AssetDefinitionInterface> = {
-  house_front: {
+  /*house_front: {
     asset: '/assets/maps/house_front.json'
+  },*/
+  cabp_office: {
+    asset: '/assets/maps/cabp_office.json'
   }
-  /*office_tiles: {
-    asset: '/assets/tilesets/office_tiles.png'
-  }*/
 };

@@ -1,4 +1,4 @@
 import dialoguesData from './dialoguesSet.json';
-import type { DialoguesSetInterface } from '../../src/app/interfaces/DialogueSetInterface';
+import type { DialoguesSetType } from '../../src/app/interfaces/DialogueSetType.ts';
 
-export const dialoguesSet = dialoguesData as DialoguesSetInterface;
+export const dialoguesSet = dialoguesData as DialoguesSetType;

@@ -1,6 +1,6 @@
 export const imagesKeys = {
   house: 'house',
-  office_tiles: 'office_tiles'
+  office: 'office'
 };
 
 export type imagesKeysType = typeof imagesKeys[keyof typeof imagesKeys];

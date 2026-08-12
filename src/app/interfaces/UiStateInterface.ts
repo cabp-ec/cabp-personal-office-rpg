@@ -1,8 +1,10 @@
-import type { DialogueSetInterface, VisitorDialogueOptionInterface } from './DialogueSetInterface.ts';
+import type { DialoguesKeysType } from '../enums/dialoguesKeys.ts';
+import type { VisitorDialogueOptionInterface } from './dialogs/VisitorDialogueOptionInterface.ts';
 
 export interface UiStateInterface {
   interactionBlocked: boolean;
   splashScreenOn: boolean;
-  currentDialogueKey: keyof DialogueSetInterface | null;
+  playerDialogueOn: boolean;
+  currentDialogueKey: DialoguesKeysType | null;
   currentOption: VisitorDialogueOptionInterface | null;
 }

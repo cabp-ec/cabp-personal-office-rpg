@@ -9,71 +9,45 @@
       {
         "id": 1,
         "text": "I'm an investor",
-        "interactionBlocked": false,
-        "targetTile": [
-          9,
-          7
-        ],
-        "targetScene": "myLittlePitch"
+        "interactionBlocked": true,
+        "continueDialogue": true
       },
       {
         "id": 2,
         "text": "I'm a fellow job seeker",
-        "interactionBlocked": false,
-        "targetTile": [
-          1,
-          5
-        ],
-        "targetScene": "editMode"
+        "interactionBlocked": true,
+        "continueDialogue": true
       },
       {
         "id": 3,
         "text": "I'm a C-Suite executive",
-        "interactionBlocked": false,
-        "targetTile": [
-          1,
-          5
-        ],
-        "targetScene": "readMode"
+        "interactionBlocked": true,
+        "continueDialogue": true
       },
       {
         "id": 4,
         "text": "I'm a recruiter/HR person",
-        "interactionBlocked": false,
-        "targetTile": [
-          1,
-          5
-        ],
-        "targetScene": "readMode"
+        "interactionBlocked": true,
+        "continueDialogue": true
       },
       {
         "id": 5,
         "text": "I want to hire your services",
-        "interactionBlocked": false,
-        "targetTile": [
-          1,
-          5
-        ],
-        "targetScene": "myLittleDemo"
+        "interactionBlocked": true,
+        "continueDialogue": true
       },
       {
         "id": 6,
         "text": "Just give me your résumé!",
-        "interactionBlocked": false,
+        "interactionBlocked": true,
+        "continueDialogue": true,
         "targetAction": "downloadResume"
       }
     ]
   },
-  "hello": {
-    "mc": [
-      "Nice to meet you.",
-      "Please, step into my little office. Let's talk."
-    ],
-    "nn": []
-  },
   "welcome": {
     "mc": [
-      "Welcome!",
+      "Welcome to my little office...!",
       "In here you'll find all the details about me.",
       "You can also print a copy of my résumé, just use the printer, it's under the standing desk.",
       "So, just tell me what you want to know about, and I'll show you..."

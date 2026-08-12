@@ -2,26 +2,48 @@ import { useRef, useState, useEffect, useLayoutEffect } from 'react';
 import { select } from '@ngneat/elf';
 
 import FApp from './app';
-import type { DialoguesSetInterface, VisitorDialogueOptionInterface } from './app/interfaces/DialogueSetInterface.ts';
+import type { DialoguesSetType } from './app/interfaces/DialogueSetType.ts';
+import type { UiStateInterface } from './app/interfaces/UiStateInterface.ts';
+import type { VisitorDialogueOptionInterface } from './app/interfaces/dialogs/VisitorDialogueOptionInterface.ts';
+import { GameScene } from './app/scenes/GameScene.ts';
 import { useElfSelector } from './app/hooks/useElf.ts';
+import { getDialoguesSet } from './app/utils/react.utils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
-
-const getDialoguesSet = () => FApp.store.dialogues.pipe(
-  select((state: DialoguesSetInterface) => state)
-);
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
-  const dialoguesSet = useElfSelector<DialoguesSetInterface>(getDialoguesSet);
+  const dialoguesSet = useElfSelector<DialoguesSetType>(getDialoguesSet);
   const [currentDialogKey, setCurrentDialogKey] = useState<string | null>(null);
-  const [dialogueOption, setDialogueOption] = useState<VisitorDialogueOptionInterface | null>(null);
 
-  const onDialogueOptionClick = (value: VisitorDialogueOptionInterface): void => {
+  const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
     console.clear();
     console.warn('PLAYER', value);
-    // setDialogueOption(value);
-    // FApp.store.ui.setProperty<VisitorDialogueOptionInterface>('currentOption', value);
+
+    const uiState = FApp.store.ui.value<UiStateInterface>();
+    uiState.playerDialogueOn = false;
+    uiState.currentOption = value;
+    FApp.store.ui.set(uiState);
+    setCurrentDialogKey(null);
+
+    if (value.continueDialogue && value.continueDialogue === true) {
+      const scene = FApp.gameService.getScene<GameScene>(GameScene.key);
+      await scene.candidate.continueDialogue();
+    }
   };
+
+  useEffect(() => {
+    // Pipe the reactive stream from Elf into your local state setter
+    const subscription = FApp.store.ui
+      .pipe(select((state: UiStateInterface) => state))
+      .subscribe((state) => {
+        if (state.playerDialogueOn === true) {
+          setCurrentDialogKey(state.currentDialogueKey);
+        }
+      });
+
+    // Clean up subscription when the component unmounts to prevent leaks
+    return () => subscription.unsubscribe();
+  }, []);
 
   useEffect(() => {
     if (gameWrapper.current) {

@@ -1,10 +1,8 @@
-import type {
-  DialoguesSetInterface,
-  VisitorDialogueOptionInterface
-} from '../../../app/interfaces/DialogueSetInterface.ts';
+import type { DialoguesSetType } from '../../../app/interfaces/DialogueSetType.ts';
+import type { VisitorDialogueOptionInterface } from '../../../app/interfaces/dialogs/VisitorDialogueOptionInterface.ts';
 
 export interface PlayerDialoguePropsInterface {
   dialogueKey: string | null;
-  dialoguesSet: DialoguesSetInterface;
+  dialoguesSet: DialoguesSetType;
   onOptionClick: (value: VisitorDialogueOptionInterface) => void;
 }
