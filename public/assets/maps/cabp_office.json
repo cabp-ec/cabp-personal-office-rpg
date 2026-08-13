@@ -259,7 +259,7 @@
       "name": "limits",
       "opacity": 1,
       "type": "tilelayer",
-      "visible": false,
+      "visible": true,
       "width": 19,
       "x": 0,
       "y": 0
@@ -520,7 +520,7 @@
       "name": "floor",
       "opacity": 1,
       "type": "tilelayer",
-      "visible": false,
+      "visible": true,
       "width": 19,
       "x": 0,
       "y": 0
@@ -1042,7 +1042,7 @@
       "name": "exit",
       "opacity": 1,
       "type": "tilelayer",
-      "visible": false,
+      "visible": true,
       "width": 19,
       "x": 0,
       "y": 0
@@ -1300,10 +1300,10 @@
       "height": 13,
       "id": 3,
       "locked": true,
-      "name": "forniture",
+      "name": "furniture",
       "opacity": 1,
       "type": "tilelayer",
-      "visible": false,
+      "visible": true,
       "width": 19,
       "x": 0,
       "y": 0
@@ -1564,14 +1564,799 @@
       "name": "assets",
       "opacity": 1,
       "type": "tilelayer",
-      "visible": false,
+      "visible": true,
       "width": 19,
+      "x": 0,
+      "y": 0
+    },
+    {
+      "draworder": "topdown",
+      "id": 11,
+      "locked": true,
+      "name": "triggers",
+      "objects": [
+        {
+          "height": 32,
+          "id": 4,
+          "name": "My Education",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "myEducation"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 96,
+          "x": 128,
+          "y": 32
+        },
+        {
+          "height": 69,
+          "id": 7,
+          "name": "Complete Professional History",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "fullProfessionalHistory"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 8
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 256,
+          "y": 37
+        },
+        {
+          "height": 64,
+          "id": 8,
+          "name": "Reading Nook",
+          "properties": [
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "whatILikeToRead"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 10
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 64,
+          "x": 288,
+          "y": 64
+        },
+        {
+          "height": 32,
+          "id": 9,
+          "name": "Music I Like",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "musicILike"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 11
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 3
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 98,
+          "x": 320,
+          "y": 32
+        },
+        {
+          "height": 32,
+          "id": 10,
+          "name": "Professional Achievements",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "professionalAchievements"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 13
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 448,
+          "y": 32
+        },
+        {
+          "height": 32,
+          "id": 11,
+          "name": "Recent Professional History",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "recentProfessionalHistory"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 13
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 448,
+          "y": 64
+        },
+        {
+          "height": 32,
+          "id": 12,
+          "name": "What Im Doing Now",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "whatImDoingNow"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 13
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 416,
+          "y": 64
+        },
+        {
+          "height": 56,
+          "id": 13,
+          "name": "Products & Services",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "productsAndServices"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 13
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 6
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 56,
+          "x": 441,
+          "y": 224
+        },
+        {
+          "height": 32,
+          "id": 14,
+          "name": "The Bookshelf",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerShowcaseModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "bookshelf"
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 96,
+          "x": 416,
+          "y": 320
+        },
+        {
+          "height": 32,
+          "id": 16,
+          "name": "Standing Desk",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerShowcaseModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "standingDesk"
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 96,
+          "x": 320,
+          "y": 320
+        },
+        {
+          "height": 32,
+          "id": 17,
+          "name": "Drinks & Snacks",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerShowcaseModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "myDrinksAndSnacks"
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 96,
+          "x": 224,
+          "y": 320
+        },
+        {
+          "height": 50,
+          "id": 18,
+          "name": "Exit",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerExitProcess"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "exit"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 1
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 9
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 121,
+          "x": 96,
+          "y": 302
+        },
+        {
+          "height": 32,
+          "id": 21,
+          "name": "Guest Book",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "guestBook"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 3
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 7
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 128,
+          "y": 256
+        },
+        {
+          "height": 320,
+          "id": 22,
+          "name": "Bonus",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "bonus"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 15
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 5
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 512,
+          "y": 32
+        },
+        {
+          "height": 32,
+          "id": 23,
+          "name": "My Hobbies",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "myHobbies"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 128,
+          "y": 64
+        },
+        {
+          "height": 64,
+          "id": 24,
+          "name": "My Style",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "myStyle"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 8
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 6
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 64,
+          "x": 224,
+          "y": 224
+        },
+        {
+          "height": 32,
+          "id": 27,
+          "name": "Internet Speed",
+          "properties": [
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "internetSpeed"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 192,
+          "y": 64
+        },
+        {
+          "height": 48,
+          "id": 28,
+          "name": "Ideation Room",
+          "properties": [
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "ideationRoom"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 2
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 3
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 64,
+          "y": 48
+        },
+        {
+          "height": 32,
+          "id": 29,
+          "name": "Contact Me",
+          "properties": [
+            {
+              "name": "actionKey",
+              "type": "string",
+              "value": "triggerDetailModal"
+            },
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": true
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "contactMe"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 5
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 160,
+          "y": 64
+        }
+      ],
+      "opacity": 1,
+      "type": "objectgroup",
+      "visible": true,
       "x": 0,
       "y": 0
     }
   ],
-  "nextlayerid": 11,
-  "nextobjectid": 1,
+  "nextlayerid": 12,
+  "nextobjectid": 30,
   "orientation": "orthogonal",
   "renderorder": "right-down",
   "tiledversion": "1.10.2",

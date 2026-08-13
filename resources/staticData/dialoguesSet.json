@@ -9,37 +9,36 @@
       {
         "id": 1,
         "text": "I'm an investor",
-        "interactionBlocked": true,
         "continueDialogue": true
       },
       {
         "id": 2,
         "text": "I'm a fellow job seeker",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "continueDialogue": true
       },
       {
         "id": 3,
         "text": "I'm a C-Suite executive",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "continueDialogue": true
       },
       {
         "id": 4,
         "text": "I'm a recruiter/HR person",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "continueDialogue": true
       },
       {
         "id": 5,
         "text": "I want to hire your services",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "continueDialogue": true
       },
       {
         "id": 6,
         "text": "Just give me your résumé!",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "continueDialogue": true,
         "targetAction": "downloadResume"
       }
@@ -47,10 +46,7 @@
   },
   "welcome": {
     "mc": [
-      "Welcome to my little office...!",
-      "In here you'll find all the details about me.",
-      "You can also print a copy of my résumé, just use the printer, it's under the standing desk.",
-      "So, just tell me what you want to know about, and I'll show you..."
+      "Welcome to my little office...!"
     ],
     "nn": []
   },
@@ -69,24 +65,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": false
+        "mapTriggersLocked": false
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": false
+        "mapTriggersLocked": false
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -105,7 +101,8 @@
       "Call Charlie, of course! My phone is 888-888",
       "Checkout my website: https://carlos-bucheli.com",
       "Drop an e-mail at `contact@carlos-bucheli.com`",
-      "Follow me on LinkedIn: /in/cabp-ec"
+      "Follow me on LinkedIn: /in/cabp-ec",
+      "Here, take my business card."
     ],
     "nn": []
   },
@@ -118,23 +115,23 @@
       {
         "id": 1,
         "text": "Show me everything!",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -158,24 +155,24 @@
       {
         "id": 1,
         "text": "Hell yeah!",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": false
+        "mapTriggersLocked": false
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": false
+        "mapTriggersLocked": false
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -190,24 +187,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -224,24 +221,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -258,24 +255,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -291,24 +288,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -325,24 +322,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -358,24 +355,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -399,24 +396,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -432,24 +429,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -464,24 +461,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true
@@ -496,24 +493,24 @@
       {
         "id": 1,
         "text": "Sure thing",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "interactionBlocked": true
+        "mapTriggersLocked": true
       },
       {
         "id": 4,
         "text": "Just a short version",
-        "interactionBlocked": true,
+        "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
         "showShortVersion": true

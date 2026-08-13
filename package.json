@@ -14,6 +14,7 @@
     "@ngneat/elf": "^2.5.1",
     "@ngneat/elf-entities": "^5.0.2",
     "@ngneat/react-rxjs": "^1.1.0",
+    "easystarjs": "^0.4.4",
     "phaser": "^4.2.1",
     "react": "^19.2.7",
     "react-dom": "^19.2.7",
@@ -21,6 +22,7 @@
   },
   "devDependencies": {
     "@eslint/js": "^10.0.1",
+    "@types/easystarjs": "^0.1.29",
     "@types/node": "^24.13.2",
     "@types/react": "^19.2.17",
     "@types/react-dom": "^19.2.3",

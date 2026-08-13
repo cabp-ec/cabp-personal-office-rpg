@@ -1,8 +1,8 @@
 export interface VisitorDialogueOptionInterface {
   id: PropertyKey;
   text: string;
-  interactionBlocked: boolean;
   continueDialogue?: boolean;
+  blockMapTriggers?: boolean;
   // ---
   targetTile?: number[];
   targetScene?: string;

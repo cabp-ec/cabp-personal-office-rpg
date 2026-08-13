@@ -1,24 +1,28 @@
-import { Scene as PhaserScene } from 'phaser';
+import { Scene as PhaserScene, GameObjects } from 'phaser';
+
 import type { StoreService } from '../../services/StoreService.ts';
 import type { UiStateInterface } from '../../interfaces/UiStateInterface.ts';
 import type { DialoguesSetType } from '../../interfaces/DialogueSetType.ts';
 import { characterAnimations } from '../../enums/characterAnimations.ts';
 import { spritesheetsKeys } from '../../enums/spritesheetsKeys.ts';
-import { dialoguesKeys, type DialoguesKeysType } from '../../enums/dialoguesKeys.ts';
+import { dialoguesKeys } from '../../enums/dialoguesKeys.ts';
+import type { XyPositionInterface } from '../../interfaces/XyPositionInterface.ts';
 
 class CharacterModel {
   readonly #key: string | number;
   #storeService: StoreService;
   #dialogues: DialoguesSetType;
   #scene: PhaserScene;
-  #container!: Phaser.GameObjects.Container;
-  #sprite!: Phaser.GameObjects.Sprite;
-  #bubbleContainer: Phaser.GameObjects.Container | null = null;
-  #bubbleGraphics: Phaser.GameObjects.Graphics | null = null;
-  #bubbleText: Phaser.GameObjects.Text | null = null;
+  #container!: GameObjects.Container;
+  #sprite!: GameObjects.Sprite;
+  #bubbleContainer: GameObjects.Container | null = null;
+  #bubbleGraphics: GameObjects.Graphics | null = null;
+  #bubbleText: GameObjects.Text | null = null;
   #defaultX = 100;
   #defaultY = 100;
   #dialogueKeyIndex = -1;
+  #currentTarget: XyPositionInterface | null;
+  #isMoving: boolean = false;
 
   constructor(
     key: string | number,
@@ -30,6 +34,8 @@ class CharacterModel {
     this.#storeService = storeService;
     this.#dialogues = dialogues;
     this.#scene = scene;
+    this.#currentTarget = null;
+    // this.#currentTarget = { x: 0, y: 0 };
   }
 
   /**
@@ -38,9 +44,6 @@ class CharacterModel {
    * The bubble itself is created only once per speaking turn.
    */
   #createBubble(): void {
-    const padding = 8;
-    const arrowHeight = 6;
-
     this.#bubbleText = this.#scene.add.text(
       0,
       0,
@@ -49,7 +52,7 @@ class CharacterModel {
         fontFamily: 'monospace',
         fontSize: '12px',
         color: '#000000',
-        align: 'center',
+        align: 'left',
         wordWrap: {
           width: 180,
           useAdvancedWrap: true
@@ -65,10 +68,6 @@ class CharacterModel {
     this.#bubbleContainer = this.#scene.add.container(localX, localY);
     this.#bubbleContainer.add([this.#bubbleGraphics, this.#bubbleText]);
     this.#container.add(this.#bubbleContainer);
-
-    // Store these values on the graphics/text objects through the update method.
-    void padding;
-    void arrowHeight;
   }
 
   /**
@@ -82,7 +81,7 @@ class CharacterModel {
       return;
     }
 
-    const padding = 8;
+    const padding = 10;
     const arrowHeight = 6;
 
     this.#bubbleText.setText(quote);
@@ -112,6 +111,12 @@ class CharacterModel {
 
     // Reposition text inside the resized bubble.
     this.#bubbleText.setPosition(bx + padding, by + padding);
+  }
+
+  async #sayMyDialogue(keys: string[]): Promise<void> {
+    const dialogueKey = keys[this.#dialogueKeyIndex];
+    const dialogue = this.#dialogues[dialogueKey];
+    await this.say(dialogue.mc);
   }
 
   /**
@@ -248,23 +253,46 @@ class CharacterModel {
 
     const uiState = this.#storeService.ui.value<UiStateInterface>();
     uiState.playerDialogueOn = true;
-    uiState.interactionBlocked = true;
+    uiState.mapTriggersLocked = true;
     this.#storeService.ui.set(uiState);
   }
 
   public async continueDialogue(): Promise<void> {
     this.#dialogueKeyIndex++;
     const keys = Object.keys(dialoguesKeys);
-    const dialogueKey = keys[this.#dialogueKeyIndex];
-    const dialogue = this.#dialogues[dialogueKey];
-    await this.say(dialogue.mc);
+    await this.#sayMyDialogue(keys);
   }
 
-  public async continueDialogueFrom(key: DialoguesKeysType): Promise<void> {
+  public async continueDialogueFrom(key: string): Promise<void> {
+    const keys = Object.keys(dialoguesKeys);
+    const index = keys.indexOf(key);
+
+    if (!index) {
+      return;
+    }
+
+    this.#dialogueKeyIndex = index;
+    await this.#sayMyDialogue(keys);
   }
 
   get key(): string | number {
     return this.#key;
+  }
+
+  get x(): number {
+    return this.#container.x;
+  }
+
+  get y(): number {
+    return this.#container.y;
+  }
+
+  get container(): GameObjects.Container {
+    return this.#container;
+  }
+
+  get sprite(): GameObjects.Sprite {
+    return this.#sprite;
   }
 }
 

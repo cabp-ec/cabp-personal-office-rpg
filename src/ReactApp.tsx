@@ -1,11 +1,12 @@
-import { useRef, useState, useEffect, useLayoutEffect } from 'react';
+import { useRef, useState, useEffect } from 'react';
 import { select } from '@ngneat/elf';
 
-import FApp from './app';
 import type { DialoguesSetType } from './app/interfaces/DialogueSetType.ts';
 import type { UiStateInterface } from './app/interfaces/UiStateInterface.ts';
 import type { VisitorDialogueOptionInterface } from './app/interfaces/dialogs/VisitorDialogueOptionInterface.ts';
 import { GameScene } from './app/scenes/GameScene.ts';
+
+import FApp from './app';
 import { useElfSelector } from './app/hooks/useElf.ts';
 import { getDialoguesSet } from './app/utils/react.utils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
@@ -28,6 +29,7 @@ function ReactApp() {
     if (value.continueDialogue && value.continueDialogue === true) {
       const scene = FApp.gameService.getScene<GameScene>(GameScene.key);
       await scene.candidate.continueDialogue();
+      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
     }
   };
 

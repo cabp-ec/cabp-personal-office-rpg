@@ -1,6 +1,12 @@
 export const characterAnimations = {
-  idleDown: 'idle_down',
-  walkDown: 'walk_down'
+  idleUp: 'idleUp',
+  idleRight: 'idleRight',
+  idleDown: 'idleDown',
+  idleLeft: 'idleLeft',
+  walkUp: 'walkUp',
+  walkRight: 'walkRight',
+  walkDown: 'walkDown',
+  walkLeft: 'walkLeft'
 };
 
 export type CharacterAnimationsType = typeof characterAnimations[keyof typeof characterAnimations];

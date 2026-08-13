@@ -2,7 +2,7 @@ import type { UiStateInterface } from '../../src/app/interfaces/UiStateInterface
 import { dialoguesKeys } from '../../src/app/enums/dialoguesKeys.ts';
 
 export const uiInitialState: UiStateInterface = {
-  interactionBlocked: true,
+  mapTriggersLocked: true,
   splashScreenOn: false,
   playerDialogueOn: false,
   currentDialogueKey: dialoguesKeys.introductions,
