@@ -96,7 +96,7 @@ export class GameScene extends MapScene {
 
     this.#createCharacterAnimations();
     this.character = new CharacterModel('mc', this, FApp.store, dialoguesSet);
-    const tile = this.tilemaps['cabp_office'].getTileAt(2, 3, false, 'floor')!;
+    const tile = this.map.getTileAt(2, 3, false, 'floor')!;
     this.character.create(tile.getLeft(), tile.getTop());
     await new Promise(resolve => setTimeout(resolve, 500));
     await this.character.startDialogue();

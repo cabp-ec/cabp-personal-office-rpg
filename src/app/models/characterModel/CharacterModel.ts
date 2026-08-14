@@ -6,12 +6,11 @@ import type { DialoguesSetType } from '../../interfaces/DialogueSetType.ts';
 import { characterAnimations } from '../../enums/characterAnimations.ts';
 import { spritesheetsKeys } from '../../enums/spritesheetsKeys.ts';
 import { dialoguesKeys } from '../../enums/dialoguesKeys.ts';
-import type { XyPositionInterface } from '../../interfaces/XyPositionInterface.ts';
 
 class CharacterModel {
   readonly #key: string | number;
   #storeService: StoreService;
-  #dialogues: DialoguesSetType;
+  readonly #dialogues: DialoguesSetType;
   #scene: PhaserScene;
   #container!: GameObjects.Container;
   #sprite!: GameObjects.Sprite;
@@ -21,8 +20,6 @@ class CharacterModel {
   #defaultX = 100;
   #defaultY = 100;
   #dialogueKeyIndex = -1;
-  #currentTarget: XyPositionInterface | null;
-  #isMoving: boolean = false;
 
   constructor(
     key: string | number,
@@ -34,8 +31,6 @@ class CharacterModel {
     this.#storeService = storeService;
     this.#dialogues = dialogues;
     this.#scene = scene;
-    this.#currentTarget = null;
-    // this.#currentTarget = { x: 0, y: 0 };
   }
 
   /**

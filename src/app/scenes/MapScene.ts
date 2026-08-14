@@ -4,16 +4,18 @@ import { Tilemaps } from 'phaser';
 import { BaseScene } from './BaseScene.ts';
 
 import FApp from '../index.ts';
+import type { CustomPropertyNumberInterface } from '../interfaces/gameAssets/CustomPropertyNumberInterface.ts';
+import type { CustomPropertyStringInterface } from '../interfaces/gameAssets/CustomPropertyStringInterface.ts';
+import type { CustomPropertyBoolInterface } from '../interfaces/gameAssets/CustomPropertyBoolInterface.ts';
+import type { UiStateInterface } from '../interfaces/UiStateInterface.ts';
+import type { XyPositionInterface } from '../interfaces/XyPositionInterface.ts';
 import type {
   ClickableObjectPropertiesInterface
 } from '../interfaces/gameAssets/ClickableObjectPropertiesInterface.ts';
-import { TooltipBubble } from '../gameObjects/TooltipBubble.ts';
 import CharacterModel from '../models/characterModel/CharacterModel.ts';
+import { TooltipBubble } from '../gameObjects/TooltipBubble.ts';
 import { filterByDialogueKey } from '../utils/mapUtils.ts';
 import { requiredMaps } from '../../../resources/gameAssets/requiredMaps.ts';
-import type { CustomPropertyNumberInterface } from '../interfaces/gameAssets/CustomPropertyNumberInterface.ts';
-import type { CustomPropertyStringInterface } from '../interfaces/gameAssets/CustomPropertyStringInterface.ts';
-import type { XyPositionInterface } from '../interfaces/XyPositionInterface.ts';
 import { characterAnimations, type CharacterAnimationsType } from '../enums/characterAnimations.ts';
 
 export class MapScene extends BaseScene {
@@ -60,7 +62,7 @@ export class MapScene extends BaseScene {
   }
 
   #moveCharacter(path: XyPositionInterface[]) {
-    const map = this.tilemaps['cabp_office'];
+    const map = this.map;
     const spritesheetKey = 'candidate'; // use your actual spritesheet key
 
     let index = 1;
@@ -118,11 +120,12 @@ export class MapScene extends BaseScene {
       return;
     }
 
-    const map = this.tilemaps['cabp_office'];
+    const map = this.map;
     const properties = target.properties as ClickableObjectPropertiesInterface[];
     const dialogueKeyProperty = filterByDialogueKey<CustomPropertyStringInterface>('dialogueKey', properties)!;
     const targetTileXProperty = filterByDialogueKey<CustomPropertyNumberInterface>('targetTileX', properties)!;
     const targetTileYProperty = filterByDialogueKey<CustomPropertyNumberInterface>('targetTileY', properties)!;
+    const actionableByPlayerProperty = filterByDialogueKey<CustomPropertyBoolInterface>('actionableByPlayer', properties)!;
 
     const fromX = Math.floor(this.character.x / 32);
     const fromY = Math.floor(this.character.y / 32);
@@ -147,6 +150,15 @@ export class MapScene extends BaseScene {
 
     this.pathFinder.calculate();
     await this.character.continueDialogueFrom(String(dialogueKeyProperty.value));
+
+    if (actionableByPlayerProperty.value) {
+      const uiState = FApp.store.ui.value<UiStateInterface>();
+      uiState.currentDialogueKey = dialogueKeyProperty.value;
+      uiState.playerDialogueOn = true;
+      uiState.mapTriggersLocked = true;
+      FApp.store.ui.set(uiState);
+      console.warn('SHOW PLAYER DIALOGUE OPTIONS');
+    }
   }
 
   #createTiledMaps(): void {
@@ -183,7 +195,7 @@ export class MapScene extends BaseScene {
   }
 
   #createMapTriggers(): void {
-    const triggersLayer = this.tilemaps['cabp_office'].getObjectLayer('triggers')!;
+    const triggersLayer = this.map.getObjectLayer('triggers')!;
     console.warn('TRIGGERS', triggersLayer.objects);
 
     triggersLayer.objects.forEach(tiledObj => {
@@ -209,7 +221,7 @@ export class MapScene extends BaseScene {
   }
 
   protected createPathFinder(): void {
-    const map = this.tilemaps['cabp_office'];
+    const map = this.map;
     const grid: number[][] = [];
     this.pathFinder = new EasyStar.js();
 
@@ -233,8 +245,8 @@ export class MapScene extends BaseScene {
   }
 
   protected centerViewPort() {
-    const mapWidth = this.tilemaps['cabp_office'].widthInPixels;
-    const mapHeight = this.tilemaps['cabp_office'].heightInPixels;
+    const mapWidth = this.map.widthInPixels;
+    const mapHeight = this.map.heightInPixels;
     const gameWidth = this.scale.width;
     const gameHeight = this.scale.height;
     const offsetX = ((gameWidth - mapWidth) / 2) + 12;
@@ -247,5 +259,9 @@ export class MapScene extends BaseScene {
 
   protected areMapTriggersLocked(): boolean {
     return FApp.store.ui.value<boolean>('mapTriggersLocked');
+  }
+
+  get map(): Tilemaps.Tilemap {
+    return this.tilemaps['cabp_office'];
   }
 }

@@ -1,13 +1,11 @@
 import type { PlayerDialoguePropsInterface } from './PlayerDialoguePropsInterface.ts';
-import type { DialogueSetInterface } from '../../../app/interfaces/DialogueSetType.ts';
+import type { DialogueSetInterface } from '../../../app/interfaces/dialogs/DialogueSetInterface.ts';
 
 function PlayerDialogue({ dialogueKey, dialoguesSet, onOptionClick }: PlayerDialoguePropsInterface) {
   if (!dialogueKey) {
     return;
   }
 
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
   const dialogue = dialoguesSet[dialogueKey] as DialogueSetInterface;
 
   return (

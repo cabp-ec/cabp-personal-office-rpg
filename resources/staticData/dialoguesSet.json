@@ -1,9 +1,7 @@
 {
   "introductions": {
     "mc": [
-      "Hi!",
-      "Carlos Bucheli is my name. But you can call me Charlie.",
-      "And you are..."
+      "Hi!"
     ],
     "nn": [
       {
@@ -56,7 +54,7 @@
     ],
     "nn": []
   },
-  "myEducation": {
+  "education": {
     "mc": [
       "My education history.",
       "Do you want to see it now...?"

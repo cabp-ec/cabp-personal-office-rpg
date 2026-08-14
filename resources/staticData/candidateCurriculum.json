@@ -1,81 +1,84 @@
 {
-  "myEducation": [
-    {
-      "id": 1,
-      "type": "formal",
-      "level": 2,
-      "startDate": null,
-      "endDate": {
-        "year": 1995,
-        "month": null,
-        "day": null
+  "education": {
+    "title": "Education",
+    "data": [
+      {
+        "id": 1,
+        "name": "Computer Sciences Bachelor",
+        "organization": "Javeriano High School",
+        "country": "Ecuador",
+        "startDate": null,
+        "endDate": {
+          "year": 1995,
+          "month": null,
+          "day": null
+        },
+        "type": "formal",
+        "level": 2,
+        "keywords": []
       },
-      "title": "Computer Sciences Bachelor",
-      "organization": "Javeriano High School",
-      "country": "Ecuador",
-      "keywords": []
-    },
-    {
-      "id": 2,
-      "type": "formal",
-      "level": 3,
-      "startDate": null,
-      "endDate": {
-        "year": 2004,
-        "month": null,
-        "day": null
+      {
+        "id": 2,
+        "name": "Systems & Networking Engineer",
+        "organization": "University Alfredo Pérez Guerrero",
+        "country": "Ecuador",
+        "startDate": null,
+        "endDate": {
+          "year": 2004,
+          "month": null,
+          "day": null
+        },
+        "type": "formal",
+        "level": 3,
+        "keywords": []
       },
-      "title": "Systems & Networking Engineer",
-      "organization": "University Alfredo Pérez Guerrero",
-      "country": "Ecuador",
-      "keywords": []
-    },
-    {
-      "id": 3,
-      "type": "certification",
-      "level": null,
-      "startDate": null,
-      "endDate": {
-        "year": 2009,
-        "month": null,
-        "day": null
+      {
+        "id": 3,
+        "name": "Project Management Professional (PMP)",
+        "organization": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)",
+        "country": "Ecuador",
+        "startDate": null,
+        "endDate": {
+          "year": 2009,
+          "month": null,
+          "day": null
+        },
+        "type": "certification",
+        "level": null,
+        "keywords": []
       },
-      "title": "Project Management Professional (PMP)",
-      "organization": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)",
-      "country": "Ecuador",
-      "keywords": []
-    },
-    {
-      "id": 4,
-      "type": "certification",
-      "level": null,
-      "startDate": null,
-      "endDate": {
-        "year": 2014,
-        "month": null,
-        "day": null
+      {
+        "id": 4,
+        "name": "International Software Testing Board (ISTQB)",
+        "organization": "Logic Studio",
+        "country": "Ecuador",
+        "startDate": null,
+        "endDate": {
+          "year": 2014,
+          "month": null,
+          "day": null
+        },
+        "type": "certification",
+        "level": null,
+        "keywords": []
       },
-      "title": "International Software Testing Board (ISTQB)",
-      "organization": "Logic Studio",
-      "country": "Ecuador",
-      "keywords": []
-    },
-    {
-      "id": 5,
-      "type": "formal",
-      "level": 4,
-      "startDate": null,
-      "endDate": {
-        "year": 2021,
-        "month": null,
-        "day": null
-      },
-      "title": "Master of Business and Technology",
-      "organization": "Universidad de San Andrés (UDESA)",
-      "country": "Argentina",
-      "keywords": []
-    }
-  ],
+      {
+        "id": 5,
+        "name": "Master of Business and Technology",
+        "organization": "Universidad de San Andrés (UDESA)",
+        "country": "Argentina",
+        "startDate": null,
+        "endDate": {
+          "year": 2021,
+          "month": null,
+          "day": null
+        },
+        "type": "formal",
+        "level": 4,
+        "keywords": []
+      }
+    ]
+  },
   "fullProfessionalHistory": [
     {
       "id": 1,
@@ -253,7 +256,7 @@
         "end": "2026-08-10 14:00:00"
       },
       "metrics": {
-        "myEducation": {
+        "education": {
           "answer": 1,
           "focusReading": 100
         },

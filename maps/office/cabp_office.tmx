@@ -114,7 +114,7 @@
     <property name="actionKey" value="triggerDetailModal"/>
     <property name="actionableAfterSpeech" type="bool" value="true"/>
     <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="myEducation"/>
+    <property name="dialogueKey" value="education"/>
     <property name="targetTileX" type="int" value="5"/>
     <property name="targetTileY" type="int" value="4"/>
    </properties>

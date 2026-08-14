@@ -1598,7 +1598,7 @@
             {
               "name": "dialogueKey",
               "type": "string",
-              "value": "myEducation"
+              "value": "education"
             },
             {
               "name": "targetTileX",

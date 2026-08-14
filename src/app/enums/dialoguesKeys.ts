@@ -2,7 +2,7 @@ export const dialoguesKeys = {
   introductions: 'introductions',
   welcome: 'welcome',
   ideationRoom: 'ideationRoom',
-  myEducation: 'myEducation',
+  education: 'education',
   internetSpeed: 'internetSpeed',
   contactMe: 'contactMe',
   fullProfessionalHistory: 'fullProfessionalHistory',

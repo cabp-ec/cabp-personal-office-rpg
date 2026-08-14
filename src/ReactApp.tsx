@@ -10,6 +10,8 @@ import FApp from './app';
 import { useElfSelector } from './app/hooks/useElf.ts';
 import { getDialoguesSet } from './app/utils/react.utils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
+import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
+import { DetailModal } from './components/organisms/detailModal/DetailModal.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -33,7 +35,7 @@ function ReactApp() {
     }
   };
 
-  useEffect(() => {
+  /*useEffect(() => {
     // Pipe the reactive stream from Elf into your local state setter
     const subscription = FApp.store.ui
       .pipe(select((state: UiStateInterface) => state))
@@ -45,9 +47,9 @@ function ReactApp() {
 
     // Clean up subscription when the component unmounts to prevent leaks
     return () => subscription.unsubscribe();
-  }, []);
+  }, []);*/
 
-  useEffect(() => {
+  /*useEffect(() => {
     if (gameWrapper.current) {
       FApp.gameService.initialize(gameWrapper.current);
     }
@@ -56,17 +58,23 @@ function ReactApp() {
     return () => {
       FApp.gameService.destroy();
     };
-  }, []);
+  }, []);*/
 
   return (
     <>
-      <PlayerDialogue
+      <DetailModal
+        dialogueKey={ 'education' }
+        title={ 'Education' }
+        curriculum={ candidateCurriculum }
+      />
+
+      {/*<PlayerDialogue
         dialogueKey={ currentDialogKey }
         dialoguesSet={ dialoguesSet! }
         onOptionClick={ onDialogueOptionClick }
       />
 
-      <div ref={ gameWrapper } className="game-wrapper z-0 test-border-green"/>
+      <div ref={ gameWrapper } className="game-wrapper z-0 test-border-green"/>*/ }
     </>
   );
 }
