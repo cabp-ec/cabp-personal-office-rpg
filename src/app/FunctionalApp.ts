@@ -3,7 +3,7 @@ import { Api } from './api/Api.ts';
 import { StoreService } from './services/StoreService.ts';
 import { UIService } from './services/UIService.ts';
 import { GameService } from './services/GameService.ts';
-import { renderReactApp } from './utils/react.utils.tsx';
+import { renderReactApp } from './utils/reactUtils.tsx';
 
 const FunctionalApp = function (): AppInterface {
   'use strict';

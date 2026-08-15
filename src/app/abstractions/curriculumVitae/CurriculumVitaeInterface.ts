@@ -1,8 +1,5 @@
-import type { EducationEntryInterface } from './EducationEntryInterface.ts';
+import type { EducationCvEntryInterface } from '../education/EducationCvEntryInterface.ts';
 
 export interface CurriculumVitaeInterface {
-  education: {
-    title: string;
-    data: EducationEntryInterface[];
-  };
+  education: EducationCvEntryInterface;
 }

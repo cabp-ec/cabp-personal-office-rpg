@@ -67,3 +67,10 @@ Here are the 3 most impactful bullet points summarizing the core innovations of 
 - **Native Candidate Data Privacy Protection**: Leveraged Phaser 4’s **Render Node architecture** and **SpriteGPU layers** to compile and output personal professional records directly as WebGL graphical vectors, inherently shielding sensitive candidate data from automated malicious web-scraping scripts.
 
 ---
+
+- **Honor/Award:** Summa Cum Laude in Computer Sciences
+- **Institution:** University Name
+- **Date/Period:** Graduation Year (e.g., May 2026)
+- **Basis/Criteria:** Achieved a cumulative GPA of 9.9/10.0 and ranked in the top **1%** of the graduating class through advanced coursework in [Computer Science](https://en.wikipedia.org/wiki/Computer_science) and an honors thesis in [Software Engineering](https://en.wikipedia.org/wiki/Software_engineering).
+
+---

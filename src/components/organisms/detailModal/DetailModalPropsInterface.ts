@@ -3,6 +3,7 @@ import type { CurriculumVitaeInterface } from '../../../app/abstractions/curricu
 
 export interface DetailModalPropsInterface {
   dialogueKey: DialoguesKeysType;
-  title?: string;
+  title: string;
   curriculum: CurriculumVitaeInterface;
+  // shortVersion: boolean;
 }

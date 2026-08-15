@@ -6,22 +6,52 @@
         "id": 1,
         "name": "Computer Sciences Bachelor",
         "organization": "Javeriano High School",
-        "country": "Ecuador",
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "alpha3": "ECU"
+        },
         "startDate": null,
         "endDate": {
-          "year": 1995,
-          "month": null,
-          "day": null
+          "year": 1998,
+          "month": 8,
+          "day": 17
         },
         "type": "formal",
         "level": 2,
+        "honors": [
+          {
+            "id": 1,
+            "name": "Summa Cum Laude in Computer Sciences",
+            "organization": "Javeriano High School",
+            "country": {
+              "id": 1,
+              "name": "Ecuador",
+              "alpha3": "ECU"
+            },
+            "startDate": null,
+            "endDate": {
+              "year": 1998,
+              "month": 8,
+              "day": 17
+            },
+            "criteria": [
+              "Achieved a cumulative GPA of 9.9/10.0",
+              "Ranked in the top 1% of the graduating class"
+            ]
+          }
+        ],
         "keywords": []
       },
       {
         "id": 2,
         "name": "Systems & Networking Engineer",
         "organization": "University Alfredo Pérez Guerrero",
-        "country": "Ecuador",
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "alpha3": "ECU"
+        },
         "startDate": null,
         "endDate": {
           "year": 2004,
@@ -30,13 +60,18 @@
         },
         "type": "formal",
         "level": 3,
+        "honors": [],
         "keywords": []
       },
       {
         "id": 3,
         "name": "Project Management Professional (PMP)",
         "organization": "Instituto Tecnológico y de Estudios Superiores de Monterrey (ITESM)",
-        "country": "Ecuador",
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "alpha3": "ECU"
+        },
         "startDate": null,
         "endDate": {
           "year": 2009,
@@ -45,29 +80,43 @@
         },
         "type": "certification",
         "level": null,
+        "honors": [],
         "keywords": []
       },
       {
         "id": 4,
         "name": "International Software Testing Board (ISTQB)",
         "organization": "Logic Studio",
-        "country": "Ecuador",
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "alpha3": "ECU"
+        },
         "startDate": null,
         "endDate": {
           "year": 2014,
-          "month": null,
-          "day": null
+          "month": 12,
+          "day": 7
         },
         "type": "certification",
         "level": null,
+        "honors": [],
         "keywords": []
       },
       {
         "id": 5,
         "name": "Master of Business and Technology",
         "organization": "Universidad de San Andrés (UDESA)",
-        "country": "Argentina",
-        "startDate": null,
+        "country": {
+          "id": 2,
+          "name": "Argentina",
+          "alpha3": "ARG"
+        },
+        "startDate": {
+          "year": 2019,
+          "month": null,
+          "day": null
+        },
         "endDate": {
           "year": 2021,
           "month": null,
@@ -75,108 +124,150 @@
         },
         "type": "formal",
         "level": 4,
+        "honors": [],
+        "keywords": []
+      },
+      {
+        "id": 6,
+        "name": "Cultural Intelligence",
+        "organization": "Universidad de Palermo",
+        "country": {
+          "id": 2,
+          "name": "Argentina",
+          "alpha3": "ARG"
+        },
+        "startDate": {
+          "year": 2021,
+          "month": 6,
+          "day": 1
+        },
+        "endDate": {
+          "year": 2021,
+          "month": 6,
+          "day": 30
+        },
+        "type": "course",
+        "level": null,
+        "honors": [],
         "keywords": []
       }
     ]
   },
-  "fullProfessionalHistory": [
-    {
-      "id": 1,
-      "organization": "Nisum",
-      "role": "Senior Full-Stack Developer & SDET",
-      "contractor": true,
-      "remote": true,
-      "projects": [
-        {
-          "id": 1,
-          "organization": "",
-          "startDate": {
-            "year": 2025,
-            "month": 2,
-            "day": null
+  "fullProfessionalHistory": {
+    "title": "Professional History",
+    "data": [
+      {
+        "id": 1,
+        "name": "Senior Full-Stack Developer & SDET",
+        "organization": "Nisum",
+        "startDate": null,
+        "endDate": null,
+        "contractor": true,
+        "remote": true,
+        "projects": [
+          {
+            "id": 1,
+            "organization": "",
+            "startDate": {
+              "year": 2025,
+              "month": 2,
+              "day": null
+            },
+            "endDate": {
+              "year": 2026,
+              "month": 2,
+              "day": null
+            },
+            "topFive": [
+              "Designed and engineered the cloud migration of legacy LAMP/Symfony applications to AWS, developing RESTful APIs with S3/MinIO storage and strict semantic versioning for seamless backward compatibility.",
+              "Refactored a critical scoring mechanism and optimized MySQL databases by eliminating nested loops and indexing tables, reducing latency by 50%, cutting regression bugs by 45%, and resolving severe memory spikes.",
+              "Migrated heavy business logic from the front-end to high-performance PHP backend services, successfully cutting peak processing times down to a 30–45 second range.",
+              "Engineered logging architectures to meet strict HIPAA standards, implementing robust data auditing across core FormIO modules and increasing form compliance ratings from 70% to over 80%.",
+              "Championed Agile engineering best practices by introducing robust design patterns, establishing a Playwright automated testing framework, and mentoring junior developers on clean code and code reviews."
+            ],
+            "technologies": [],
+            "keywords": []
+          }
+        ],
+        "keywords": []
+      }
+    ]
+  },
+  "musicILike": {
+    "title": "Music",
+    "data": [
+      {
+        "id": 1,
+        "name": "System of a Down",
+        "keywords": []
+      }
+    ]
+  },
+  "whatImDoingNow": {
+    "title": "What He's Doing Now",
+    "data": [
+      {
+        "id": 1,
+        "title": "Charlie's Little Office",
+        "top3": [
+          "I'm creating an open-source, pixel-art RPG using Phaser 4, React, Elf and TypeScript that flips traditional recruiting paradigms by casting the recruiter as the \"Hero\" on Christopher Vogler’s narrative framework.",
+          "My endeavor replaces rapid-scan resume skimming with spatial exploration of a digital-twin home office, this helps to eliminate superficial visual presentation biases.",
+          "I'm leveraging Phaser 4’s Render Node architecture and SpriteGPU layers to compile and output professional records directly as WebGL graphical vectors, inherently shielding sensitive candidate data from automated malicious web-scraping scripts"
+        ],
+        "links": [
+          {
+            "text": "Demo",
+            "href": "https://office.carlos-bucheli.com"
           },
-          "endDate": {
-            "year": 2026,
-            "month": 2,
-            "day": null
+          {
+            "text": "GitHub",
+            "href": "https://github.com/cabp-ec/charlies-little-office"
           },
-          "topFive": [
-            "Designed and engineered the cloud migration of legacy LAMP/Symfony applications to AWS, developing RESTful APIs with S3/MinIO storage and strict semantic versioning for seamless backward compatibility.",
-            "Refactored a critical scoring mechanism and optimized MySQL databases by eliminating nested loops and indexing tables, reducing latency by 50%, cutting regression bugs by 45%, and resolving severe memory spikes.",
-            "Migrated heavy business logic from the front-end to high-performance PHP backend services, successfully cutting peak processing times down to a 30–45 second range.",
-            "Engineered logging architectures to meet strict HIPAA standards, implementing robust data auditing across core FormIO modules and increasing form compliance ratings from 70% to over 80%.",
-            "Championed Agile engineering best practices by introducing robust design patterns, establishing a Playwright automated testing framework, and mentoring junior developers on clean code and code reviews."
-          ],
-          "technologies": [],
-          "keywords": []
-        }
-      ],
-      "keywords": []
-    }
-  ],
-  "musicILike": [
-    {
-      "id": 1,
-      "band": "System of a Down",
-      "keywords": []
-    }
-  ],
-  "whatImDoingNow": [
-    {
-      "id": 1,
-      "title": "Charlie's Little Office",
-      "top3": [
-        "I'm creating an open-source, pixel-art RPG using Phaser 4, React, Elf and TypeScript that flips traditional recruiting paradigms by casting the recruiter as the \"Hero\" on Christopher Vogler’s narrative framework.",
-        "My endeavor replaces rapid-scan resume skimming with spatial exploration of a digital-twin home office, this helps to eliminate superficial visual presentation biases.",
-        "I'm leveraging Phaser 4’s Render Node architecture and SpriteGPU layers to compile and output professional records directly as WebGL graphical vectors, inherently shielding sensitive candidate data from automated malicious web-scraping scripts"
-      ],
-      "links": [
-        {
-          "text": "Demo",
-          "href": "https://office.carlos-bucheli.com"
-        },
-        {
-          "text": "GitHub",
-          "href": "https://github.com/cabp-ec/charlies-little-office"
-        },
-        {
-          "text": "Documentation",
-          "href": "https://office.carlos-bucheli.com/products/charlies-little-office"
-        }
-      ],
-      "keywords": []
-    }
-  ],
-  "professionalAchievements": [
-    {
-      "id": 1,
-      "title": "Playwright Testing Framework",
-      "situation": [
-        "Multiple features had 0% test coverage.",
-        "Bugs re-appeared from time to time.",
-        "Ent-2-End testing was nonexistent."
-      ],
-      "task": "Integrate Playwright into the Compliance Platform (i.e. a Symfony monolith).",
-      "actions": [
-        "Architectured and implemented a framework-agnostic Playwright + TypeScript E2E testing and test strategy from scratch.",
-        "Created a database-agnostic data-hydration pipeline paired with local MinIO storage, AWS S3 for production and GitHub Actions.",
-        "Included a sequential test-chaining engine that mirrors end-to-end user journeys using Gherkin."
-      ],
-      "results": [
-        "Eliminated manual regression testing.",
-        "Introduced smoke testing.",
-        "Reduced manual testing overhead.",
-        "Ensured test coverage of medical compliance features from 0% to 83.3%",
-        "My framework became the company-wide E2E framework for Symfony and Ruby on Rails."
-      ],
-      "keywords": []
-    }
-  ],
+          {
+            "text": "Documentation",
+            "href": "https://office.carlos-bucheli.com/products/charlies-little-office"
+          }
+        ],
+        "keywords": []
+      }
+    ]
+  },
+  "professionalAchievements": {
+    "title": "Professional Achievements",
+    "data": [
+      {
+        "id": 1,
+        "title": "Playwright Testing Framework",
+        "situation": [
+          "Multiple features had 0% test coverage.",
+          "Bugs re-appeared from time to time.",
+          "Ent-2-End testing was nonexistent."
+        ],
+        "task": "Integrate Playwright into the Compliance Platform (i.e. a Symfony monolith).",
+        "actions": [
+          "Architectured and implemented a framework-agnostic Playwright + TypeScript E2E testing and test strategy from scratch.",
+          "Created a database-agnostic data-hydration pipeline paired with local MinIO storage, AWS S3 for production and GitHub Actions.",
+          "Included a sequential test-chaining engine that mirrors end-to-end user journeys using Gherkin."
+        ],
+        "results": [
+          "Eliminated manual regression testing.",
+          "Introduced smoke testing.",
+          "Reduced manual testing overhead.",
+          "Ensured test coverage of medical compliance features from 0% to 83.3%",
+          "My framework became the company-wide E2E framework for Symfony and Ruby on Rails."
+        ],
+        "keywords": []
+      }
+    ]
+  },
   "myStyle": {
-    "coding": "Pragmatic and test-driven; I prioritize long-term maintainability and self-documenting code over clever, over-engineered solutions.",
-    "communication": "Technical translator; skilled at translating complex system architecture into clear, business-value metrics for stakeholders.",
-    "leadership": "Servant-leader; focused on mentoring junior engineers and building consensus across cross-functional product teams.",
-    "execution": "Bias for action; utilizing rapid prototyping and iterative feedback loops to deliver user value quickly."
+    "title": "Working Style",
+    "data": {
+      "coding": "Pragmatic and test-driven; I prioritize long-term maintainability and self-documenting code over clever, over-engineered solutions.",
+      "communication": "Technical translator; skilled at translating complex system architecture into clear, business-value metrics for stakeholders.",
+      "leadership": "Servant-leader; focused on mentoring junior engineers and building consensus across cross-functional product teams.",
+      "execution": "Bias for action; utilizing rapid prototyping and iterative feedback loops to deliver user value quickly."
+    }
   },
   "productsAndServices": {
     "products": [
@@ -223,92 +314,104 @@
       }
     ]
   },
-  "myDrinksAndSnacks": [
-    {
-      "id": 1,
-      "title": "Coffee",
-      "description": "I'm a coffee-to-code machine..."
-    }
-  ],
-  "bookshelf": [
-    {
-      "id": 1,
-      "title": "The Hobbit: An Unexpected Journey",
-      "description": "I'm starting to read this one."
-    }
-  ],
-  "myHobbies": [
-    {
-      "id": 1,
-      "title": "Lego",
-      "description": "I already have 10 models in my collection: Star Wars AT-AT, Optimus Prime and more!"
-    }
-  ],
-  "guestBook": [
-    {
-      "id": 1,
-      "role": 4,
-      "name": "Fulano de Tal",
-      "organization": "No One Inc.",
-      "comment": null,
-      "session": {
-        "start": "2026-08-10 13:30:00",
-        "end": "2026-08-10 14:00:00"
-      },
-      "metrics": {
-        "education": {
-          "answer": 1,
-          "focusReading": 100
+  "myDrinksAndSnacks": {
+    "title": "",
+    "data": [
+      {
+        "id": 1,
+        "title": "Coffee",
+        "description": "I'm a coffee-to-code machine..."
+      }
+    ]
+  },
+  "bookshelf": {
+    "title": "",
+    "data": [
+      {
+        "id": 1,
+        "title": "The Hobbit: An Unexpected Journey",
+        "description": "I'm starting to read this one."
+      }
+    ]
+  },
+  "myHobbies": {
+    "title": "",
+    "data": [
+      {
+        "id": 1,
+        "title": "Lego",
+        "description": "I already have 10 models in my collection: Star Wars AT-AT, Optimus Prime and more!"
+      }
+    ]
+  },
+  "guestBook": {
+    "title": "Guest Book",
+    "data": [
+      {
+        "id": 1,
+        "role": 4,
+        "name": "Fulano de Tal",
+        "organization": "No One Inc.",
+        "comment": null,
+        "session": {
+          "start": "2026-08-10 13:30:00",
+          "end": "2026-08-10 14:00:00"
         },
-        "fullProfessionalHistory": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "musicILike": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "whatImDoingNow": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "recentProfessionalHistory": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "professionalAchievements": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "myStyle": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "productsAndServices": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "myDrinksAndSnacks": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "bookshelf": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "myHobbies": {
-          "answer": 1,
-          "focusReading": 100
-        },
-        "guestBook": {
-          "answer": 1,
-          "focusReading": null
-        },
-        "bonus": {
-          "answer": 1,
-          "focusReading": null
+        "metrics": {
+          "education": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "fullProfessionalHistory": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "musicILike": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "whatImDoingNow": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "recentProfessionalHistory": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "professionalAchievements": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "myStyle": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "productsAndServices": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "myDrinksAndSnacks": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "bookshelf": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "myHobbies": {
+            "answer": 1,
+            "focusReading": 100
+          },
+          "guestBook": {
+            "answer": 1,
+            "focusReading": null
+          },
+          "bonus": {
+            "answer": 1,
+            "focusReading": null
+          }
         }
       }
-    }
-  ]
+    ]
+  }
 }

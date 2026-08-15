@@ -85,6 +85,10 @@ body {
   margin: 0;
 }
 
+.mb-1 {
+  margin: 0 0 1em 0;
+}
+
 .p-0 {
   padding: 0;
 }
@@ -108,6 +112,14 @@ body {
 
 .text-center {
   text-align: center;
+}
+
+.text-italic {
+  font-style: italic;
+}
+
+.text-capitalize {
+  text-transform: capitalize;
 }
 
 /* FLEX */
@@ -257,9 +269,9 @@ div.game-wrapper {
   font-weight: normal;
 }
 
-.book * {
+/*.book * {
   font-weight: normal;
-}
+}*/
 
 .book > .page {
   box-sizing: border-box;
@@ -286,8 +298,8 @@ div.game-wrapper {
   justify-content: center;
 }
 
-.book .page-left .index {
-  margin-top: auto;
+.book .page-left .title.with-footer {
+  margin-top: 150px;
 }
 
 .book .page-left h1 {
@@ -312,8 +324,65 @@ div.game-wrapper {
 
 .book .page-right {
   font-size: 14px;
-  padding-left: 50px;
-  padding-right: 60px;
+  padding-left: 40px;
+  padding-right: 70px;
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.book .page-right .content {
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  justify-content: start;
+  margin-bottom: auto;
+}
+
+.book .page footer {
+  display: flex;
+  margin-top: auto;
+  width: 100%;
+}
+
+.book .page-left footer {
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.book .page-right footer {
+  justify-content: space-between;
+}
+
+.book .page footer a {
+  margin: 0 4px;
+  text-decoration: none;
+}
+
+.book .page-left .index {
+  margin-top: auto;
+}
+
+.book .page-right h2 {
+  margin-bottom: 10px;
+}
+
+.info-group {
+  margin-top: 30px;
+}
+
+.info-group:first-child {
+  margin-top: 0;
+}
+
+.entry-list div:last-child {
+  margin-bottom: 20px;
+}
+
+.entry-list > div p:last-child {
+  margin-bottom: 10px;
 }
 
 /* --------------------- */

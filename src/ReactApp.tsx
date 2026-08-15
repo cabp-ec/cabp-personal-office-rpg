@@ -8,10 +8,11 @@ import { GameScene } from './app/scenes/GameScene.ts';
 
 import FApp from './app';
 import { useElfSelector } from './app/hooks/useElf.ts';
-import { getDialoguesSet } from './app/utils/react.utils.tsx';
+import { getDialoguesSet } from './app/utils/reactUtils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
 import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
 import { DetailModal } from './components/organisms/detailModal/DetailModal.tsx';
+import { dialoguesKeys } from './app/enums/dialoguesKeys.ts';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -63,7 +64,7 @@ function ReactApp() {
   return (
     <>
       <DetailModal
-        dialogueKey={ 'education' }
+        dialogueKey={ dialoguesKeys.education }
         title={ 'Education' }
         curriculum={ candidateCurriculum }
       />
