@@ -5,6 +5,9 @@ import type { DialoguesSetType } from '../interfaces/DialogueSetType.ts';
 import FApp from '../index.ts';
 import type { EducationEntryInterface } from '../abstractions/education/EducationEntryInterface.ts';
 import type { CurriculumVitaeInterface } from '../abstractions/curriculumVitae/CurriculumVitaeInterface.ts';
+import type { ProfessionalExperienceInterface } from '../abstractions/professional/ProfessionalExperienceInterface.ts';
+import type { MeasurableResultInterface } from '../abstractions/professional/MeasurableResultInterface.ts';
+import type { StarInterface } from '../abstractions/professional/StarInterface.ts';
 
 export function renderReactApp() {
   const elRoot = document.getElementById('root');
@@ -47,17 +50,35 @@ export function separateEducationEntries(values: EducationEntryInterface[]): {
   );
 }
 
-export function getPrevAndNextTitles(needle: string, haystack: string[], curriculum: CurriculumVitaeInterface): {
-  prev: string | null,
-  next: string | null
+export function getPrevAndNextIndexes(needle: string, haystack: string[], curriculum: CurriculumVitaeInterface): {
+  prev: number | null,
+  next: number | null
 } | null {
   if (!haystack.includes(needle)) {
     return null;
   }
 
   const index = haystack.indexOf(needle);
-  const prevKey = haystack[index - 1] ?? null;
-  const nextKey = haystack[index + 1] ?? null;
+  const prevIndex = index - 1;
+  const nextIndex = index + 1;
+
+  return {
+    prev: prevIndex < 0 ? null : prevIndex,
+    next: nextIndex > (haystack.length - 1) ? null : nextIndex
+  };
+}
+
+export function getPrevAndNextTitles(
+  prevIndex: number | null,
+  nextIndex: number | null,
+  haystack: string[],
+  curriculum: CurriculumVitaeInterface
+): {
+  prev: string | null,
+  next: string | null
+} | null {
+  const prevKey = prevIndex ? haystack[prevIndex] : null;
+  const nextKey = nextIndex ? haystack[nextIndex] : null;
 
   // eslint-disable-next-line @typescript-eslint/ban-ts-comment
   // @ts-expect-error
@@ -68,4 +89,93 @@ export function getPrevAndNextTitles(needle: string, haystack: string[], curricu
   const next = nextKey ? curriculum[nextKey].title : null;
 
   return { prev, next };
+}
+
+const months = [
+  'January',
+  'February',
+  'March',
+  'April',
+  'May',
+  'June',
+  'July',
+  'August',
+  'September',
+  'October',
+  'November',
+  'December'
+];
+
+export function getMonthName(monthNumber: number, threeLetters: boolean = true): string | null {
+  if (monthNumber < 0 || monthNumber > 11) {
+    return null;
+  }
+
+  return threeLetters ? months[monthNumber].slice(0, 3).toUpperCase() : months[monthNumber];
+}
+
+export function getDateRange(experience: ProfessionalExperienceInterface): {
+  range: string | null,
+  tooltip: string | null
+} | null {
+  const startDateHasY = (experience.startDate && experience.startDate.year);
+  const startDateHasM = (experience.startDate && experience.startDate.month);
+  const startDateY = startDateHasY ? experience.startDate!.year : null;
+  const startDateM = (startDateHasY && startDateHasM) ? experience.startDate!.month : null;
+  const startDate = (startDateY && startDateM) ? `${ getMonthName(startDateM) } ${ startDateY }` : null;
+  const startDateTooltip = (startDateY && startDateM) ? `${ getMonthName(startDateM, false) } ${ startDateY }` : null;
+
+  const endDateHasY = (experience.endDate && experience.endDate.year);
+  const endDateHasM = (experience.endDate && experience.endDate.month);
+  const endDateY = endDateHasY ? experience.endDate!.year : null;
+  const endDateM = (endDateHasY && endDateHasM) ? experience.endDate!.month : null;
+  const endDate = (endDateY && endDateM) ? `${ getMonthName(endDateM) } ${ endDateY }` : null;
+  const endDateTooltip = (endDateY && endDateM) ? `${ getMonthName(endDateM, false) } ${ endDateY }` : null;
+
+  const range = (startDate && endDate) ? `${ startDate } - ${ endDate }` : null;
+  const tooltip = range ? `From ${ startDateTooltip } to ${ endDateTooltip }` : null;
+
+  return range ? { range, tooltip } : null;
+}
+
+export function capitalizeFirst(value: string) {
+  return `${ String(value).charAt(0).toUpperCase() }${ String(value).slice(1) }`;
+}
+
+export function getSingleMuStatement(mu: MeasurableResultInterface): string {
+  const unit = mu.unit
+    ? mu.useFullUnit ? `${ mu.unit.name } (${ mu.unit.symbol })` : mu.unit.symbol
+    : '';
+  const unitSpace = (unit && mu.spaceBeforeUnit === true) ? ' ' : '';
+  let output = '';
+
+  output += `${ mu.descriptorPrefix } `;
+  output += `${ mu.approxValue ? '~' : '' }${ mu.value }`;
+  output += `${ unitSpace }${ unit }`;
+  output += ` ${ mu.unitDescriptor }`;
+
+  return output.trim();
+}
+
+export function getMuStatement(mus: MeasurableResultInterface[], separator: string = 'and'): string {
+  const output: string[] = [];
+  mus.forEach(mu => output.push(getSingleMuStatement(mu)));
+
+  return output.join(` ${ separator } `).trim();
+}
+
+export function getActionStatement(actions: string[], closer: string = 'and'): string {
+  const lastSegment = actions.pop();
+  return `${ actions.join(', ') } ${ closer } ${ lastSegment }`;
+}
+
+export function getXyzStatement(star: StarInterface): string {
+  let output = '';
+
+  output += getMuStatement(star.results);
+  output += ' by ';
+  output += getActionStatement(star.actions);
+  output += '.';
+
+  return capitalizeFirst(output.trim());
 }

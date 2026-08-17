@@ -89,12 +89,12 @@
             "state": {
               "type": "markdown",
               "state": {
-                "file": "Anti-Bias & ATI Compliance.md",
+                "file": "How we handle XYZ.md",
                 "mode": "source",
                 "source": false
               },
               "icon": "lucide-file",
-              "title": "Anti-Bias & ATI Compliance"
+              "title": "How we handle XYZ"
             }
           }
         ],
@@ -237,9 +237,10 @@
       "command-palette:Open command palette": false
     }
   },
-  "active": "acd0e89f60feed27",
+  "active": "2dc42fca169b0520",
   "lastOpenFiles": [
     "Anti-Bias & ATI Compliance.md",
+    "How we handle XYZ.md",
     "Index.md",
     "Overview.md",
     "The Office.md",

@@ -1,6 +1,5 @@
-import type { EntityInterface } from '../interfaces/EntityInterface.ts';
+import type { NamedEntityInterface } from '../interfaces/NamedEntityInterface.ts';
 
-export interface InformationEntryInterface extends EntityInterface {
-  name: string;
+export interface InformationEntryInterface extends NamedEntityInterface {
   keywords: string[];
 }

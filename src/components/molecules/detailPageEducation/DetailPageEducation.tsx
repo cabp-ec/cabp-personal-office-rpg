@@ -8,7 +8,7 @@ export function DetailPageEducation({ data }: DetailPageEducationPropsInterface)
   const groupSubTitles = [false, true];
 
   return (
-    <div className="content test-border-red">
+    <div className="content w-100 test-border-red">
       {
         Object.keys(groups).map((groupKey, i) => {
           // eslint-disable-next-line @typescript-eslint/ban-ts-comment

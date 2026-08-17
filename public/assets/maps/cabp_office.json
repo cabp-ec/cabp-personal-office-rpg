@@ -1641,7 +1641,7 @@
             {
               "name": "dialogueKey",
               "type": "string",
-              "value": "fullProfessionalHistory"
+              "value": "professionalHistory"
             },
             {
               "name": "targetTileX",

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect } from 'react';
+import { useRef, useState, useEffect, type MouseEvent } from 'react';
 import { select } from '@ngneat/elf';
 
 import type { DialoguesSetType } from './app/interfaces/DialogueSetType.ts';
@@ -10,14 +10,16 @@ import FApp from './app';
 import { useElfSelector } from './app/hooks/useElf.ts';
 import { getDialoguesSet } from './app/utils/reactUtils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
+import DetailModal from './components/organisms/detailModal/DetailModal.tsx';
+import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
 import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
-import { DetailModal } from './components/organisms/detailModal/DetailModal.tsx';
-import { dialoguesKeys } from './app/enums/dialoguesKeys.ts';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
   const dialoguesSet = useElfSelector<DialoguesSetType>(getDialoguesSet);
-  const [currentDialogKey, setCurrentDialogKey] = useState<string | null>(null);
+  const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
+  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.professionalHistory);
+  const cvKeys = Object.keys(candidateCurriculum);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
     console.clear();
@@ -34,6 +36,11 @@ function ReactApp() {
       await scene.candidate.continueDialogue();
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
     }
+  };
+
+  const onDetailCloseClick = (e: MouseEvent<HTMLAnchorElement>): void => {
+    e.preventDefault();
+    setCurrentDetailKey(null);
   };
 
   /*useEffect(() => {
@@ -63,11 +70,12 @@ function ReactApp() {
 
   return (
     <>
-      <DetailModal
-        dialogueKey={ dialoguesKeys.education }
-        title={ 'Education' }
+      { currentDetailKey && <DetailModal
+        dialogueKey={ currentDetailKey }
+        cvKeys={ cvKeys }
         curriculum={ candidateCurriculum }
-      />
+        onCloseClick={ onDetailCloseClick }
+      /> }
 
       {/*<PlayerDialogue
         dialogueKey={ currentDialogKey }

@@ -82,7 +82,7 @@ body {
 
 /* MARGIN & PADDING */
 .m-0 {
-  margin: 0;
+  margin: 0 !important;
 }
 
 .mb-1 {
@@ -99,6 +99,11 @@ body {
 
 .p-2 {
   padding: 2em;
+}
+
+/* FONT */
+.fs-12 {
+  font-size: 12px;
 }
 
 /* TEXT */
@@ -304,8 +309,9 @@ div.game-wrapper {
 
 .book .page-left h1 {
   font-family: "Century Gothic", serif;
-  font-size: 2.8em;
+  font-size: 2.6em;
   letter-spacing: 2px;
+  text-align: center;
   text-transform: uppercase;
 }
 
@@ -371,6 +377,10 @@ div.game-wrapper {
 
 .info-group {
   margin-top: 30px;
+}
+
+.info-group header {
+  margin-bottom: 20px;
 }
 
 .info-group:first-child {

@@ -9,6 +9,7 @@
         "country": {
           "id": 1,
           "name": "Ecuador",
+          "dialCode": 593,
           "alpha3": "ECU"
         },
         "startDate": null,
@@ -19,7 +20,7 @@
         },
         "type": "formal",
         "level": 2,
-        "honors": [
+        "stars": [
           {
             "id": 1,
             "name": "Summa Cum Laude in Computer Sciences",
@@ -27,6 +28,7 @@
             "country": {
               "id": 1,
               "name": "Ecuador",
+              "dialCode": 593,
               "alpha3": "ECU"
             },
             "startDate": null,
@@ -50,6 +52,7 @@
         "country": {
           "id": 1,
           "name": "Ecuador",
+          "dialCode": 593,
           "alpha3": "ECU"
         },
         "startDate": null,
@@ -60,7 +63,7 @@
         },
         "type": "formal",
         "level": 3,
-        "honors": [],
+        "stars": [],
         "keywords": []
       },
       {
@@ -70,6 +73,7 @@
         "country": {
           "id": 1,
           "name": "Ecuador",
+          "dialCode": 593,
           "alpha3": "ECU"
         },
         "startDate": null,
@@ -80,7 +84,7 @@
         },
         "type": "certification",
         "level": null,
-        "honors": [],
+        "stars": [],
         "keywords": []
       },
       {
@@ -90,6 +94,7 @@
         "country": {
           "id": 1,
           "name": "Ecuador",
+          "dialCode": 593,
           "alpha3": "ECU"
         },
         "startDate": null,
@@ -100,7 +105,7 @@
         },
         "type": "certification",
         "level": null,
-        "honors": [],
+        "stars": [],
         "keywords": []
       },
       {
@@ -110,6 +115,7 @@
         "country": {
           "id": 2,
           "name": "Argentina",
+          "dialCode": 54,
           "alpha3": "ARG"
         },
         "startDate": {
@@ -124,7 +130,7 @@
         },
         "type": "formal",
         "level": 4,
-        "honors": [],
+        "stars": [],
         "keywords": []
       },
       {
@@ -134,6 +140,7 @@
         "country": {
           "id": 2,
           "name": "Argentina",
+          "dialCode": 54,
           "alpha3": "ARG"
         },
         "startDate": {
@@ -148,26 +155,47 @@
         },
         "type": "course",
         "level": null,
-        "honors": [],
+        "stars": [],
         "keywords": []
       }
     ]
   },
-  "fullProfessionalHistory": {
+  "professionalHistory": {
     "title": "Professional History",
     "data": [
       {
         "id": 1,
-        "name": "Senior Full-Stack Developer & SDET",
+        "name": "Senior Full-Stack Developer (FSD) & SDET",
         "organization": "Nisum",
-        "startDate": null,
-        "endDate": null,
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "dialCode": 593,
+          "alpha3": "ECU"
+        },
+        "startDate": {
+          "year": 2022,
+          "month": 5,
+          "day": 1
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 28
+        },
         "contractor": true,
         "remote": true,
         "projects": [
           {
             "id": 1,
-            "organization": "",
+            "name": "Compliance Platform",
+            "organization": "Kipu Health",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
             "startDate": {
               "year": 2025,
               "month": 2,
@@ -178,15 +206,253 @@
               "month": 2,
               "day": null
             },
-            "topFive": [
-              "Designed and engineered the cloud migration of legacy LAMP/Symfony applications to AWS, developing RESTful APIs with S3/MinIO storage and strict semantic versioning for seamless backward compatibility.",
-              "Refactored a critical scoring mechanism and optimized MySQL databases by eliminating nested loops and indexing tables, reducing latency by 50%, cutting regression bugs by 45%, and resolving severe memory spikes.",
-              "Migrated heavy business logic from the front-end to high-performance PHP backend services, successfully cutting peak processing times down to a 30–45 second range.",
-              "Engineered logging architectures to meet strict HIPAA standards, implementing robust data auditing across core FormIO modules and increasing form compliance ratings from 70% to over 80%.",
-              "Championed Agile engineering best practices by introducing robust design patterns, establishing a Playwright automated testing framework, and mentoring junior developers on clean code and code reviews."
+            "stars": [
+              {
+                "id": 1,
+                "context": {
+                  "situation": "Customer faced a migration of a legacy Symfony monolith to Amazon Web Services (AWS)",
+                  "tasks": [
+                    "Support the migration to AWS",
+                    "Integrate the platform with AWS S3"
+                  ]
+                },
+                "actions": [
+                  "integrating 10 system features with S3",
+                  "implementing MinIO for development environments",
+                  "creating a batch processing command to copy files"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 1,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 0,
+                    "descriptorPrefix": "achieved",
+                    "unitDescriptor": "downtime after migration"
+                  },
+                  {
+                    "id": 2,
+                    "unit": {
+                      "id": 2,
+                      "name": "Terabyte",
+                      "symbol": "TB"
+                    },
+                    "useFullUnit": true,
+                    "spaceBeforeUnit": true,
+                    "value": 12,
+                    "descriptorPrefix": "completed the transfer of",
+                    "unitDescriptor": "of data (clinical compliance, system and user-generated files, usage and telemetry logs)",
+                    "approxValue": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "context": {
+                  "situation": "Platform had performance issues before a major version migration",
+                  "tasks": [
+                    "Identify and resolve bottlenecks"
+                  ]
+                },
+                "actions": [
+                  "normalizing + optimizing (indexing, queries, etc.) a MySQL database",
+                  "applying good practices and design patterns",
+                  "migrating heavy business logic from the front-end to high-performance backend services"
+                ],
+                "results": [
+                  {
+                    "id": 3,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 50,
+                    "descriptorPrefix": "stabilized a HIPAA-compliant production environment as measured by over",
+                    "unitDescriptor": "drop in peak resource utilization and zero subsequent server failures",
+                    "approxValue": false
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "context": {
+                  "situation": "Teams were facing a company-wide migration from Cypress to Playwright",
+                  "tasks": [
+                    "Implement Playwright for the compliance platform"
+                  ]
+                },
+                "actions": [
+                  "creating a framework-agnostic Playwright + TypeScript end-to-end test framework from scratch",
+                  "designing a sequential test-chaining engine that mirrors end-to-end user journeys",
+                  "creating a seamless database-agnostic data-hydration pipeline"
+                ],
+                "results": [
+                  {
+                    "id": 4,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 100,
+                    "descriptorPrefix": "achieved a",
+                    "unitDescriptor": "adoption across 4 departments (EMR/EHR, CRM, RCM, GRC) as foundation for a company-wide migration towards Playwright",
+                    "approxValue": false
+                  }
+                ]
+              }
             ],
             "technologies": [],
-            "keywords": []
+            "keywords": [
+              "LAMP",
+              "AWS",
+              "GitHub Actions",
+              "MySQL"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Taxation API",
+            "organization": "Toast Inc.",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
+            "startDate": {
+              "year": 2025,
+              "month": 2,
+              "day": null
+            },
+            "endDate": {
+              "year": 2026,
+              "month": 2,
+              "day": null
+            },
+            "stars": [
+              {
+                "id": 1,
+                "context": {
+                  "situation": "Customer faced a migration of a legacy Symfony monolith to Amazon Web Services (AWS)",
+                  "tasks": [
+                    "Support the migration to AWS",
+                    "Integrate the platform with AWS S3"
+                  ]
+                },
+                "actions": [
+                  "integrating 10 system features with S3",
+                  "implementing MinIO for development environments",
+                  "creating a batch processing command to copy files"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 1,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 0,
+                    "descriptorPrefix": "achieved",
+                    "unitDescriptor": "downtime after migration"
+                  },
+                  {
+                    "id": 2,
+                    "unit": {
+                      "id": 2,
+                      "name": "Terabyte",
+                      "symbol": "TB"
+                    },
+                    "useFullUnit": true,
+                    "spaceBeforeUnit": true,
+                    "value": 12,
+                    "descriptorPrefix": "completed the transfer of",
+                    "unitDescriptor": "of data (clinical compliance, system and user-generated files, usage and telemetry logs)",
+                    "approxValue": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "context": {
+                  "situation": "Platform had performance issues before a major version migration",
+                  "tasks": [
+                    "Identify and resolve bottlenecks"
+                  ]
+                },
+                "actions": [
+                  "normalizing + optimizing (indexing, queries, etc.) a MySQL database",
+                  "applying good practices and design patterns",
+                  "migrating heavy business logic from the front-end to high-performance backend services"
+                ],
+                "results": [
+                  {
+                    "id": 3,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 50,
+                    "descriptorPrefix": "stabilized a HIPAA-compliant production environment as measured by over",
+                    "unitDescriptor": "drop in peak resource utilization and zero subsequent server failures",
+                    "approxValue": false
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "context": {
+                  "situation": "Teams were facing a company-wide migration from Cypress to Playwright",
+                  "tasks": [
+                    "Implement Playwright for the compliance platform"
+                  ]
+                },
+                "actions": [
+                  "creating a framework-agnostic Playwright + TypeScript end-to-end test framework from scratch",
+                  "designing a sequential test-chaining engine that mirrors end-to-end user journeys",
+                  "creating a seamless database-agnostic data-hydration pipeline"
+                ],
+                "results": [
+                  {
+                    "id": 4,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 100,
+                    "descriptorPrefix": "achieved a",
+                    "unitDescriptor": "adoption across 4 departments (EMR/EHR, CRM, RCM, GRC) as foundation for a company-wide migration towards Playwright",
+                    "approxValue": false
+                  }
+                ]
+              }
+            ],
+            "technologies": [],
+            "keywords": [
+              "LAMP",
+              "AWS",
+              "GitHub Actions",
+              "MySQL"
+            ]
           }
         ],
         "keywords": []
@@ -362,7 +628,7 @@
             "answer": 1,
             "focusReading": 100
           },
-          "fullProfessionalHistory": {
+          "professionalHistory": {
             "answer": 1,
             "focusReading": 100
           },

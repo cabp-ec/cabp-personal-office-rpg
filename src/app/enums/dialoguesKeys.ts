@@ -5,7 +5,7 @@ export const dialoguesKeys = {
   education: 'education',
   internetSpeed: 'internetSpeed',
   contactMe: 'contactMe',
-  fullProfessionalHistory: 'fullProfessionalHistory',
+  professionalHistory: 'professionalHistory',
   whatILikeToRead: 'whatILikeToRead',
   musicILike: 'musicILike',
   whatImDoingNow: 'whatImDoingNow',

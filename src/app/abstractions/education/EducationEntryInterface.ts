@@ -5,5 +5,5 @@ import type { OrganizationalEntryInterface } from '../OrganizationalEntryInterfa
 export interface EducationEntryInterface extends OrganizationalEntryInterface {
   type: EducationType;
   level: 1 | 2 | 3 | 4 | null;
-  honors: EducationalHonorInterface[];
+  stars: EducationalHonorInterface[];
 }
