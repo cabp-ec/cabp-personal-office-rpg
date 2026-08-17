@@ -1,3 +1,69 @@
+import FApp from '../../../app';
+import type { EducationInfoGroupsInterface } from '../../../app/services/CurriculumService.ts';
+import { capitalizeFirst, getXyzStatement } from '../../../app/utils/reactUtils.tsx';
+import type {
+  ProfessionalExperienceInterface
+} from '../../../app/abstractions/professional/ProfessionalExperienceInterface.ts';
+
+function DetailPageProfessionalHistory() {
+  const renderData = FApp.curriculumService.getProfessionalExperiences();
+  console.warn('renderData', renderData);
+
+  return (
+    <>
+      <div className="content text-dark w-100 test-border-red">
+        {
+          renderData.map((experience, ei) => {
+            return (
+              <div key={ `key_ei_${ ei }` } className="info-group">
+                <header>
+                  <h2 className="m-0">{ capitalizeFirst(experience.name) }</h2>
+                </header>
+
+                <div className="entry-list">
+                  {
+                    experience.projects.map((project, pi) => {
+                      return (
+                        <div key={ `key_pi_${ pi }` } className="mb-2">
+                          <h3 className="m-0">{ project.name }, { project.endDate!.year }</h3>
+                          <p>{ project.organization }, { project.country.name }</p>
+                          <ul className="fs-12">
+                            {
+                              project.stars.map((star, psi) => {
+                                return (
+                                  <li key={ `key_peps_${ psi }` }>
+                                    { getXyzStatement(star) }
+                                  </li>
+                                );
+                              })
+                            }
+                          </ul>
+                        </div>
+                      );
+                    })
+                  }
+                </div>
+              </div>
+            );
+          })
+        }
+      </div>
+
+      <footer>
+        <div>
+          <a href="#" title="PREVIOUS EXPERIENCE" className="text-dark">[↶]</a>
+          <a href="#" title="PREVIOUS PROJECT" className="text-dark">[←]</a>
+        </div>
+        <div>
+          <a href="#" title="NEXT PROJECT" className="text-dark">[→]</a>
+          <a href="#" title="NEXT EXPERIENCE" className="text-dark">[↷]</a>
+        </div>
+      </footer>
+    </>
+  );
+}
+
+/*
 import { useState } from 'react';
 import type { DetailPageProfessionalHistoryPropsInterface } from './DetailPageProfessionalHistoryPropsInterface.ts';
 import { getDateRange, getXyzStatement } from '../../../app/utils/reactUtils.tsx';
@@ -90,5 +156,8 @@ function DetailPageProfessionalHistory({ data, showExperiencePager }: DetailPage
     </>
   );
 }
+
+export default DetailPageProfessionalHistory;
+*/
 
 export default DetailPageProfessionalHistory;

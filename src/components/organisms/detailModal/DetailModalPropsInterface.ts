@@ -1,11 +1,8 @@
-import { type MouseEvent } from 'react';
-import type { DialoguesKeysType } from '../../../app/enums/dialoguesKeys.ts';
-import type { CurriculumVitaeInterface } from '../../../app/abstractions/curriculumVitae/CurriculumVitaeInterface.ts';
+import type { MouseEvent, ReactNode } from 'react';
 
 export interface DetailModalPropsInterface {
-  dialogueKey: DialoguesKeysType;
-  cvKeys: string[];
-  curriculum: CurriculumVitaeInterface;
+  title: string;
+  children: ReactNode;
   onCloseClick: (e: MouseEvent<HTMLAnchorElement>) => void;
-  // shortVersion: boolean;
+  subTitle?: string;
 }

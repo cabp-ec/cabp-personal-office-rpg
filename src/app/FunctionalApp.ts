@@ -3,6 +3,7 @@ import { Api } from './api/Api.ts';
 import { StoreService } from './services/StoreService.ts';
 import { UIService } from './services/UIService.ts';
 import { GameService } from './services/GameService.ts';
+import { CurriculumService } from './services/CurriculumService.ts';
 import { renderReactApp } from './utils/reactUtils.tsx';
 
 const FunctionalApp = function (): AppInterface {
@@ -15,12 +16,14 @@ const FunctionalApp = function (): AppInterface {
     readonly store: StoreService;
     readonly uiService: UIService;
     readonly gameService: GameService;
+    readonly curriculumService: CurriculumService;
 
     constructor() {
       this.#api = new Api();
       this.store = new StoreService();
       this.uiService = new UIService(this.store.ui);
       this.gameService = new GameService();
+      this.curriculumService = new CurriculumService(this.store);
     }
 
     /**

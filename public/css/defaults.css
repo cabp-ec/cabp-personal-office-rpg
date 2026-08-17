@@ -345,6 +345,8 @@ div.game-wrapper {
   align-items: start;
   justify-content: start;
   margin-bottom: auto;
+  overflow-y: auto;
+  overflow-x: hidden;
 }
 
 .book .page footer {

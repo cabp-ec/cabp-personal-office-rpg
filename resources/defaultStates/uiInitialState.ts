@@ -6,5 +6,5 @@ export const uiInitialState: UiStateInterface = {
   splashScreenOn: false,
   playerDialogueOn: false,
   currentDialogueKey: dialoguesKeys.introductions,
-  currentOption: null
+  currentOption: null,
 };

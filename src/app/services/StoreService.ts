@@ -16,6 +16,8 @@ import { uiInitialState } from '../../../resources/defaultStates/uiInitialState.
 import { sessionInitialState } from '../../../resources/defaultStates/sessionInitialState.ts';
 import { anonymousUser } from '../../../resources/staticData/anonymousUser.ts';
 import { dialoguesSet } from '../../../resources/staticData/dialoguesSet.ts';
+import type { ProfessionalExperienceInterface } from '../abstractions/professional/ProfessionalExperienceInterface.ts';
+import type { EducationEntryInterface } from '../abstractions/education/EducationEntryInterface.ts';
 
 export class StoreService implements ServiceInterface {
   #initialized = false;
@@ -25,6 +27,8 @@ export class StoreService implements ServiceInterface {
   dialogues: PropsStoreInterface;
   countries: EntityStore;
   cities: EntityStore;
+  educationExperiences: EntityStore;
+  experiences: EntityStore;
 
   /**
    * The StoreService class
@@ -36,12 +40,16 @@ export class StoreService implements ServiceInterface {
     this.cities = new EntityStore(storesAvail.cities, withEntities<NamedEntityInterface>(), []);
     this.session = new PropsStore(storesAvail.session, withProps<SessionInterface>(sessionInitialState));
     this.dialogues = new PropsStore(storesAvail.dialogues, withProps<DialoguesSetType>(dialoguesSet));
+    this.educationExperiences = new EntityStore(storesAvail.educationExperiences, withEntities<EducationEntryInterface>(), []);
+    this.experiences = new EntityStore(storesAvail.experiences, withEntities<ProfessionalExperienceInterface>(), []);
   }
 
   public initialize(initialStateData: InitialStateInterface): void {
     this.countries.set<CountryEntityInterface>(initialStateData.countries);
     this.user.set(initialStateData.user);
     this.session.set(initialStateData.session);
+    this.educationExperiences.set(initialStateData.candidateCurriculum.education.data);
+    this.experiences.set(initialStateData.candidateCurriculum.professionalHistory.data);
     this.#initialized = true;
   }
 

@@ -1,4 +1,4 @@
-import { useRef, useState, useEffect, type MouseEvent } from 'react';
+import { useRef, useState, useEffect, type MouseEvent, type ReactNode } from 'react';
 import { select } from '@ngneat/elf';
 
 import type { DialoguesSetType } from './app/interfaces/DialogueSetType.ts';
@@ -13,6 +13,9 @@ import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue
 import DetailModal from './components/organisms/detailModal/DetailModal.tsx';
 import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
 import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
+import { DetailPageEducation } from './components/molecules/detailPageEducation/DetailPageEducation.tsx';
+import DetailPageProfessionalHistory
+  from './components/molecules/detailPageProfessionalHistory/DetailPageProfessionalHistory.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -43,6 +46,17 @@ function ReactApp() {
     setCurrentDetailKey(null);
   };
 
+  const renderDetailPage = (): ReactNode => {
+    switch (currentDetailKey) {
+      case dialoguesKeys.education:
+        return <DetailPageEducation/>;
+      case dialoguesKeys.professionalHistory:
+        return <DetailPageProfessionalHistory/>
+    }
+
+    return null;
+  };
+
   /*useEffect(() => {
     // Pipe the reactive stream from Elf into your local state setter
     const subscription = FApp.store.ui
@@ -70,12 +84,14 @@ function ReactApp() {
 
   return (
     <>
-      { currentDetailKey && <DetailModal
-        dialogueKey={ currentDetailKey }
-        cvKeys={ cvKeys }
-        curriculum={ candidateCurriculum }
-        onCloseClick={ onDetailCloseClick }
-      /> }
+      {
+        <DetailModal
+          title={ 'education' }
+          onCloseClick={ onDetailCloseClick }
+        >
+          { renderDetailPage() }
+        </DetailModal>
+      }
 
       {/*<PlayerDialogue
         dialogueKey={ currentDialogKey }

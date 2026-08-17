@@ -1,28 +1,35 @@
-import type { DetailPageEducationPropsInterface } from './DetailPageEducationPropsInterface.ts';
-import { separateEducationEntries } from '../../../app/utils/reactUtils.tsx';
-import { InfoGroup } from '../infoGroup/InfoGroup.tsx';
+import type { EducationInfoGroupsInterface } from '../../../app/services/CurriculumService.ts';
+import { capitalizeFirst } from '../../../app/utils/reactUtils.tsx';
+import FApp from '../../../app';
 
-export function DetailPageEducation({ data }: DetailPageEducationPropsInterface) {
-  const groups = separateEducationEntries(data);
-  const groupTitles = ['Formal Education', 'Other'];
-  const groupSubTitles = [false, true];
+export function DetailPageEducation() {
+  const renderData = FApp.curriculumService.getEducationRenderData();
 
   return (
-    <div className="content w-100 test-border-red">
+    <div className="content text-dark w-100 test-border-red">
       {
-        Object.keys(groups).map((groupKey, i) => {
-          // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-          // @ts-expect-error
-          const g = groups[groupKey];
-          const s = groupSubTitles[i];
+        Object.keys(renderData).map((groupKey, i) => {
+          const group = renderData[groupKey as keyof EducationInfoGroupsInterface];
 
           return (
-            <InfoGroup
-              key={ `key_ig_${ i }` }
-              title={ groupTitles[i] }
-              group={ g }
-              subTitleKey={ s ? 'type' : null }
-            />
+            <div key={ `key_ig_${ i }` } className="info-group">
+              <header>
+                <h2 className="m-0">{ capitalizeFirst(group.title) }</h2>
+              </header>
+
+              <div className="entry-list">
+                {
+                  group.data.map((entry, ii) => {
+                    return (
+                      <div key={ `key_if_${ ii }` } className="mb-2">
+                        <h3 className="m-0">{ entry.name }, { entry.endDate!.year }</h3>
+                        <p>{ entry.organization }, { entry.country.name }</p>
+                      </div>
+                    );
+                  })
+                }
+              </div>
+            </div>
           );
         })
       }

@@ -8,6 +8,9 @@ export const storesAvail = {
   cities: 'cities',
   playerObjectives: 'playerObjectives',
   gameState: 'gameState',
+  educationHeader: 'educationHeader',
+  educationExperiences: 'educationExperiences',
+  experiences: 'experiences'
 };
 
 export type StoresAvailType = typeof storesAvail[keyof typeof storesAvail];
