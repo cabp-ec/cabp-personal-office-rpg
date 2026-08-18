@@ -61,10 +61,17 @@ function Achievements() {
         </li>
 
         <li className="my-1">
-          <h5 className="">Customer</h5>
-          <h5 className="">Reason: International Regulatory Compliance (SARFT)</h5>
-          <h5 className="fs-12">Financial Bonus: no</h5>
-          <p className="fs-12">Exceptional autonomy and foresight, preemptively auditing and engineering search metadata for The Guillotines movie micro-site to achieve flawless compliance under an overnight deadline.</p>
+          <h5 className="">Customer: City Oriente Ltd. (2007)</h5>
+          <h5 className="">Reason: Technical Excellence</h5>
+          <h5 className="fs-12">Financial Bonus: yes</h5>
+          <p className="fs-12">Engineered a mission-critical oil production system, securing secured 100% regulatory compliance as Ecuador’s only on-time oil firm during a nationwide calculation update.</p>
+        </li>
+
+        <li className="my-1">
+          <h5 className="">Customer: Coopseguros (2006)</h5>
+          <h5 className="">Reason: Technical Excellence & Problem Solving</h5>
+          <h5 className="fs-12">Financial Bonus: yes</h5>
+          <p className="fs-12">Secured a double performance bonus by engineering a first-of-its-kind web-desktop hybrid intranet seamlessly integrating with Windows and Active Directory for a 100% employee SSO.</p>
         </li>
       </ul>
     </div>
