@@ -17,12 +17,13 @@ import { DetailPageEducation } from './components/molecules/detailPageEducation/
 import RecentHistory from './components/molecules/RecentHistory.tsx';
 import ProfessionalHistory from './components/molecules/detailPageProfessionalHistory/ProfessionalHistory.tsx';
 import CurrentActivities from './components/molecules/CurrentActivities.tsx';
+import Achievements from './components/molecules/Achievements.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
   const dialoguesSet = useElfSelector<DialoguesSetType>(getDialoguesSet);
   const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
-  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.whatImDoingNow);
+  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.professionalAchievements);
   const cvKeys = Object.keys(candidateCurriculum);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
@@ -57,6 +58,8 @@ function ReactApp() {
         return 'Recent History';
       case dialoguesKeys.whatImDoingNow:
         return 'Current Projects';
+      case dialoguesKeys.professionalAchievements:
+        return 'Professional Achievements';
     }
 
     return '';
@@ -72,6 +75,8 @@ function ReactApp() {
         return <RecentHistory/>;
       case dialoguesKeys.whatImDoingNow:
         return <CurrentActivities/>;
+      case dialoguesKeys.professionalAchievements:
+        return <Achievements/>;
     }
 
     return null;

@@ -85,6 +85,10 @@ body {
   margin: 0 !important;
 }
 
+.my-1 {
+  margin: 1em auto;
+}
+
 .mb-1 {
   margin: 0 0 1em 0;
 }

@@ -774,6 +774,34 @@
       }
     ]
   },
+  "professionalAchievements": {
+    "title": "Professional Achievements",
+    "data": [
+      {
+        "id": 1,
+        "title": "Playwright Testing Framework",
+        "situation": [
+          "Multiple features had 0% test coverage.",
+          "Bugs re-appeared from time to time.",
+          "Ent-2-End testing was nonexistent."
+        ],
+        "task": "Integrate Playwright into the Compliance Platform (i.e. a Symfony monolith).",
+        "actions": [
+          "Architectured and implemented a framework-agnostic Playwright + TypeScript E2E testing and test strategy from scratch.",
+          "Created a database-agnostic data-hydration pipeline paired with local MinIO storage, AWS S3 for production and GitHub Actions.",
+          "Included a sequential test-chaining engine that mirrors end-to-end user journeys using Gherkin."
+        ],
+        "results": [
+          "Eliminated manual regression testing.",
+          "Introduced smoke testing.",
+          "Reduced manual testing overhead.",
+          "Ensured test coverage of medical compliance features from 0% to 83.3%",
+          "My framework became the company-wide E2E framework for Symfony and Ruby on Rails."
+        ],
+        "keywords": []
+      }
+    ]
+  },
   "whatImDoingNow": {
     "title": "What He's Doing Now",
     "data": [
@@ -809,34 +837,6 @@
       {
         "id": 1,
         "name": "System of a Down",
-        "keywords": []
-      }
-    ]
-  },
-  "professionalAchievements": {
-    "title": "Professional Achievements",
-    "data": [
-      {
-        "id": 1,
-        "title": "Playwright Testing Framework",
-        "situation": [
-          "Multiple features had 0% test coverage.",
-          "Bugs re-appeared from time to time.",
-          "Ent-2-End testing was nonexistent."
-        ],
-        "task": "Integrate Playwright into the Compliance Platform (i.e. a Symfony monolith).",
-        "actions": [
-          "Architectured and implemented a framework-agnostic Playwright + TypeScript E2E testing and test strategy from scratch.",
-          "Created a database-agnostic data-hydration pipeline paired with local MinIO storage, AWS S3 for production and GitHub Actions.",
-          "Included a sequential test-chaining engine that mirrors end-to-end user journeys using Gherkin."
-        ],
-        "results": [
-          "Eliminated manual regression testing.",
-          "Introduced smoke testing.",
-          "Reduced manual testing overhead.",
-          "Ensured test coverage of medical compliance features from 0% to 83.3%",
-          "My framework became the company-wide E2E framework for Symfony and Ruby on Rails."
-        ],
         "keywords": []
       }
     ]
