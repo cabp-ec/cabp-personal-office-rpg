@@ -108,7 +108,7 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
 </data>
  </layer>
- <objectgroup id="11" name="triggers" locked="1">
+ <objectgroup id="11" name="triggers">
   <object id="4" name="My Education" x="128" y="32" width="96" height="32">
    <properties>
     <property name="actionKey" value="triggerDetailModal"/>
@@ -158,12 +158,12 @@
     <property name="targetTileY" type="int" value="4"/>
    </properties>
   </object>
-  <object id="11" name="Recent Professional History" x="448" y="64" width="32" height="32">
+  <object id="11" name="Recent History" x="448" y="64" width="32" height="32">
    <properties>
     <property name="actionKey" value="triggerDetailModal"/>
     <property name="actionableAfterSpeech" type="bool" value="true"/>
     <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="recentProfessionalHistory"/>
+    <property name="dialogueKey" value="recentHistory"/>
     <property name="targetTileX" type="int" value="13"/>
     <property name="targetTileY" type="int" value="4"/>
    </properties>

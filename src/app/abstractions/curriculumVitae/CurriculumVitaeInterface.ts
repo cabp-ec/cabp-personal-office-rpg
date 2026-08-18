@@ -4,4 +4,5 @@ import type { ProfessionalExperienceCvEntryInterface } from '../professional/Pro
 export interface CurriculumVitaeInterface {
   education: EducationCvEntryInterface;
   professionalHistory: ProfessionalExperienceCvEntryInterface;
+  recentHistory: ProfessionalExperienceCvEntryInterface;
 }

@@ -130,3 +130,18 @@ Visitor leaves the office with all the material he needs:
 3. Permalink to the candidate's profile
 
 ---
+- X:
+	- anti-bias (ATI-Fair) and anti-fraud ecosystem
+	- Neutralization of Cognitive Screening Bias
+- Y: 
+	- eliminating the 6-second review bias
+	- effective built-in bot and scraping defenses
+- Z:
+	- applying an inverted gamification architecture via "monomyth design" using Christopher Vogler’s narrative framework
+	- replacing rapid-scan resume skimming with spatial exploration of a digital-twin home-office
+
+You're looking at it! A new anti-bias (ATI-Fair) and anti-fraud résumé reading ecosystem which neutralizes the cognitive screening bias, measured by the 100% elimination of the 6-second review bias and effective built-in bot and scraping defenses, by applying an inverted gamification architecture via "monomyth design" using Christopher Vogler’s narrative framework and replacing rapid-scan resume skimming with spatial exploration of a digital-twin home-office.
+
+
+
+---

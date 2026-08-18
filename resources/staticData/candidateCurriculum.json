@@ -160,6 +160,313 @@
       }
     ]
   },
+  "recentHistory": {
+    "title": "Recent History",
+    "data": [
+      {
+        "id": 1,
+        "name": "Full-Stack Developer (FSD) & SDET",
+        "organization": "Nisum",
+        "seniority": "Senior",
+        "country": {
+          "id": 1,
+          "name": "Ecuador",
+          "dialCode": 593,
+          "alpha3": "ECU"
+        },
+        "startDate": {
+          "year": 2022,
+          "month": 5,
+          "day": 1
+        },
+        "endDate": {
+          "year": 2026,
+          "month": 2,
+          "day": 28
+        },
+        "contractor": true,
+        "remote": true,
+        "projects": [
+          {
+            "id": 1,
+            "name": "Compliance Platform (Migration to AWS)",
+            "status": "Successfully Finished",
+            "fixedTerm": true,
+            "organization": "Kipu Health",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
+            "startDate": {
+              "year": 2025,
+              "month": 2,
+              "day": null
+            },
+            "endDate": {
+              "year": 2026,
+              "month": 2,
+              "day": null
+            },
+            "stars": [
+              {
+                "id": 1,
+                "context": {
+                  "situation": "Customer faced a migration of a legacy Symfony monolith to Amazon Web Services (AWS)",
+                  "tasks": [
+                    "Support the migration to AWS",
+                    "Integrate the platform with AWS S3"
+                  ]
+                },
+                "actions": [
+                  "integrating 10 system features with S3",
+                  "implementing MinIO for development environments",
+                  "creating a batch processing command to copy files"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 1,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 0,
+                    "descriptorPrefix": "achieved",
+                    "unitDescriptor": "downtime after migration"
+                  },
+                  {
+                    "id": 2,
+                    "unit": {
+                      "id": 2,
+                      "name": "Terabyte",
+                      "symbol": "TB"
+                    },
+                    "useFullUnit": true,
+                    "spaceBeforeUnit": true,
+                    "value": 12,
+                    "descriptorPrefix": "completed the transfer of",
+                    "unitDescriptor": "of data (clinical compliance, system and user-generated files, usage and telemetry logs)",
+                    "approxValue": true
+                  }
+                ]
+              },
+              {
+                "id": 2,
+                "context": {
+                  "situation": "Platform had performance issues before a major version migration",
+                  "tasks": [
+                    "Identify and resolve bottlenecks"
+                  ]
+                },
+                "actions": [
+                  "normalizing + optimizing (indexing, queries, etc.) a MySQL database",
+                  "applying good practices and design patterns",
+                  "migrating heavy business logic from the front-end to high-performance backend services"
+                ],
+                "results": [
+                  {
+                    "id": 3,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 50,
+                    "descriptorPrefix": "stabilized a HIPAA-compliant production environment as measured by over",
+                    "unitDescriptor": "drop in peak resource utilization and zero subsequent server failures",
+                    "approxValue": false
+                  }
+                ]
+              },
+              {
+                "id": 3,
+                "context": {
+                  "situation": "Teams were facing a company-wide migration from Cypress to Playwright",
+                  "tasks": [
+                    "Implement Playwright for the compliance platform"
+                  ]
+                },
+                "actions": [
+                  "creating a framework-agnostic Playwright + TypeScript end-to-end test framework from scratch",
+                  "designing a sequential test-chaining engine that mirrors end-to-end user journeys",
+                  "creating a seamless database-agnostic data-hydration pipeline"
+                ],
+                "results": [
+                  {
+                    "id": 4,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 100,
+                    "descriptorPrefix": "achieved a",
+                    "unitDescriptor": "adoption across 4 departments (EMR/EHR, CRM, RCM, GRC) as foundation for a company-wide migration towards Playwright",
+                    "approxValue": false
+                  }
+                ]
+              }
+            ],
+            "technologies": [],
+            "keywords": [
+              "LAMP",
+              "AWS",
+              "GitHub Actions",
+              "MySQL"
+            ]
+          },
+          {
+            "id": 2,
+            "name": "Taxation API - Project Recovery",
+            "status": "Successfully Finished",
+            "fixedTerm": true,
+            "organization": "Toast Inc.",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
+            "startDate": {
+              "year": 2024,
+              "month": 3,
+              "day": null
+            },
+            "endDate": {
+              "year": 2024,
+              "month": 8,
+              "day": null
+            },
+            "stars": [
+              {
+                "id": 6,
+                "context": {
+                  "situation": "Customer faced an integration with Vertex",
+                  "tasks": [
+                    "Test the new API and its integration with Vertex"
+                  ]
+                },
+                "actions": [
+                  "introducing the trust triangle as part of customer relationship management",
+                  "leading the integration with Vertex Tax Technology"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 100,
+                    "descriptorPrefix": "rescued a high-risk, failing taxation API project within an Agile/Scrum environment, measured by a",
+                    "unitDescriptor": "deficit recovery and on-time production deployment"
+                  }
+                ]
+              },
+              {
+                "id": 5,
+                "context": {
+                  "situation": "Customer faced an integration with Vertex",
+                  "tasks": [
+                    "Test the new API and its integration with Vertex"
+                  ]
+                },
+                "actions": [
+                  "introducing the trust triangle as part of customer relationship management",
+                  "leading the integration with Vertex Tax Technology"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": null,
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 1,
+                    "descriptorPrefix": "restored customer relations, measured by",
+                    "unitDescriptor": "customer commendation for trust building and leadership"
+                  }
+                ]
+              }
+            ],
+            "technologies": [],
+            "keywords": [
+              "LAMP",
+              "AWS",
+              "GitHub Actions",
+              "MySQL"
+            ]
+          },
+          {
+            "id": 3,
+            "name": "Clinical Trials",
+            "status": "Cancelled",
+            "fixedTerm": false,
+            "organization": "Science37",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
+            "startDate": {
+              "year": 2024,
+              "month": 3,
+              "day": null
+            },
+            "endDate": {
+              "year": 2024,
+              "month": 8,
+              "day": null
+            },
+            "stars": [
+              {
+                "id": 6,
+                "context": {
+                  "situation": "Customer faced an integration with Vertex",
+                  "tasks": [
+                    "Test the new API and its integration with Vertex"
+                  ]
+                },
+                "actions": [
+                  "identifying and fixing bottlenecks",
+                  "implementing localization"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 30,
+                    "descriptorPrefix": "earned a customer commendation for quickly achieving a",
+                    "unitDescriptor": "reduction in front-end rendering latency for Next.js in an AWS infrastructure"
+                  }
+                ]
+              }
+            ],
+            "technologies": [],
+            "keywords": []
+          }
+        ],
+        "keywords": []
+      }
+    ]
+  },
   "professionalHistory": {
     "title": "Professional History",
     "data": [
@@ -467,16 +774,6 @@
       }
     ]
   },
-  "musicILike": {
-    "title": "Music",
-    "data": [
-      {
-        "id": 1,
-        "name": "System of a Down",
-        "keywords": []
-      }
-    ]
-  },
   "whatImDoingNow": {
     "title": "What He's Doing Now",
     "data": [
@@ -502,6 +799,16 @@
             "href": "https://office.carlos-bucheli.com/products/charlies-little-office"
           }
         ],
+        "keywords": []
+      }
+    ]
+  },
+  "musicILike": {
+    "title": "Music",
+    "data": [
+      {
+        "id": 1,
+        "name": "System of a Down",
         "keywords": []
       }
     ]
@@ -648,7 +955,7 @@
             "answer": 1,
             "focusReading": 100
           },
-          "recentProfessionalHistory": {
+          "recentHistory": {
             "answer": 1,
             "focusReading": 100
           },

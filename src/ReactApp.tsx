@@ -14,14 +14,15 @@ import DetailModal from './components/organisms/detailModal/DetailModal.tsx';
 import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
 import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
 import { DetailPageEducation } from './components/molecules/detailPageEducation/DetailPageEducation.tsx';
-import DetailPageProfessionalHistory
-  from './components/molecules/detailPageProfessionalHistory/DetailPageProfessionalHistory.tsx';
+import RecentHistory from './components/molecules/RecentHistory.tsx';
+import ProfessionalHistory from './components/molecules/detailPageProfessionalHistory/ProfessionalHistory.tsx';
+import CurrentActivities from './components/molecules/CurrentActivities.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
   const dialoguesSet = useElfSelector<DialoguesSetType>(getDialoguesSet);
   const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
-  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.professionalHistory);
+  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.whatImDoingNow);
   const cvKeys = Object.keys(candidateCurriculum);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
@@ -52,6 +53,10 @@ function ReactApp() {
         return 'Education';
       case dialoguesKeys.professionalHistory:
         return 'PageProfessional History';
+      case dialoguesKeys.recentHistory:
+        return 'Recent History';
+      case dialoguesKeys.whatImDoingNow:
+        return 'Current Projects';
     }
 
     return '';
@@ -62,7 +67,11 @@ function ReactApp() {
       case dialoguesKeys.education:
         return <DetailPageEducation/>;
       case dialoguesKeys.professionalHistory:
-        return <DetailPageProfessionalHistory/>;
+        return <ProfessionalHistory/>;
+      case dialoguesKeys.recentHistory:
+        return <RecentHistory/>;
+      case dialoguesKeys.whatImDoingNow:
+        return <CurrentActivities/>;
     }
 
     return null;
