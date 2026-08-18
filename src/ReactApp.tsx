@@ -46,12 +46,23 @@ function ReactApp() {
     setCurrentDetailKey(null);
   };
 
+  const getPageTitle = (): string => {
+    switch (currentDetailKey) {
+      case dialoguesKeys.education:
+        return 'Education';
+      case dialoguesKeys.professionalHistory:
+        return 'PageProfessional History';
+    }
+
+    return '';
+  };
+
   const renderDetailPage = (): ReactNode => {
     switch (currentDetailKey) {
       case dialoguesKeys.education:
         return <DetailPageEducation/>;
       case dialoguesKeys.professionalHistory:
-        return <DetailPageProfessionalHistory/>
+        return <DetailPageProfessionalHistory/>;
     }
 
     return null;
@@ -86,7 +97,7 @@ function ReactApp() {
     <>
       {
         <DetailModal
-          title={ 'education' }
+          title={ getPageTitle() }
           onCloseClick={ onDetailCloseClick }
         >
           { renderDetailPage() }

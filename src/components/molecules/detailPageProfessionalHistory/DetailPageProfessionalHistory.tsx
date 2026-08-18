@@ -38,7 +38,6 @@ function DetailPageProfessionalHistory() {
                         <div key={ `key_pi_${ pi }` } className="mb-2">
                           <h4 className="m-0">{ project.name }</h4>
                           <p className="fs-13">Customer: { project.organization } ({ `${ sd } / ${ ed }` })</p>
-                          <p className="fs-13">Fixed-Term: yes</p>
                           <ul className="fs-12">
                             {
                               project.stars.map((star, psi) => {

@@ -189,7 +189,9 @@
         "projects": [
           {
             "id": 1,
-            "name": "Compliance Platform",
+            "name": "Compliance Platform (Migration to AWS)",
+            "status": "Successfully Finished",
+            "fixedTerm": true,
             "organization": "Kipu Health",
             "country": {
               "id": 3,
@@ -323,7 +325,9 @@
           },
           {
             "id": 2,
-            "name": "Taxation API",
+            "name": "Taxation API - Project Recovery",
+            "status": "Successfully Finished",
+            "fixedTerm": true,
             "organization": "Toast Inc.",
             "country": {
               "id": 3,
@@ -402,6 +406,61 @@
               "GitHub Actions",
               "MySQL"
             ]
+          },
+          {
+            "id": 3,
+            "name": "Clinical Trials",
+            "status": "Cancelled",
+            "fixedTerm": false,
+            "organization": "Science37",
+            "country": {
+              "id": 3,
+              "name": "USA",
+              "dialCode": 1,
+              "alpha3": "USA"
+            },
+            "startDate": {
+              "year": 2024,
+              "month": 3,
+              "day": null
+            },
+            "endDate": {
+              "year": 2024,
+              "month": 8,
+              "day": null
+            },
+            "stars": [
+              {
+                "id": 6,
+                "context": {
+                  "situation": "Customer faced an integration with Vertex",
+                  "tasks": [
+                    "Test the new API and its integration with Vertex"
+                  ]
+                },
+                "actions": [
+                  "identifying and fixing bottlenecks",
+                  "implementing localization"
+                ],
+                "results": [
+                  {
+                    "id": 1,
+                    "unit": {
+                      "id": 3,
+                      "name": "Percentage",
+                      "symbol": "%"
+                    },
+                    "useFullUnit": false,
+                    "spaceBeforeUnit": false,
+                    "value": 30,
+                    "descriptorPrefix": "earned a customer commendation for quickly achieving a",
+                    "unitDescriptor": "reduction in front-end rendering latency for Next.js in an AWS infrastructure"
+                  }
+                ]
+              }
+            ],
+            "technologies": [],
+            "keywords": []
           }
         ],
         "keywords": []

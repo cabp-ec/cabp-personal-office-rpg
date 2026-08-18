@@ -312,7 +312,7 @@ div.game-wrapper {
 
 .book .page-left h1 {
   font-family: "Century Gothic", serif;
-  font-size: 2.6em;
+  font-size: 40px;
   letter-spacing: 2px;
   text-align: center;
   text-transform: uppercase;
@@ -385,7 +385,7 @@ div.game-wrapper {
 }
 
 .info-group header {
-  margin-bottom: 15px;
+  margin: 5px 0 15px;
 }
 
 .info-group:first-child {

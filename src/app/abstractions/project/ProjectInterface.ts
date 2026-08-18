@@ -2,6 +2,8 @@ import type { OrganizationalEntryInterface } from '../OrganizationalEntryInterfa
 import type { StarInterface } from '../professional/StarInterface.ts';
 
 export interface ProjectInterface extends OrganizationalEntryInterface {
-  stars: StarInterface[],
+  status: 'Cancelled';
+  fixedTerm: true;
+  stars: StarInterface[];
   role?: string;
 }
