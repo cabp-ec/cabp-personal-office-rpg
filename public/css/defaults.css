@@ -105,6 +105,9 @@ body {
 .fs-12 {
   font-size: 12px;
 }
+.fs-13 {
+  font-size: 13px;
+}
 
 /* TEXT */
 .text-light {
@@ -382,7 +385,7 @@ div.game-wrapper {
 }
 
 .info-group header {
-  margin-bottom: 20px;
+  margin-bottom: 15px;
 }
 
 .info-group:first-child {
@@ -398,7 +401,6 @@ div.game-wrapper {
 }
 
 /* --------------------- */
-
 
 /* TESTING STUFF */
 

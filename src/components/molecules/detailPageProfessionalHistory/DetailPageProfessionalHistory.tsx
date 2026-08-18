@@ -14,19 +14,31 @@ function DetailPageProfessionalHistory() {
       <div className="content text-dark w-100 test-border-red">
         {
           renderData.map((experience, ei) => {
+            const roleSub = [
+              experience.seniority,
+              experience.contractor ? 'Contractor':'',
+              experience.remote ? 'Remote':''
+            ];
+
             return (
               <div key={ `key_ei_${ ei }` } className="info-group">
                 <header>
-                  <h2 className="m-0">{ capitalizeFirst(experience.name) }</h2>
+                  <h2 className="m-0">{ capitalizeFirst(experience.organization) }</h2>
+                  <h3 className="m-0">{ capitalizeFirst(experience.name) }</h3>
+                  <h5 className="m-0">{ roleSub.join(' | ') }</h5>
                 </header>
 
                 <div className="entry-list">
                   {
                     experience.projects.map((project, pi) => {
+                      const sd = `${ project.startDate!.year }-${ project.startDate!.month }`;
+                      const ed = `${ project.endDate!.year }-${ project.endDate!.month }`;
+
                       return (
                         <div key={ `key_pi_${ pi }` } className="mb-2">
-                          <h3 className="m-0">{ project.name }, { project.endDate!.year }</h3>
-                          <p>{ project.organization }, { project.country.name }</p>
+                          <h4 className="m-0">{ project.name }</h4>
+                          <p className="fs-13">Customer: { project.organization } ({ `${ sd } / ${ ed }` })</p>
+                          <p className="fs-13">Fixed-Term: yes</p>
                           <ul className="fs-12">
                             {
                               project.stars.map((star, psi) => {
