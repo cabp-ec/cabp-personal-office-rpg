@@ -335,7 +335,7 @@
   },
   "guestBook": {
     "mc": [
-      "Would you mind signing the guest book before you leave...?"
+      "Would you mind signing the guest book...?"
     ],
     "nn": [
       {
@@ -343,25 +343,12 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "guestBook"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
         "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
       }
     ]
   },
@@ -506,10 +493,27 @@
   },
   "exit": {
     "mc": [
-      "Well, this was a cool way to know something about me, was it?",
-      "I'm glad you passed by.",
-      "Let me walk you out."
+      "Would you mind signing the guest book before you leave...?"
     ],
-    "nn": []
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "mapTriggersLocked": true,
+        "continueDialogue": true
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me",
+        "mapTriggersLocked": true,
+        "continueDialogue": true
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless",
+        "mapTriggersLocked": true,
+        "continueDialogue": true
+      }
+    ]
   }
 }
