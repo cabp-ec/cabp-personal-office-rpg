@@ -19,6 +19,7 @@ import ProfessionalHistory from './components/molecules/detailPageProfessionalHi
 import CurrentActivities from './components/molecules/CurrentActivities.tsx';
 import Achievements from './components/molecules/Achievements.tsx';
 import Services from './components/molecules/Services.tsx';
+import WorkingStyle from './components/molecules/WorkingStyle.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -38,7 +39,7 @@ function ReactApp() {
     FApp.store.ui.set(uiState);
     setCurrentDialogKey(null);
 
-    if (value.continueDialogue && value.continueDialogue === true) {
+    if (value.continueDialogue) {
       const scene = FApp.gameService.getScene<GameScene>(GameScene.key);
       await scene.candidate.continueDialogue();
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
@@ -70,6 +71,8 @@ function ReactApp() {
         return 'Professional Achievements';
       case dialoguesKeys.myHobbies:
         return 'Hobbies';
+      case dialoguesKeys.myStyle:
+        return 'Working Style';
     }
 
     return '';
@@ -89,6 +92,8 @@ function ReactApp() {
         return <Achievements/>;
       case dialoguesKeys.productsAndServices:
         return <Services/>;
+      case dialoguesKeys.myStyle:
+        return <WorkingStyle/>;
     }
 
     return null;

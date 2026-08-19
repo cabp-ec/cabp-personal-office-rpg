@@ -1,7 +1,7 @@
 function Services() {
   return (
     <div className="content text-dark w-100 test-border-red">
-      <h2 className="">Technical Project Recovery</h2>
+      <h2>Technical Project Recovery</h2>
 
       <p className="fs-12 mb-1">When a high-stakes software initiative stalls, the threat is no longer just technical, it's financial, operational, and reputational.</p>
       <p className="fs-12 mb-1">Experience has tough me that critical roadblocks with high-stakes software projects, not only increase the risk but expands it from technical into financial, operational and reputational.</p>

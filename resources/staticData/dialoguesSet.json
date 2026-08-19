@@ -311,7 +311,7 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "myStyle"
       },
       {
         "id": 2,
@@ -328,7 +328,7 @@
         "text": "Just a short version",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book",
+        "modalKey": "myStyle",
         "showShortVersion": true
       }
     ]

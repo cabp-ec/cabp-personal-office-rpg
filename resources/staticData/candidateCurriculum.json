@@ -831,15 +831,6 @@
       }
     ]
   },
-  "myStyle": {
-    "title": "Working Style",
-    "data": {
-      "coding": "Pragmatic and test-driven; I prioritize long-term maintainability and self-documenting code over clever, over-engineered solutions.",
-      "communication": "Technical translator; skilled at translating complex system architecture into clear, business-value metrics for stakeholders.",
-      "leadership": "Servant-leader; focused on mentoring junior engineers and building consensus across cross-functional product teams.",
-      "execution": "Bias for action; utilizing rapid prototyping and iterative feedback loops to deliver user value quickly."
-    }
-  },
   "productsAndServices": {
     "products": [
       {
@@ -895,6 +886,15 @@
       }
     ]
   },
+  "myStyle": {
+    "title": "Working Style",
+    "data": {
+      "coding": "Pragmatic and test-driven; I prioritize long-term maintainability and self-documenting code over clever, over-engineered solutions.",
+      "communication": "Technical translator; skilled at translating complex system architecture into clear, business-value metrics for stakeholders.",
+      "leadership": "Servant-leader; focused on mentoring junior engineers and building consensus across cross-functional product teams.",
+      "execution": "Bias for action; utilizing rapid prototyping and iterative feedback loops to deliver user value quickly."
+    }
+  },
   "myDrinksAndSnacks": {
     "title": "",
     "data": [
@@ -922,76 +922,6 @@
         "id": 1,
         "name": "System of a Down",
         "keywords": []
-      }
-    ]
-  },
-  "guestBook": {
-    "title": "Guest Book",
-    "data": [
-      {
-        "id": 1,
-        "role": 4,
-        "name": "Fulano de Tal",
-        "organization": "No One Inc.",
-        "comment": null,
-        "session": {
-          "start": "2026-08-10 13:30:00",
-          "end": "2026-08-10 14:00:00"
-        },
-        "metrics": {
-          "education": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "professionalHistory": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "musicILike": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "whatImDoingNow": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "recentHistory": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "professionalAchievements": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "myStyle": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "productsAndServices": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "myDrinksAndSnacks": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "bookshelf": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "myHobbies": {
-            "answer": 1,
-            "focusReading": 100
-          },
-          "guestBook": {
-            "answer": 1,
-            "focusReading": null
-          },
-          "bonus": {
-            "answer": 1,
-            "focusReading": null
-          }
-        }
       }
     ]
   }
