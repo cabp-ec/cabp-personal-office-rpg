@@ -18,12 +18,14 @@ import RecentHistory from './components/molecules/RecentHistory.tsx';
 import ProfessionalHistory from './components/molecules/detailPageProfessionalHistory/ProfessionalHistory.tsx';
 import CurrentActivities from './components/molecules/CurrentActivities.tsx';
 import Achievements from './components/molecules/Achievements.tsx';
+import Services from './components/molecules/Services.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
   const dialoguesSet = useElfSelector<DialoguesSetType>(getDialoguesSet);
   const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
-  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(dialoguesKeys.professionalAchievements);
+  const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(null);
+  const [showDetailModal, setShowDetailModal] = useState<boolean>(false);
   const cvKeys = Object.keys(candidateCurriculum);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
@@ -41,10 +43,16 @@ function ReactApp() {
       await scene.candidate.continueDialogue();
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
     }
+    else if (value.modalKey && value.modalKey.length) {
+      setCurrentDetailKey(value.modalKey as DialoguesKeysType);
+      setShowDetailModal(true);
+      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
+    }
   };
 
   const onDetailCloseClick = (e: MouseEvent<HTMLAnchorElement>): void => {
     e.preventDefault();
+    setShowDetailModal(false);
     setCurrentDetailKey(null);
   };
 
@@ -53,13 +61,15 @@ function ReactApp() {
       case dialoguesKeys.education:
         return 'Education';
       case dialoguesKeys.professionalHistory:
-        return 'PageProfessional History';
+        return 'Professional History';
       case dialoguesKeys.recentHistory:
         return 'Recent History';
       case dialoguesKeys.whatImDoingNow:
         return 'Current Projects';
       case dialoguesKeys.professionalAchievements:
         return 'Professional Achievements';
+      case dialoguesKeys.myHobbies:
+        return 'Hobbies';
     }
 
     return '';
@@ -77,12 +87,14 @@ function ReactApp() {
         return <CurrentActivities/>;
       case dialoguesKeys.professionalAchievements:
         return <Achievements/>;
+      case dialoguesKeys.productsAndServices:
+        return <Services/>;
     }
 
     return null;
   };
 
-  /*useEffect(() => {
+  useEffect(() => {
     // Pipe the reactive stream from Elf into your local state setter
     const subscription = FApp.store.ui
       .pipe(select((state: UiStateInterface) => state))
@@ -94,9 +106,9 @@ function ReactApp() {
 
     // Clean up subscription when the component unmounts to prevent leaks
     return () => subscription.unsubscribe();
-  }, []);*/
+  }, []);
 
-  /*useEffect(() => {
+  useEffect(() => {
     if (gameWrapper.current) {
       FApp.gameService.initialize(gameWrapper.current);
     }
@@ -105,26 +117,23 @@ function ReactApp() {
     return () => {
       FApp.gameService.destroy();
     };
-  }, []);*/
+  }, []);
 
   return (
     <>
       {
-        <DetailModal
-          title={ getPageTitle() }
-          onCloseClick={ onDetailCloseClick }
-        >
+        (showDetailModal === true) && <DetailModal title={ getPageTitle() } onCloseClick={ onDetailCloseClick }>
           { renderDetailPage() }
         </DetailModal>
       }
 
-      {/*<PlayerDialogue
+      <PlayerDialogue
         dialogueKey={ currentDialogKey }
         dialoguesSet={ dialoguesSet! }
         onOptionClick={ onDialogueOptionClick }
       />
 
-      <div ref={ gameWrapper } className="game-wrapper z-0 test-border-green"/>*/ }
+      <div ref={ gameWrapper } className="game-wrapper z-0 test-border-green"/>
     </>
   );
 }

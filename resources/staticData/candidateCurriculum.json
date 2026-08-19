@@ -831,16 +831,6 @@
       }
     ]
   },
-  "musicILike": {
-    "title": "Music",
-    "data": [
-      {
-        "id": 1,
-        "name": "System of a Down",
-        "keywords": []
-      }
-    ]
-  },
   "myStyle": {
     "title": "Working Style",
     "data": {
@@ -895,6 +885,16 @@
       }
     ]
   },
+  "myHobbies": {
+    "title": "",
+    "data": [
+      {
+        "id": 1,
+        "title": "Lego",
+        "description": "I already have 10 models in my collection: Star Wars AT-AT, Optimus Prime and more!"
+      }
+    ]
+  },
   "myDrinksAndSnacks": {
     "title": "",
     "data": [
@@ -915,13 +915,13 @@
       }
     ]
   },
-  "myHobbies": {
-    "title": "",
+  "musicILike": {
+    "title": "Music",
     "data": [
       {
         "id": 1,
-        "title": "Lego",
-        "description": "I already have 10 models in my collection: Star Wars AT-AT, Optimus Prime and more!"
+        "name": "System of a Down",
+        "keywords": []
       }
     ]
   },

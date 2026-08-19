@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="19" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="30">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="19" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="33">
  <editorsettings>
   <export target="cabp_office.json" format="json"/>
  </editorsettings>
@@ -84,8 +84,8 @@
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,44,0,0,0,0,0,4,5,0,0,0,
-0,0,0,0,18,8,0,46,47,0,0,0,0,0,20,21,0,0,0,
-0,0,0,40,41,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
+0,0,0,0,18,8,0,46,47,0,0,65,66,0,20,21,0,0,0,
+0,0,0,40,41,0,0,0,0,0,0,81,82,0,0,0,0,0,0,
 0,0,0,56,57,0,0,22,23,23,22,23,24,23,23,24,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,
 0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0,0
@@ -133,19 +133,9 @@
    <properties>
     <property name="actionableAfterSpeech" type="bool" value="false"/>
     <property name="actionableByPlayer" type="bool" value="false"/>
-    <property name="dialogueKey" value="whatILikeToRead"/>
+    <property name="dialogueKey" value="readingNook"/>
     <property name="targetTileX" type="int" value="10"/>
     <property name="targetTileY" type="int" value="4"/>
-   </properties>
-  </object>
-  <object id="9" name="Music I Like" x="320" y="32" width="98" height="32">
-   <properties>
-    <property name="actionKey" value="triggerDetailModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="musicILike"/>
-    <property name="targetTileX" type="int" value="11"/>
-    <property name="targetTileY" type="int" value="3"/>
    </properties>
   </object>
   <object id="10" name="Professional Achievements" x="448" y="32" width="32" height="32">
@@ -164,7 +154,7 @@
     <property name="actionableAfterSpeech" type="bool" value="true"/>
     <property name="actionableByPlayer" type="bool" value="true"/>
     <property name="dialogueKey" value="recentHistory"/>
-    <property name="targetTileX" type="int" value="13"/>
+    <property name="targetTileX" type="int" value="14"/>
     <property name="targetTileY" type="int" value="4"/>
    </properties>
   </object>
@@ -188,30 +178,6 @@
     <property name="targetTileY" type="int" value="6"/>
    </properties>
   </object>
-  <object id="14" name="The Bookshelf" x="416" y="320" width="96" height="32">
-   <properties>
-    <property name="actionKey" value="triggerShowcaseModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="bookshelf"/>
-   </properties>
-  </object>
-  <object id="16" name="Standing Desk" x="320" y="320" width="96" height="32">
-   <properties>
-    <property name="actionKey" value="triggerShowcaseModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="standingDesk"/>
-   </properties>
-  </object>
-  <object id="17" name="Drinks &amp; Snacks" x="224" y="320" width="96" height="32">
-   <properties>
-    <property name="actionKey" value="triggerShowcaseModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="myDrinksAndSnacks"/>
-   </properties>
-  </object>
   <object id="18" name="Exit" x="96" y="302" width="121" height="50">
    <properties>
     <property name="actionKey" value="triggerExitProcess"/>
@@ -232,23 +198,12 @@
     <property name="targetTileY" type="int" value="7"/>
    </properties>
   </object>
-  <object id="22" name="Bonus" x="512" y="32" width="32" height="320">
+  <object id="23" name="My Services" x="128" y="64" width="32" height="32">
    <properties>
-    <property name="actionKey" value="triggerDetailModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="bonus"/>
-    <property name="targetTileX" type="int" value="15"/>
-    <property name="targetTileY" type="int" value="5"/>
-   </properties>
-  </object>
-  <object id="23" name="My Hobbies" x="128" y="64" width="32" height="32">
-   <properties>
-    <property name="actionKey" value="triggerDetailModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
+    <property name="actionableAfterSpeech" type="bool" value="false"/>
+    <property name="actionableByPlayer" type="bool" value="false"/>
     <property name="dialogueKey" value="myHobbies"/>
-    <property name="targetTileX" type="int" value="5"/>
+    <property name="targetTileX" type="int" value="4"/>
     <property name="targetTileY" type="int" value="4"/>
    </properties>
   </object>
@@ -267,7 +222,7 @@
     <property name="actionableAfterSpeech" type="bool" value="false"/>
     <property name="actionableByPlayer" type="bool" value="false"/>
     <property name="dialogueKey" value="internetSpeed"/>
-    <property name="targetTileX" type="int" value="5"/>
+    <property name="targetTileX" type="int" value="6"/>
     <property name="targetTileY" type="int" value="4"/>
    </properties>
   </object>
@@ -282,12 +237,29 @@
   </object>
   <object id="29" name="Contact Me" x="160" y="64" width="32" height="32">
    <properties>
-    <property name="actionKey" value="triggerDetailModal"/>
-    <property name="actionableAfterSpeech" type="bool" value="true"/>
-    <property name="actionableByPlayer" type="bool" value="true"/>
+    <property name="actionableAfterSpeech" type="bool" value="false"/>
+    <property name="actionableByPlayer" type="bool" value="false"/>
     <property name="dialogueKey" value="contactMe"/>
     <property name="targetTileX" type="int" value="5"/>
     <property name="targetTileY" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="31" name="Coffee Lover" x="384" y="64" width="32" height="32">
+   <properties>
+    <property name="actionableAfterSpeech" type="bool" value="false"/>
+    <property name="actionableByPlayer" type="bool" value="false"/>
+    <property name="dialogueKey" value="coffeeLover"/>
+    <property name="targetTileX" type="int" value="12"/>
+    <property name="targetTileY" type="int" value="4"/>
+   </properties>
+  </object>
+  <object id="32" name="Print My Resume" x="352" y="256" width="64" height="64">
+   <properties>
+    <property name="actionableAfterSpeech" type="bool" value="false"/>
+    <property name="actionableByPlayer" type="bool" value="false"/>
+    <property name="dialogueKey" value="printResume"/>
+    <property name="targetTileX" type="int" value="10"/>
+    <property name="targetTileY" type="int" value="9"/>
    </properties>
   </object>
  </objectgroup>

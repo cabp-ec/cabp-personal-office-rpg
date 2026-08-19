@@ -1212,8 +1212,8 @@
         47,
         0,
         0,
-        0,
-        0,
+        65,
+        66,
         0,
         20,
         21,
@@ -1231,8 +1231,8 @@
         0,
         0,
         0,
-        0,
-        0,
+        81,
+        82,
         0,
         0,
         0,
@@ -1572,7 +1572,6 @@
     {
       "draworder": "topdown",
       "id": 11,
-      "locked": true,
       "name": "triggers",
       "objects": [
         {
@@ -1679,7 +1678,7 @@
             {
               "name": "dialogueKey",
               "type": "string",
-              "value": "whatILikeToRead"
+              "value": "readingNook"
             },
             {
               "name": "targetTileX",
@@ -1698,49 +1697,6 @@
           "width": 64,
           "x": 288,
           "y": 64
-        },
-        {
-          "height": 32,
-          "id": 9,
-          "name": "Music I Like",
-          "properties": [
-            {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerDetailModal"
-            },
-            {
-              "name": "actionableAfterSpeech",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "actionableByPlayer",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "dialogueKey",
-              "type": "string",
-              "value": "musicILike"
-            },
-            {
-              "name": "targetTileX",
-              "type": "int",
-              "value": 11
-            },
-            {
-              "name": "targetTileY",
-              "type": "int",
-              "value": 3
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 98,
-          "x": 320,
-          "y": 32
         },
         {
           "height": 32,
@@ -1788,7 +1744,7 @@
         {
           "height": 32,
           "id": 11,
-          "name": "Recent Professional History",
+          "name": "Recent History",
           "properties": [
             {
               "name": "actionKey",
@@ -1813,7 +1769,7 @@
             {
               "name": "targetTileX",
               "type": "int",
-              "value": 13
+              "value": 14
             },
             {
               "name": "targetTileY",
@@ -1915,105 +1871,6 @@
           "y": 224
         },
         {
-          "height": 32,
-          "id": 14,
-          "name": "The Bookshelf",
-          "properties": [
-            {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerShowcaseModal"
-            },
-            {
-              "name": "actionableAfterSpeech",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "actionableByPlayer",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "dialogueKey",
-              "type": "string",
-              "value": "bookshelf"
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 96,
-          "x": 416,
-          "y": 320
-        },
-        {
-          "height": 32,
-          "id": 16,
-          "name": "Standing Desk",
-          "properties": [
-            {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerShowcaseModal"
-            },
-            {
-              "name": "actionableAfterSpeech",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "actionableByPlayer",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "dialogueKey",
-              "type": "string",
-              "value": "standingDesk"
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 96,
-          "x": 320,
-          "y": 320
-        },
-        {
-          "height": 32,
-          "id": 17,
-          "name": "Drinks & Snacks",
-          "properties": [
-            {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerShowcaseModal"
-            },
-            {
-              "name": "actionableAfterSpeech",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "actionableByPlayer",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "dialogueKey",
-              "type": "string",
-              "value": "myDrinksAndSnacks"
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 96,
-          "x": 224,
-          "y": 320
-        },
-        {
           "height": 50,
           "id": 18,
           "name": "Exit",
@@ -2100,67 +1957,19 @@
           "y": 256
         },
         {
-          "height": 320,
-          "id": 22,
-          "name": "Bonus",
-          "properties": [
-            {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerDetailModal"
-            },
-            {
-              "name": "actionableAfterSpeech",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "actionableByPlayer",
-              "type": "bool",
-              "value": true
-            },
-            {
-              "name": "dialogueKey",
-              "type": "string",
-              "value": "bonus"
-            },
-            {
-              "name": "targetTileX",
-              "type": "int",
-              "value": 15
-            },
-            {
-              "name": "targetTileY",
-              "type": "int",
-              "value": 5
-            }
-          ],
-          "rotation": 0,
-          "type": "",
-          "visible": true,
-          "width": 32,
-          "x": 512,
-          "y": 32
-        },
-        {
           "height": 32,
           "id": 23,
           "name": "My Hobbies",
           "properties": [
             {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerDetailModal"
-            },
-            {
               "name": "actionableAfterSpeech",
               "type": "bool",
-              "value": true
+              "value": false
             },
             {
               "name": "actionableByPlayer",
               "type": "bool",
-              "value": true
+              "value": false
             },
             {
               "name": "dialogueKey",
@@ -2170,7 +1979,7 @@
             {
               "name": "targetTileX",
               "type": "int",
-              "value": 5
+              "value": 4
             },
             {
               "name": "targetTileY",
@@ -2251,7 +2060,7 @@
             {
               "name": "targetTileX",
               "type": "int",
-              "value": 5
+              "value": 6
             },
             {
               "name": "targetTileY",
@@ -2310,19 +2119,14 @@
           "name": "Contact Me",
           "properties": [
             {
-              "name": "actionKey",
-              "type": "string",
-              "value": "triggerDetailModal"
-            },
-            {
               "name": "actionableAfterSpeech",
               "type": "bool",
-              "value": true
+              "value": false
             },
             {
               "name": "actionableByPlayer",
               "type": "bool",
-              "value": true
+              "value": false
             },
             {
               "name": "dialogueKey",
@@ -2346,6 +2150,82 @@
           "width": 32,
           "x": 160,
           "y": 64
+        },
+        {
+          "height": 32,
+          "id": 31,
+          "name": "Coffee Lover",
+          "properties": [
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "coffeeLover"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 12
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 4
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 32,
+          "x": 384,
+          "y": 64
+        },
+        {
+          "height": 64,
+          "id": 32,
+          "name": "Print My Resume",
+          "properties": [
+            {
+              "name": "actionableAfterSpeech",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "actionableByPlayer",
+              "type": "bool",
+              "value": false
+            },
+            {
+              "name": "dialogueKey",
+              "type": "string",
+              "value": "printResume"
+            },
+            {
+              "name": "targetTileX",
+              "type": "int",
+              "value": 10
+            },
+            {
+              "name": "targetTileY",
+              "type": "int",
+              "value": 9
+            }
+          ],
+          "rotation": 0,
+          "type": "",
+          "visible": true,
+          "width": 64,
+          "x": 352,
+          "y": 256
         }
       ],
       "opacity": 1,
@@ -2356,7 +2236,7 @@
     }
   ],
   "nextlayerid": 12,
-  "nextobjectid": 30,
+  "nextobjectid": 33,
   "orientation": "orthogonal",
   "renderorder": "right-down",
   "tiledversion": "1.10.2",

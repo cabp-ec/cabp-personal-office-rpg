@@ -58,6 +58,10 @@ ul {
   padding-left: 12px;
 }
 
+ol {
+  padding-left: 20px;
+}
+
 ul li {
   margin: 10px 0;
 }

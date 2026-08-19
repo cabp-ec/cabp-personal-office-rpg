@@ -65,7 +65,7 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "education"
       },
       {
         "id": 2,
@@ -87,9 +87,13 @@
       }
     ]
   },
-  "internetSpeed": {
+  "myHobbies": {
     "mc": [
-      "My internet connection, 333.72 Mbps for download and 248.97 Mbps for upload"
+      "My hobbies, or things I do in my spare time.",
+      "Family guy, first and foremost.",
+      "I like legos, also the Serious Play Method.",
+      "Also learning. I'm currently using Phaser 4.",
+      "Swimming, reading."
     ],
     "nn": []
   },
@@ -97,10 +101,16 @@
     "mc": [
       "If there's something strange, in the neighborhood, who you gonna call?",
       "Call Charlie, of course! My phone is 888-888",
-      "Checkout my website: https://carlos-bucheli.com",
-      "Drop an e-mail at `contact@carlos-bucheli.com`",
+      "Drop an e-mail at contact@carlos-bucheli.com",
       "Follow me on LinkedIn: /in/cabp-ec",
+      "My website: https://carlos-bucheli.com",
       "Here, take my business card."
+    ],
+    "nn": []
+  },
+  "internetSpeed": {
+    "mc": [
+      "My internet connection, 333.72 Mbps for download and 248.97 Mbps for upload"
     ],
     "nn": []
   },
@@ -114,7 +124,7 @@
         "id": 1,
         "text": "Show me everything!",
         "mapTriggersLocked": true,
-        "modalKey": "book"
+        "modalKey": "professionalHistory"
       },
       {
         "id": 2,
@@ -131,51 +141,24 @@
         "text": "Just a short version",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book",
+        "modalKey": "professionalHistory",
         "showShortVersion": true
       }
     ]
   },
-  "whatILikeToRead": {
+  "readingNook": {
     "mc": [
       "My reading nook, it's pretty cozy.",
       "Here I read all kind of things, science, management, technology, you name it...",
-      "Just take a look at the books on the bookshelf."
+      "I just started The Hobbit. A little late, I know."
     ],
     "nn": []
   },
-  "musicILike": {
+  "coffeeLover": {
     "mc": [
-      "Great memories from that concert!",
-      "Let me tell you about my fine musical taste."
+      "Coffee-To-Code Machine!"
     ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Hell yeah!",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": false
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": false
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
+    "nn": []
   },
   "whatImDoingNow": {
     "mc": [
@@ -187,7 +170,7 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "whatImDoingNow"
       },
       {
         "id": 2,
@@ -204,7 +187,7 @@
         "text": "Just a short version",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book",
+        "modalKey": "whatImDoingNow",
         "showShortVersion": true
       }
     ]
@@ -221,7 +204,7 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "recentHistory"
       },
       {
         "id": 2,
@@ -238,7 +221,7 @@
         "text": "Just a short version",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book",
+        "modalKey": "recentHistory",
         "showShortVersion": true
       }
     ]
@@ -255,7 +238,7 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book"
+        "modalKey": "professionalAchievements"
       },
       {
         "id": 2,
@@ -272,10 +255,50 @@
         "text": "Just a short version",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "book",
+        "modalKey": "professionalAchievements",
         "showShortVersion": true
       }
     ]
+  },
+  "productsAndServices": {
+    "mc": [
+      "In this board I keep a visible list of my products and services.",
+      "That way customers can know what I can help them with.",
+      "Let me tell you about them."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Sure thing",
+        "mapTriggersLocked": true,
+        "targetModal": true,
+        "modalKey": "productsAndServices"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me",
+        "mapTriggersLocked": true
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless",
+        "mapTriggersLocked": true
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "mapTriggersLocked": true,
+        "targetModal": true,
+        "modalKey": "productsAndServices",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "printResume": {
+    "mc": [
+      "Let me print a copy of my resume for you."
+    ],
+    "nn": []
   },
   "myStyle": {
     "mc": [
@@ -310,11 +333,9 @@
       }
     ]
   },
-  "productsAndServices": {
+  "guestBook": {
     "mc": [
-      "In this board I keep a visible list of my products and services.",
-      "That way customers can know what I can help them with.",
-      "Let me tell you about them."
+      "Would you mind signing the guest book before you leave...?"
     ],
     "nn": [
       {
@@ -333,6 +354,39 @@
         "id": 3,
         "text": "Nah, that's useless",
         "mapTriggersLocked": true
+      },
+      {
+        "id": 4,
+        "text": "Just a short version",
+        "mapTriggersLocked": true,
+        "targetModal": true,
+        "modalKey": "book",
+        "showShortVersion": true
+      }
+    ]
+  },
+  "musicILike": {
+    "mc": [
+      "Great memories from that concert!",
+      "Let me tell you about my fine musical taste."
+    ],
+    "nn": [
+      {
+        "id": 1,
+        "text": "Hell yeah!",
+        "mapTriggersLocked": true,
+        "targetModal": true,
+        "modalKey": "book"
+      },
+      {
+        "id": 2,
+        "text": "That's not relevant for me",
+        "mapTriggersLocked": false
+      },
+      {
+        "id": 3,
+        "text": "Nah, that's useless",
+        "mapTriggersLocked": false
       },
       {
         "id": 4,
@@ -389,71 +443,6 @@
     "mc": [
       "Books, comics and magazines.",
       "Do you want to take a closer look...?"
-    ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Sure thing",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
-  },
-  "myHobbies": {
-    "mc": [
-      "My hobbies.",
-      "Do you want to take a closer look...?"
-    ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Sure thing",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
-  },
-  "guestBook": {
-    "mc": [
-      "Would you mind signing the guest book before you leave...?"
     ],
     "nn": [
       {
