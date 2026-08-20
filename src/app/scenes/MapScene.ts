@@ -14,7 +14,7 @@ import type {
 } from '../interfaces/gameAssets/ClickableObjectPropertiesInterface.ts';
 import CharacterModel from '../models/characterModel/CharacterModel.ts';
 import { TooltipBubble } from '../gameObjects/TooltipBubble.ts';
-import { filterByDialogueKey } from '../utils/mapUtils.ts';
+import { downloadResume, downloadVcf, filterByDialogueKey } from '../utils/mapUtils.ts';
 import { requiredMaps } from '../../../resources/gameAssets/requiredMaps.ts';
 import { characterAnimations, type CharacterAnimationsType } from '../enums/characterAnimations.ts';
 
@@ -126,6 +126,7 @@ export class MapScene extends BaseScene {
     const targetTileXProperty = filterByDialogueKey<CustomPropertyNumberInterface>('targetTileX', properties)!;
     const targetTileYProperty = filterByDialogueKey<CustomPropertyNumberInterface>('targetTileY', properties)!;
     const actionableByPlayerProperty = filterByDialogueKey<CustomPropertyBoolInterface>('actionableByPlayer', properties)!;
+    const actionableAfterSpeech = filterByDialogueKey<CustomPropertyBoolInterface>('actionableAfterSpeech', properties)!;
 
     const fromX = Math.floor(this.character.x / 32);
     const fromY = Math.floor(this.character.y / 32);
@@ -135,9 +136,6 @@ export class MapScene extends BaseScene {
     const targetY = Math.floor(targetXY.y / 32);
 
     console.warn('TRIGGER', target.name);
-    console.log(dialogueKeyProperty, targetTileXProperty, targetTileYProperty);
-    console.log(fromX, fromY);
-    console.log(targetX, targetY);
 
     this.pathFinder.findPath(fromX, fromY, targetX, targetY, (path) => {
       if (path === null) {
@@ -150,6 +148,17 @@ export class MapScene extends BaseScene {
 
     this.pathFinder.calculate();
     await this.character.continueDialogueFrom(String(dialogueKeyProperty.value));
+
+    if (actionableAfterSpeech && actionableAfterSpeech.value === true) {
+      switch (dialogueKeyProperty.value) {
+        case 'contactMe':
+          downloadVcf();
+          break;
+        case 'printResume':
+          downloadResume();
+          break;
+      }
+    }
 
     if (actionableByPlayerProperty.value) {
       const uiState = FApp.store.ui.value<UiStateInterface>();
@@ -233,7 +242,7 @@ export class MapScene extends BaseScene {
         const tileF = map.getTileAt(x, y, true, 'furniture');
         const tileE = map.getTileAt(x, y, true, 'exit');
         const blockedTile = (tileF && tileF.index > 0) || (tileE && tileE.index > 0);
-        row.push(blockedTile ? 1 : 0);
+        row.push(blockedTile ? 1:0);
       }
 
       grid.push(row);

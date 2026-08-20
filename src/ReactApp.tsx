@@ -20,6 +20,7 @@ import WorkingStyle from './components/molecules/WorkingStyle.tsx';
 import GuestBook from './components/molecules/guessBook/GuestBook.tsx';
 import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
 import DetailPageEducation from './components/molecules/detailPageEducation/DetailPageEducation.tsx';
+import { downloadResume } from './app/utils/mapUtils.ts';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -44,7 +45,8 @@ function ReactApp() {
     if (value.targetAction && value.targetAction === 'downloadResume') {
       console.warn('DOWNLOAD!');
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', true);
-      window.location.replace('https://carlos-bucheli.com/resume/');
+      downloadResume();
+      // window.location.replace('https://carlos-bucheli.com/resume/');
     }
 
     if (value.continueDialogue) {

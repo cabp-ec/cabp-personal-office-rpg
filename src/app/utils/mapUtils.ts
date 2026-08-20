@@ -21,3 +21,23 @@ export function filterByDialogueKey<T = ClickableObjectPropertiesInterface>(
     return accumulator;
   }, undefined) as T;
 }
+
+export function downloadVcf() {
+  const link = document.createElement('a');
+  link.href = '/CarlosBucheli.vcf';
+  link.download = 'CarlosBucheli.vcf';
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
+
+export function downloadResume() {
+  const link = document.createElement('a');
+  link.href = '/CarlosBucheliResume.pdf';
+  link.download = 'CarlosBucheliResume.pdf';
+
+  document.body.appendChild(link);
+  link.click();
+  document.body.removeChild(link);
+}
