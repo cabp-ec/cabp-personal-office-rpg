@@ -127,6 +127,10 @@ function ReactApp() {
         if (state.playerDialogueOn === true) {
           setCurrentDialogKey(state.currentDialogueKey);
         }
+
+        if (state.guestBookSigned === true) {
+          setShowDetailModal(false);
+        }
       });
 
     // Clean up subscription when the component unmounts to prevent leaks

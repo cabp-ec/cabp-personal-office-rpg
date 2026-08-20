@@ -1,30 +1,29 @@
-import { type ChangeEvent, MouseEvent, useState } from 'react';
+import { type ChangeEvent, type MouseEvent, useState } from 'react';
 import FApp from '../../../app';
-import type { UiStateInterface } from '../../../app/interfaces/UiStateInterface.ts';
+import type { CountryEntityInterface } from '../../../app/models/country/CountryEntityInterface.ts';
 
 function GuestBook() {
   const [guestName, setGuestName] = useState<string>('');
   const [guestMessage, setGuestMessage] = useState<string>('');
   const [guestCountry, setGuestCountry] = useState<string>('');
+  const countries = FApp.store.countries.getAllEntities<CountryEntityInterface>();
   const now = new Date();
+  // console.warn('COUNTRIES', countries);
 
   const onNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setGuestName(e.target.value);
   };
 
   const onMessageChange = (e: ChangeEvent<HTMLTextAreaElement>): void => {
-    setGuestName(e.target.value);
+    setGuestMessage(e.target.value);
   };
 
   const onCountryChange = (e: ChangeEvent<HTMLSelectElement>): void => {
-    console.log(e.target.value);
+    setGuestCountry(e.target.value);
   };
 
   const onSubmitClick = async (e: MouseEvent<HTMLButtonElement>) => {
     e.preventDefault();
-
-    console.log('N', guestName);
-    console.log('c', guestCountry);
 
     if (guestName.length && guestCountry.length) {
       console.warn('GO!');
@@ -34,7 +33,7 @@ function GuestBook() {
         timestamp: (new Date()).getTime(),
         country: guestCountry,
         role: 'TBD...',
-        message: guestMessage.length ? guestMessage : null
+        message: guestMessage.length ? guestMessage:null
       });
 
       FApp.store.ui.setProperty<boolean>('guestBookSigned', true);
@@ -56,9 +55,12 @@ function GuestBook() {
 
         <div className="input-group my-1 text-dark">
           <label htmlFor="country">You are from</label>
-          <select id="country" onSelect={ onCountryChange }>
+          <select id="country" onChange={ onCountryChange }>
             <option></option>
-            <option value={ 1 }>Ecuador (ECU)</option>
+            {
+              countries.map((country, index) => <option key={ `country_${ index }` }
+                                                        value={ country.name }>{ `${ country.name } (${ country.alpha3 })` }</option>)
+            }
           </select>
         </div>
 

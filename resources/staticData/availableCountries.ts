@@ -1,0 +1,974 @@
+import type { CountryEntityInterface } from '../../src/app/models/country/CountryEntityInterface';
+
+export const availableCountries: CountryEntityInterface[] = [
+  {
+    id: 1,
+    name: 'Afghanistan',
+    alpha3: 'AFG'
+  },
+  {
+    id: 2,
+    name: 'Albania',
+    alpha3: 'ALB'
+  },
+  {
+    id: 3,
+    name: 'Algeria',
+    alpha3: 'DZA'
+  },
+  {
+    id: 4,
+    name: 'Andorra',
+    alpha3: 'AND'
+  },
+  {
+    id: 5,
+    name: 'Angola',
+    alpha3: 'AGO'
+  },
+  {
+    id: 6,
+    name: 'Antigua and Barbuda',
+    alpha3: 'ATG'
+  },
+  {
+    id: 7,
+    name: 'Argentina',
+    alpha3: 'ARG'
+  },
+  {
+    id: 8,
+    name: 'Armenia',
+    alpha3: 'ARM'
+  },
+  {
+    id: 9,
+    name: 'Australia',
+    alpha3: 'AUS'
+  },
+  {
+    id: 10,
+    name: 'Austria',
+    alpha3: 'AUT'
+  },
+  {
+    id: 11,
+    name: 'Azerbaijan',
+    alpha3: 'AZE'
+  },
+  {
+    id: 12,
+    name: 'Bahamas',
+    alpha3: 'BHS'
+  },
+  {
+    id: 13,
+    name: 'Bahrain',
+    alpha3: 'BHR'
+  },
+  {
+    id: 14,
+    name: 'Bangladesh',
+    alpha3: 'BGD'
+  },
+  {
+    id: 15,
+    name: 'Barbados',
+    alpha3: 'BRB'
+  },
+  {
+    id: 16,
+    name: 'Belarus',
+    alpha3: 'BLR'
+  },
+  {
+    id: 17,
+    name: 'Belgium',
+    alpha3: 'BEL'
+  },
+  {
+    id: 18,
+    name: 'Belize',
+    alpha3: 'BLZ'
+  },
+  {
+    id: 19,
+    name: 'Benin',
+    alpha3: 'BEN'
+  },
+  {
+    id: 20,
+    name: 'Bhutan',
+    alpha3: 'BTN'
+  },
+  {
+    id: 21,
+    name: 'Bolivia',
+    alpha3: 'BOL'
+  },
+  {
+    id: 22,
+    name: 'Bosnia and Herzegovina',
+    alpha3: 'BIH'
+  },
+  {
+    id: 23,
+    name: 'Botswana',
+    alpha3: 'BWA'
+  },
+  {
+    id: 24,
+    name: 'Brazil',
+    alpha3: 'BRA'
+  },
+  {
+    id: 25,
+    name: 'Brunei',
+    alpha3: 'BRN'
+  },
+  {
+    id: 26,
+    name: 'Bulgaria',
+    alpha3: 'BGR'
+  },
+  {
+    id: 27,
+    name: 'Burkina Faso',
+    alpha3: 'BFA'
+  },
+  {
+    id: 28,
+    name: 'Burundi',
+    alpha3: 'BDI'
+  },
+  {
+    id: 29,
+    name: 'Cabo Verde',
+    alpha3: 'CPV'
+  },
+  {
+    id: 30,
+    name: 'Cambodia',
+    alpha3: 'KHM'
+  },
+  {
+    id: 31,
+    name: 'Cameroon',
+    alpha3: 'CMR'
+  },
+  {
+    id: 32,
+    name: 'Canada',
+    alpha3: 'CAN'
+  },
+  {
+    id: 33,
+    name: 'Central African Republic',
+    alpha3: 'CAF'
+  },
+  {
+    id: 34,
+    name: 'Chad',
+    alpha3: 'TCD'
+  },
+  {
+    id: 35,
+    name: 'Chile',
+    alpha3: 'CHL'
+  },
+  {
+    id: 36,
+    name: 'China',
+    alpha3: 'CHN'
+  },
+  {
+    id: 37,
+    name: 'Colombia',
+    alpha3: 'COL'
+  },
+  {
+    id: 38,
+    name: 'Comoros',
+    alpha3: 'COM'
+  },
+  {
+    id: 39,
+    name: 'Congo (Congo-Brazzaville)',
+    alpha3: 'COG'
+  },
+  {
+    id: 40,
+    name: 'Democratic Republic of the Congo',
+    alpha3: 'COD'
+  },
+  {
+    id: 41,
+    name: 'Costa Rica',
+    alpha3: 'CRI'
+  },
+  {
+    id: 42,
+    name: 'Croatia',
+    alpha3: 'HRV'
+  },
+  {
+    id: 43,
+    name: 'Cuba',
+    alpha3: 'CUB'
+  },
+  {
+    id: 44,
+    name: 'Cyprus',
+    alpha3: 'CYP'
+  },
+  {
+    id: 45,
+    name: 'Czechia (Czech Republic)',
+    alpha3: 'CZE'
+  },
+  {
+    id: 46,
+    name: 'Denmark',
+    alpha3: 'DNK'
+  },
+  {
+    id: 47,
+    name: 'Djibouti',
+    alpha3: 'DJI'
+  },
+  {
+    id: 48,
+    name: 'Dominica',
+    alpha3: 'DMA'
+  },
+  {
+    id: 49,
+    name: 'Dominican Republic',
+    alpha3: 'DOM'
+  },
+  {
+    id: 50,
+    name: 'Ecuador',
+    alpha3: 'ECU'
+  },
+  {
+    id: 51,
+    name: 'Egypt',
+    alpha3: 'EGY'
+  },
+  {
+    id: 52,
+    name: 'El Salvador',
+    alpha3: 'SLV'
+  },
+  {
+    id: 53,
+    name: 'Equatorial Guinea',
+    alpha3: 'GNQ'
+  },
+  {
+    id: 54,
+    name: 'Eritrea',
+    alpha3: 'ERI'
+  },
+  {
+    id: 55,
+    name: 'Estonia',
+    alpha3: 'EST'
+  },
+  {
+    id: 56,
+    name: 'Eswatini',
+    alpha3: 'SWZ'
+  },
+  {
+    id: 57,
+    name: 'Ethiopia',
+    alpha3: 'ETH'
+  },
+  {
+    id: 58,
+    name: 'Fiji',
+    alpha3: 'FJI'
+  },
+  {
+    id: 59,
+    name: 'Finland',
+    alpha3: 'FIN'
+  },
+  {
+    id: 60,
+    name: 'France',
+    alpha3: 'FRA'
+  },
+  {
+    id: 61,
+    name: 'Gabon',
+    alpha3: 'GAB'
+  },
+  {
+    id: 62,
+    name: 'Gambia',
+    alpha3: 'GMB'
+  },
+  {
+    id: 63,
+    name: 'Georgia',
+    alpha3: 'GEO'
+  },
+  {
+    id: 64,
+    name: 'Germany',
+    alpha3: 'DEU'
+  },
+  {
+    id: 65,
+    name: 'Ghana',
+    alpha3: 'GHA'
+  },
+  {
+    id: 66,
+    name: 'Greece',
+    alpha3: 'GRC'
+  },
+  {
+    id: 67,
+    name: 'Grenada',
+    alpha3: 'GRD'
+  },
+  {
+    id: 68,
+    name: 'Guatemala',
+    alpha3: 'GTM'
+  },
+  {
+    id: 69,
+    name: 'Guinea',
+    alpha3: 'GIN'
+  },
+  {
+    id: 70,
+    name: 'Guinea-Bissau',
+    alpha3: 'GNB'
+  },
+  {
+    id: 71,
+    name: 'Guyana',
+    alpha3: 'GUY'
+  },
+  {
+    id: 72,
+    name: 'Haiti',
+    alpha3: 'HTI'
+  },
+  {
+    id: 73,
+    name: 'Honduras',
+    alpha3: 'HND'
+  },
+  {
+    id: 74,
+    name: 'Hungary',
+    alpha3: 'HUN'
+  },
+  {
+    id: 75,
+    name: 'Iceland',
+    alpha3: 'ISL'
+  },
+  {
+    id: 76,
+    name: 'India',
+    alpha3: 'IND'
+  },
+  {
+    id: 77,
+    name: 'Indonesia',
+    alpha3: 'IDN'
+  },
+  {
+    id: 78,
+    name: 'Iran',
+    alpha3: 'IRN'
+  },
+  {
+    id: 79,
+    name: 'Iraq',
+    alpha3: 'IRQ'
+  },
+  {
+    id: 80,
+    name: 'Ireland',
+    alpha3: 'IRL'
+  },
+  {
+    id: 81,
+    name: 'Israel',
+    alpha3: 'ISR'
+  },
+  {
+    id: 82,
+    name: 'Italy',
+    alpha3: 'ITA'
+  },
+  {
+    id: 83,
+    name: 'Jamaica',
+    alpha3: 'JAM'
+  },
+  {
+    id: 84,
+    name: 'Japan',
+    alpha3: 'JPN'
+  },
+  {
+    id: 85,
+    name: 'Jordan',
+    alpha3: 'JOR'
+  },
+  {
+    id: 86,
+    name: 'Kazakhstan',
+    alpha3: 'KAZ'
+  },
+  {
+    id: 87,
+    name: 'Kenya',
+    alpha3: 'KEN'
+  },
+  {
+    id: 88,
+    name: 'Kiribati',
+    alpha3: 'KIR'
+  },
+  {
+    id: 89,
+    name: 'Kuwait',
+    alpha3: 'KWT'
+  },
+  {
+    id: 90,
+    name: 'Kyrgyzstan',
+    alpha3: 'KGZ'
+  },
+  {
+    id: 91,
+    name: 'Laos',
+    alpha3: 'LAO'
+  },
+  {
+    id: 92,
+    name: 'Latvia',
+    alpha3: 'LVA'
+  },
+  {
+    id: 93,
+    name: 'Lebanon',
+    alpha3: 'LBN'
+  },
+  {
+    id: 94,
+    name: 'Lesotho',
+    alpha3: 'LSO'
+  },
+  {
+    id: 95,
+    name: 'Liberia',
+    alpha3: 'LBR'
+  },
+  {
+    id: 96,
+    name: 'Libya',
+    alpha3: 'LBY'
+  },
+  {
+    id: 97,
+    name: 'Liechtenstein',
+    alpha3: 'LIE'
+  },
+  {
+    id: 98,
+    name: 'Lithuania',
+    alpha3: 'LTU'
+  },
+  {
+    id: 99,
+    name: 'Luxembourg',
+    alpha3: 'LUX'
+  },
+  {
+    id: 100,
+    name: 'Madagascar',
+    alpha3: 'MDG'
+  },
+  {
+    id: 101,
+    name: 'Malawi',
+    alpha3: 'MWI'
+  },
+  {
+    id: 102,
+    name: 'Malaysia',
+    alpha3: 'MYS'
+  },
+  {
+    id: 103,
+    name: 'Maldives',
+    alpha3: 'MDV'
+  },
+  {
+    id: 104,
+    name: 'Mali',
+    alpha3: 'MLI'
+  },
+  {
+    id: 105,
+    name: 'Malta',
+    alpha3: 'MLT'
+  },
+  {
+    id: 106,
+    name: 'Marshall Islands',
+    alpha3: 'MHL'
+  },
+  {
+    id: 107,
+    name: 'Mauritania',
+    alpha3: 'MRT'
+  },
+  {
+    id: 108,
+    name: 'Mauritius',
+    alpha3: 'MUS'
+  },
+  {
+    id: 109,
+    name: 'Mexico',
+    alpha3: 'MEX'
+  },
+  {
+    id: 110,
+    name: 'Micronesia',
+    alpha3: 'FSM'
+  },
+  {
+    id: 111,
+    name: 'Moldova',
+    alpha3: 'MDA'
+  },
+  {
+    id: 112,
+    name: 'Monaco',
+    alpha3: 'MCO'
+  },
+  {
+    id: 113,
+    name: 'Mongolia',
+    alpha3: 'MNG'
+  },
+  {
+    id: 114,
+    name: 'Montenegro',
+    alpha3: 'MNE'
+  },
+  {
+    id: 115,
+    name: 'Morocco',
+    alpha3: 'MAR'
+  },
+  {
+    id: 116,
+    name: 'Mozambique',
+    alpha3: 'MOZ'
+  },
+  {
+    id: 117,
+    name: 'Myanmar (Burma)',
+    alpha3: 'MMR'
+  },
+  {
+    id: 118,
+    name: 'Namibia',
+    alpha3: 'NAM'
+  },
+  {
+    id: 119,
+    name: 'Nauru',
+    alpha3: 'NRU'
+  },
+  {
+    id: 120,
+    name: 'Nepal',
+    alpha3: 'NPL'
+  },
+  {
+    id: 121,
+    name: 'Netherlands',
+    alpha3: 'NLD'
+  },
+  {
+    id: 122,
+    name: 'New Zealand',
+    alpha3: 'NZL'
+  },
+  {
+    id: 123,
+    name: 'Nicaragua',
+    alpha3: 'NIC'
+  },
+  {
+    id: 124,
+    name: 'Niger',
+    alpha3: 'NER'
+  },
+  {
+    id: 125,
+    name: 'Nigeria',
+    alpha3: 'NGA'
+  },
+  {
+    id: 126,
+    name: 'North Korea',
+    alpha3: 'PRK'
+  },
+  {
+    id: 127,
+    name: 'North Macedonia',
+    alpha3: 'MKD'
+  },
+  {
+    id: 128,
+    name: 'Norway',
+    alpha3: 'NOR'
+  },
+  {
+    id: 129,
+    name: 'Oman',
+    alpha3: 'OMN'
+  },
+  {
+    id: 130,
+    name: 'Pakistan',
+    alpha3: 'PAK'
+  },
+  {
+    id: 131,
+    name: 'Palau',
+    alpha3: 'PLW'
+  },
+  {
+    id: 132,
+    name: 'Panama',
+    alpha3: 'PAN'
+  },
+  {
+    id: 133,
+    name: 'Papua New Guinea',
+    alpha3: 'PNG'
+  },
+  {
+    id: 134,
+    name: 'Paraguay',
+    alpha3: 'PRY'
+  },
+  {
+    id: 135,
+    name: 'Peru',
+    alpha3: 'PER'
+  },
+  {
+    id: 136,
+    name: 'Philippines',
+    alpha3: 'PHL'
+  },
+  {
+    id: 137,
+    name: 'Poland',
+    alpha3: 'POL'
+  },
+  {
+    id: 138,
+    name: 'Portugal',
+    alpha3: 'PRT'
+  },
+  {
+    id: 139,
+    name: 'Qatar',
+    alpha3: 'QAT'
+  },
+  {
+    id: 140,
+    name: 'Romania',
+    alpha3: 'ROU'
+  },
+  {
+    id: 141,
+    name: 'Russia',
+    alpha3: 'RUS'
+  },
+  {
+    id: 142,
+    name: 'Rwanda',
+    alpha3: 'RWA'
+  },
+  {
+    id: 143,
+    name: 'Saint Kitts and Nevis',
+    alpha3: 'KNA'
+  },
+  {
+    id: 144,
+    name: 'Saint Lucia',
+    alpha3: 'LCA'
+  },
+  {
+    id: 145,
+    name: 'Saint Vincent and the Grenadines',
+    alpha3: 'VCT'
+  },
+  {
+    id: 146,
+    name: 'Samoa',
+    alpha3: 'WSM'
+  },
+  {
+    id: 147,
+    name: 'San Marino',
+    alpha3: 'SMR'
+  },
+  {
+    id: 148,
+    name: 'Sao Tome and Principe',
+    alpha3: 'STP'
+  },
+  {
+    id: 149,
+    name: 'Saudi Arabia',
+    alpha3: 'SAU'
+  },
+  {
+    id: 150,
+    name: 'Senegal',
+    alpha3: 'SEN'
+  },
+  {
+    id: 151,
+    name: 'Serbia',
+    alpha3: 'SRB'
+  },
+  {
+    id: 152,
+    name: 'Seychelles',
+    alpha3: 'SYC'
+  },
+  {
+    id: 153,
+    name: 'Sierra Leone',
+    alpha3: 'SLE'
+  },
+  {
+    id: 154,
+    name: 'Singapore',
+    alpha3: 'SGP'
+  },
+  {
+    id: 155,
+    name: 'Slovakia',
+    alpha3: 'SVK'
+  },
+  {
+    id: 156,
+    name: 'Slovenia',
+    alpha3: 'SVN'
+  },
+  {
+    id: 157,
+    name: 'Solomon Islands',
+    alpha3: 'SLB'
+  },
+  {
+    id: 158,
+    name: 'Somalia',
+    alpha3: 'SOM'
+  },
+  {
+    id: 159,
+    name: 'South Africa',
+    alpha3: 'ZAF'
+  },
+  {
+    id: 160,
+    name: 'South Korea',
+    alpha3: 'KOR'
+  },
+  {
+    id: 161,
+    name: 'South Sudan',
+    alpha3: 'SSD'
+  },
+  {
+    id: 162,
+    name: 'Spain',
+    alpha3: 'ESP'
+  },
+  {
+    id: 163,
+    name: 'Sri Lanka',
+    alpha3: 'LKA'
+  },
+  {
+    id: 164,
+    name: 'Sudan',
+    alpha3: 'SDN'
+  },
+  {
+    id: 165,
+    name: 'Suriname',
+    alpha3: 'SUR'
+  },
+  {
+    id: 166,
+    name: 'Sweden',
+    alpha3: 'SWE'
+  },
+  {
+    id: 167,
+    name: 'Switzerland',
+    alpha3: 'CHE'
+  },
+  {
+    id: 168,
+    name: 'Syria',
+    alpha3: 'SYR'
+  },
+  {
+    id: 169,
+    name: 'Taiwan',
+    alpha3: 'TWN'
+  },
+  {
+    id: 170,
+    name: 'Tajikistan',
+    alpha3: 'TJK'
+  },
+  {
+    id: 171,
+    name: 'Tanzania',
+    alpha3: 'TZA'
+  },
+  {
+    id: 172,
+    name: 'Thailand',
+    alpha3: 'THA'
+  },
+  {
+    id: 173,
+    name: 'Timor-Leste',
+    alpha3: 'TLS'
+  },
+  {
+    id: 174,
+    name: 'Togo',
+    alpha3: 'TGO'
+  },
+  {
+    id: 175,
+    name: 'Tonga',
+    alpha3: 'TON'
+  },
+  {
+    id: 176,
+    name: 'Trinidad and Tobago',
+    alpha3: 'TTO'
+  },
+  {
+    id: 177,
+    name: 'Tunisia',
+    alpha3: 'TUN'
+  },
+  {
+    id: 178,
+    name: 'Turkey',
+    alpha3: 'TUR'
+  },
+  {
+    id: 179,
+    name: 'Turkmenistan',
+    alpha3: 'TKM'
+  },
+  {
+    id: 180,
+    name: 'Tuvalu',
+    alpha3: 'TUV'
+  },
+  {
+    id: 181,
+    name: 'Uganda',
+    alpha3: 'UGA'
+  },
+  {
+    id: 182,
+    name: 'Ukraine',
+    alpha3: 'UKR'
+  },
+  {
+    id: 183,
+    name: 'United Arab Emirates',
+    alpha3: 'ARE'
+  },
+  {
+    id: 184,
+    name: 'United Kingdom',
+    alpha3: 'GBR'
+  },
+  {
+    id: 185,
+    name: 'United States',
+    alpha3: 'USA'
+  },
+  {
+    id: 186,
+    name: 'Uruguay',
+    alpha3: 'URY'
+  },
+  {
+    id: 187,
+    name: 'Uzbekistan',
+    alpha3: 'UZB'
+  },
+  {
+    id: 188,
+    name: 'Vanuatu',
+    alpha3: 'VUT'
+  },
+  {
+    id: 189,
+    name: 'Vatican City',
+    alpha3: 'VAT'
+  },
+  {
+    id: 190,
+    name: 'Venezuela',
+    alpha3: 'VEN'
+  },
+  {
+    id: 191,
+    name: 'Vietnam',
+    alpha3: 'VNM'
+  },
+  {
+    id: 192,
+    name: 'Yemen',
+    alpha3: 'YEM'
+  },
+  {
+    id: 193,
+    name: 'Zambia',
+    alpha3: 'ZMB'
+  },
+  {
+    id: 194,
+    name: 'Zimbabwe',
+    alpha3: 'ZWE'
+  }
+];
