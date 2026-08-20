@@ -44,18 +44,24 @@ function ReactApp() {
 
     if (value.targetAction && value.targetAction === 'downloadResume') {
       console.warn('DOWNLOAD!');
-      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', true);
+      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
       downloadResume();
-      // window.location.replace('https://carlos-bucheli.com/resume/');
+      return;
     }
 
     if (value.continueDialogue) {
       const scene = FApp.gameService.getScene<GameScene>(GameScene.key);
       await scene.candidate.continueDialogue();
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
+      return;
     } else if (value.modalKey && value.modalKey.length) {
       setCurrentDetailKey(value.modalKey as DialoguesKeysType);
       setShowDetailModal(true);
+      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
+      return;
+    }
+
+    if (value.blockMapTriggers !== true) {
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
     }
   };
@@ -168,7 +174,7 @@ function ReactApp() {
         onOptionClick={ onDialogueOptionClick }
       />
 
-      <div ref={ gameWrapper } className="game-wrapper z-0 test-border-green"/>
+      <div ref={ gameWrapper } className="game-wrapper z-0"/>
     </>
   );
 }

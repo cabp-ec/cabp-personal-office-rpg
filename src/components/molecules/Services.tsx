@@ -1,6 +1,6 @@
 function Services() {
   return (
-    <div className="content text-dark w-100 test-border-red">
+    <div className="content text-dark w-100">
       <h2>Technical Project Recovery</h2>
 
       <p className="fs-12 mb-1">When a high-stakes software initiative stalls, the threat is no longer just technical, it's financial, operational, and reputational.</p>

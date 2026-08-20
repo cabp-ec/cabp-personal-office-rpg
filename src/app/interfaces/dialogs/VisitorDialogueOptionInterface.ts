@@ -1,6 +1,7 @@
 export interface VisitorDialogueOptionInterface {
   id: PropertyKey;
   text: string;
+  statValue: string;
   continueDialogue?: boolean;
   blockMapTriggers?: boolean;
   // ---

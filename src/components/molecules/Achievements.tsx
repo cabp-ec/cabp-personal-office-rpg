@@ -1,6 +1,6 @@
 function Achievements() {
   return (
-    <div className="content text-dark w-100 test-border-red">
+    <div className="content text-dark w-100">
       <h3 className="m-0">Earned Commendations & Bonuses</h3>
 
       <ul>

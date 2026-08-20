@@ -8,9 +8,9 @@ function DetailModal({
                        showShortVersion = true
                      }: DetailModalPropsInterface) {
   return (
-    <div className="modal d-flex align-items-center justify-content-center vh-100 w-100 test-border-green">
+    <div className="modal d-flex align-items-center justify-content-center vh-100 w-100">
       <div className="book">
-        <div className="page page-left text-light test-border-red align-content-between">
+        <div className="page page-left text-light align-content-between">
           <div className="title with-footer">
             <h2 className="m-0">{ subTitle }</h2>
             <h1 className="m-0">{ title }</h1>
@@ -22,7 +22,7 @@ function DetailModal({
           </footer>
         </div>
 
-        <div className="page page-right text-dark test-border-red">
+        <div className="page page-right text-dark">
           { children }
         </div>
       </div>

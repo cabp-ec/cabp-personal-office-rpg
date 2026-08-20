@@ -6,7 +6,7 @@ function DetailPageEducation() {
   const renderData = FApp.curriculumService.getEducationRenderData();
 
   return (
-    <div className="content text-dark w-100 test-border-red">
+    <div className="content text-dark w-100">
       {
         Object.keys(renderData).map((groupKey, i) => {
           const group = renderData[groupKey as keyof EducationInfoGroupsInterface];

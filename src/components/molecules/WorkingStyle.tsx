@@ -1,6 +1,6 @@
 function WorkingStyle() {
   return (
-    <div className="content text-dark w-100 test-border-red">
+    <div className="content text-dark w-100">
       <div>
         <h2>Coding</h2>
         <p className="fs-12 mb-1">Pragmatic and test-driven; I prioritize long-term maintainability and self-documenting code over clever, over-engineered solutions.</p>

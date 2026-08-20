@@ -59,17 +59,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "education"
+        "modalKey": "education",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": false
+        "mapTriggersLocked": false,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": false
+        "mapTriggersLocked": false,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -77,7 +80,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "book",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -118,17 +122,20 @@
         "id": 1,
         "text": "Show me everything!",
         "mapTriggersLocked": true,
-        "modalKey": "professionalHistory"
+        "modalKey": "professionalHistory",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -136,7 +143,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "professionalHistory",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -164,17 +172,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "whatImDoingNow"
+        "modalKey": "whatImDoingNow",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -182,7 +193,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "whatImDoingNow",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -198,17 +210,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "recentHistory"
+        "modalKey": "recentHistory",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -216,7 +231,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "recentHistory",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -232,17 +248,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "professionalAchievements"
+        "modalKey": "professionalAchievements",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -250,7 +269,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "professionalAchievements",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -266,17 +286,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "productsAndServices"
+        "modalKey": "productsAndServices",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -284,7 +307,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "productsAndServices",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -305,17 +329,20 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "myStyle"
+        "modalKey": "myStyle",
+        "statValue": "Accepted a full version"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as not relevant"
       },
       {
         "id": 3,
         "text": "Nah, that's useless",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Ignored as useless"
       },
       {
         "id": 4,
@@ -323,7 +350,8 @@
         "mapTriggersLocked": true,
         "targetModal": true,
         "modalKey": "myStyle",
-        "showShortVersion": true
+        "showShortVersion": true,
+        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -337,12 +365,14 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "guestBook"
+        "modalKey": "guestBook",
+        "statValue": "Accepted to sign the guest book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Rejected to sign the guest book"
       }
     ]
   },
@@ -351,66 +381,14 @@
       "Great memories from that concert!",
       "Let me tell you about my fine musical taste."
     ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Hell yeah!",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": false
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": false
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
+    "nn": []
   },
   "myDrinksAndSnacks": {
     "mc": [
       "Ah, the \"fuel station\" corner!",
       "Let's see what's inside.'."
     ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Sure thing",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
+    "nn": []
   },
   "standingDesk": {
     "mc": [
@@ -425,65 +403,13 @@
       "Books, comics and magazines.",
       "Do you want to take a closer look...?"
     ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Sure thing",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
+    "nn": []
   },
   "bonus": {
     "mc": [
       "Come, take a look at the view."
     ],
-    "nn": [
-      {
-        "id": 1,
-        "text": "Sure thing",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book"
-      },
-      {
-        "id": 2,
-        "text": "That's not relevant for me",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "mapTriggersLocked": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true
-      }
-    ]
+    "nn": []
   },
   "exit": {
     "mc": [
@@ -495,12 +421,14 @@
         "text": "Sure thing",
         "mapTriggersLocked": true,
         "targetModal": true,
-        "modalKey": "guestBook"
+        "modalKey": "guestBook",
+        "statValue": "Accepted to sign the guest book"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true
+        "mapTriggersLocked": true,
+        "statValue": "Rejected to sign the guest book"
       }
     ]
   }
