@@ -28,12 +28,6 @@
         "continueDialogue": true
       },
       {
-        "id": 5,
-        "text": "I want to hire your services",
-        "mapTriggersLocked": true,
-        "continueDialogue": true
-      },
-      {
         "id": 6,
         "text": "Just give me your résumé!",
         "mapTriggersLocked": true,
@@ -500,19 +494,13 @@
         "id": 1,
         "text": "Sure thing",
         "mapTriggersLocked": true,
-        "continueDialogue": true
+        "targetModal": true,
+        "modalKey": "guestBook"
       },
       {
         "id": 2,
         "text": "That's not relevant for me",
-        "mapTriggersLocked": true,
-        "continueDialogue": true
-      },
-      {
-        "id": 3,
-        "text": "Nah, that's useless",
-        "mapTriggersLocked": true,
-        "continueDialogue": true
+        "mapTriggersLocked": true
       }
     ]
   }

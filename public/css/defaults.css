@@ -120,7 +120,7 @@ body {
 
 /* TEXT */
 .text-light {
-  color: rgb(248, 249, 250);
+  color: rgb(248, 249, 250) !important;
 }
 
 .text-dark {
@@ -408,6 +408,31 @@ div.game-wrapper {
 h5.section-title {
   font-weight: bold;
   margin-top: 15px;
+}
+
+/* --------------------- */
+/* FORM */
+form {
+  width: 100%;
+}
+
+form .input-group input,
+form .input-group select,
+form .input-group textarea {
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid #ccc;
+  color: rgb(33, 37, 41);
+  width: 100%;
+}
+
+form button {
+  border: none;
+  border-radius: 4px;
+}
+
+form button[disabled] {
+  background-color: #999;
 }
 
 /* --------------------- */

@@ -2,7 +2,7 @@ import type { EducationInfoGroupsInterface } from '../../../app/services/Curricu
 import { capitalizeFirst } from '../../../app/utils/reactUtils.tsx';
 import FApp from '../../../app';
 
-export function DetailPageEducation() {
+function DetailPageEducation() {
   const renderData = FApp.curriculumService.getEducationRenderData();
 
   return (
@@ -36,3 +36,5 @@ export function DetailPageEducation() {
     </div>
   );
 }
+
+export default DetailPageEducation;

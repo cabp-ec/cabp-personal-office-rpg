@@ -11,15 +11,15 @@ import { useElfSelector } from './app/hooks/useElf.ts';
 import { getDialoguesSet } from './app/utils/reactUtils.tsx';
 import PlayerDialogue from './components/organisms/playerDialogue/PlayerDialogue.tsx';
 import DetailModal from './components/organisms/detailModal/DetailModal.tsx';
-import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
-import { candidateCurriculum } from '../resources/staticData/candidateCurriculum.ts';
-import { DetailPageEducation } from './components/molecules/detailPageEducation/DetailPageEducation.tsx';
 import RecentHistory from './components/molecules/RecentHistory.tsx';
 import ProfessionalHistory from './components/molecules/detailPageProfessionalHistory/ProfessionalHistory.tsx';
 import CurrentActivities from './components/molecules/CurrentActivities.tsx';
 import Achievements from './components/molecules/Achievements.tsx';
 import Services from './components/molecules/Services.tsx';
 import WorkingStyle from './components/molecules/WorkingStyle.tsx';
+import GuestBook from './components/molecules/guessBook/GuestBook.tsx';
+import { dialoguesKeys, type DialoguesKeysType } from './app/enums/dialoguesKeys.ts';
+import DetailPageEducation from './components/molecules/detailPageEducation/DetailPageEducation.tsx';
 
 function ReactApp() {
   const gameWrapper = useRef<HTMLDivElement | null>(null);
@@ -27,7 +27,7 @@ function ReactApp() {
   const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
   const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(null);
   const [showDetailModal, setShowDetailModal] = useState<boolean>(false);
-  const cvKeys = Object.keys(candidateCurriculum);
+  const [guestBookSigned, setGuestBookSigned] = useState<boolean>(false);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
     console.clear();
@@ -39,12 +39,19 @@ function ReactApp() {
     FApp.store.ui.set(uiState);
     setCurrentDialogKey(null);
 
+    console.warn('ACTION', value.targetAction);
+
+    if (value.targetAction && value.targetAction === 'downloadResume') {
+      console.warn('DOWNLOAD!');
+      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', true);
+      window.location.replace('https://carlos-bucheli.com/resume/');
+    }
+
     if (value.continueDialogue) {
       const scene = FApp.gameService.getScene<GameScene>(GameScene.key);
       await scene.candidate.continueDialogue();
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
-    }
-    else if (value.modalKey && value.modalKey.length) {
+    } else if (value.modalKey && value.modalKey.length) {
       setCurrentDetailKey(value.modalKey as DialoguesKeysType);
       setShowDetailModal(true);
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
@@ -55,6 +62,15 @@ function ReactApp() {
     e.preventDefault();
     setShowDetailModal(false);
     setCurrentDetailKey(null);
+  };
+
+  const getShowShortVersion = (): boolean => {
+    switch (currentDetailKey) {
+      case dialoguesKeys.guestBook:
+        return false;
+    }
+
+    return true;
   };
 
   const getPageTitle = (): string => {
@@ -73,6 +89,8 @@ function ReactApp() {
         return 'Hobbies';
       case dialoguesKeys.myStyle:
         return 'Working Style';
+      case dialoguesKeys.guestBook:
+        return 'Guest Book';
     }
 
     return '';
@@ -94,6 +112,8 @@ function ReactApp() {
         return <Services/>;
       case dialoguesKeys.myStyle:
         return <WorkingStyle/>;
+      case dialoguesKeys.guestBook:
+        return <GuestBook/>;
     }
 
     return null;
@@ -127,7 +147,11 @@ function ReactApp() {
   return (
     <>
       {
-        (showDetailModal === true) && <DetailModal title={ getPageTitle() } onCloseClick={ onDetailCloseClick }>
+        (showDetailModal === true) && <DetailModal
+          title={ getPageTitle() }
+          showShortVersion={ getShowShortVersion() }
+          onCloseClick={ onDetailCloseClick }
+        >
           { renderDetailPage() }
         </DetailModal>
       }

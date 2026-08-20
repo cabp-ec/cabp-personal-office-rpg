@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<map version="1.10" tiledversion="1.11.0" orientation="orthogonal" renderorder="right-down" width="19" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="33">
+<map version="1.10" tiledversion="1.10.2" orientation="orthogonal" renderorder="right-down" width="19" height="13" tilewidth="32" tileheight="32" infinite="0" nextlayerid="12" nextobjectid="33">
  <editorsettings>
   <export target="cabp_office.json" format="json"/>
  </editorsettings>
@@ -109,7 +109,7 @@
 </data>
  </layer>
  <objectgroup id="11" name="triggers">
-  <object id="4" name="My Education" x="128" y="32" width="96" height="32">
+  <object id="4" name="Education" x="128" y="32" width="96" height="32">
    <properties>
     <property name="actionKey" value="triggerDetailModal"/>
     <property name="actionableAfterSpeech" type="bool" value="true"/>
@@ -119,7 +119,7 @@
     <property name="targetTileY" type="int" value="4"/>
    </properties>
   </object>
-  <object id="7" name="Complete Professional History" x="256" y="37" width="32" height="69">
+  <object id="7" name="Professional History" x="256" y="37" width="32" height="69">
    <properties>
     <property name="actionKey" value="triggerDetailModal"/>
     <property name="actionableAfterSpeech" type="bool" value="true"/>
@@ -180,25 +180,15 @@
   </object>
   <object id="18" name="Exit" x="96" y="302" width="121" height="50">
    <properties>
-    <property name="actionKey" value="triggerExitProcess"/>
-    <property name="actionableAfterSpeech" type="bool" value="false"/>
-    <property name="actionableByPlayer" type="bool" value="false"/>
-    <property name="dialogueKey" value="exit"/>
-    <property name="targetTileX" type="int" value="3"/>
-    <property name="targetTileY" type="int" value="7"/>
-   </properties>
-  </object>
-  <object id="21" name="Guest Book" x="128" y="256" width="32" height="32">
-   <properties>
     <property name="actionKey" value="triggerDetailModal"/>
     <property name="actionableAfterSpeech" type="bool" value="true"/>
     <property name="actionableByPlayer" type="bool" value="true"/>
-    <property name="dialogueKey" value="guestBook"/>
-    <property name="targetTileX" type="int" value="3"/>
+    <property name="dialogueKey" value="exit"/>
+    <property name="targetTileX" type="int" value="4"/>
     <property name="targetTileY" type="int" value="7"/>
    </properties>
   </object>
-  <object id="23" name="My Services" x="128" y="64" width="32" height="32">
+  <object id="23" name="Hobbies" x="128" y="64" width="32" height="32">
    <properties>
     <property name="actionableAfterSpeech" type="bool" value="false"/>
     <property name="actionableByPlayer" type="bool" value="false"/>
@@ -235,7 +225,7 @@
     <property name="targetTileY" type="int" value="3"/>
    </properties>
   </object>
-  <object id="29" name="Contact Me" x="160" y="64" width="32" height="32">
+  <object id="29" name="Contact" x="160" y="64" width="32" height="32">
    <properties>
     <property name="actionableAfterSpeech" type="bool" value="false"/>
     <property name="actionableByPlayer" type="bool" value="false"/>

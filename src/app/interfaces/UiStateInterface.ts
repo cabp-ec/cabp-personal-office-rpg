@@ -5,6 +5,7 @@ export interface UiStateInterface {
   mapTriggersLocked: boolean;
   splashScreenOn: boolean;
   playerDialogueOn: boolean;
+  guestBookSigned: boolean;
   currentDialogueKey: DialoguesKeysType | null;
   currentOption: VisitorDialogueOptionInterface | null;
 }

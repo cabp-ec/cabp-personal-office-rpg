@@ -5,4 +5,5 @@ export interface DetailModalPropsInterface {
   children: ReactNode;
   onCloseClick: (e: MouseEvent<HTMLAnchorElement>) => void;
   subTitle?: string;
+  showShortVersion?: boolean;
 }

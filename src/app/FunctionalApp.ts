@@ -12,14 +12,14 @@ const FunctionalApp = function (): AppInterface {
   let _instance: AppInterface;
 
   class TheFunctionalApp implements AppInterface {
-    readonly #api: Api;
+    readonly api: Api;
     readonly store: StoreService;
     readonly uiService: UIService;
     readonly gameService: GameService;
     readonly curriculumService: CurriculumService;
 
     constructor() {
-      this.#api = new Api();
+      this.api = new Api();
       this.store = new StoreService();
       this.uiService = new UIService(this.store.ui);
       this.gameService = new GameService();
@@ -33,7 +33,7 @@ const FunctionalApp = function (): AppInterface {
      */
     async #initialize(): Promise<void> {
       this.uiService.initialize();
-      const initialStateData = await this.#api.getInitialState();
+      const initialStateData = await this.api.getInitialState();
       this.store.initialize(initialStateData);
 
       return Promise.resolve();
