@@ -8,7 +8,6 @@ function GuestBook() {
   const [guestCountry, setGuestCountry] = useState<string>('');
   const countries = FApp.store.countries.getAllEntities<CountryEntityInterface>();
   const now = new Date();
-  // console.warn('COUNTRIES', countries);
 
   const onNameChange = (e: ChangeEvent<HTMLInputElement>): void => {
     setGuestName(e.target.value);
@@ -26,19 +25,16 @@ function GuestBook() {
     e.preventDefault();
 
     if (guestName.length && guestCountry.length) {
-      console.warn('GO!');
       await FApp.api.postGuestEntry({
         id: -2,
         name: guestName,
         timestamp: (new Date()).getTime(),
         country: guestCountry,
-        role: 'TBD...',
-        message: guestMessage.length ? guestMessage:null
+        role: FApp.store.ui.value<string>('visitorRole'),
+        message: guestMessage.length ? guestMessage : null
       });
 
       FApp.store.ui.setProperty<boolean>('guestBookSigned', true);
-    } else {
-      console.warn('NO!');
     }
   };
 

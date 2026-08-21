@@ -24,11 +24,9 @@ export class PreloadScene extends BaseScene {
   #setPreloadEventListeners() {
     this.load.on(Loader.Events.PROGRESS, (value: number) => {
       value = Math.ceil(value * 100);
-      console.log('Loading:', value);
     });
 
     this.load.on(Loader.Events.COMPLETE, () => {
-      console.warn('START "INTRODUCTIONS" SCENE');
       this.switchScenes(PreloadScene.key, GameScene.key);
     });
   }

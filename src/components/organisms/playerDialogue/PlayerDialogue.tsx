@@ -10,15 +10,11 @@ function PlayerDialogue({ dialogueKey, dialoguesSet, onOptionClick }: PlayerDial
 
   return (
     <div className="dialog z-100">
-      <div className="dialog-name">You</div>
-
-      <div className="dialog-content dialog-options">
-        { dialogue.nn.map((set, i) => (
-          <button key={ `key_${ i }` } type="button" onClick={ () => onOptionClick(set) }>
-            { set.text }
-          </button>
-        )) }
-      </div>
+      { dialogue.nn.map((set, i) => (
+        <button key={ `key_${ i }` } type="button" onClick={ () => onOptionClick(set) }>
+          { set.text }
+        </button>
+      )) }
     </div>
   );
 }

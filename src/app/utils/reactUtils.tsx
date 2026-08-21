@@ -4,14 +4,12 @@ import { select } from '@ngneat/elf';
 import type { DialoguesSetType } from '../interfaces/DialogueSetType.ts';
 import FApp from '../index.ts';
 import type { EducationEntryInterface } from '../abstractions/education/EducationEntryInterface.ts';
-import type { CurriculumVitaeInterface } from '../abstractions/curriculumVitae/CurriculumVitaeInterface.ts';
 import type { ProfessionalExperienceInterface } from '../abstractions/professional/ProfessionalExperienceInterface.ts';
 import type { MeasurableResultInterface } from '../abstractions/professional/MeasurableResultInterface.ts';
 import type { StarInterface } from '../abstractions/professional/StarInterface.ts';
 
 export function renderReactApp() {
   const elRoot = document.getElementById('root');
-  console.warn('RENDERING REACT!');
 
   createRoot(elRoot!).render(
     // <StrictMode>
@@ -48,47 +46,6 @@ export function separateEducationEntries(values: EducationEntryInterface[]): {
       others: EducationEntryInterface[];
     }
   );
-}
-
-export function getPrevAndNextIndexes(needle: string, haystack: string[], curriculum: CurriculumVitaeInterface): {
-  prev: number | null,
-  next: number | null
-} | null {
-  if (!haystack.includes(needle)) {
-    return null;
-  }
-
-  const index = haystack.indexOf(needle);
-  const prevIndex = index - 1;
-  const nextIndex = index + 1;
-
-  return {
-    prev: prevIndex < 0 ? null : prevIndex,
-    next: nextIndex > (haystack.length - 1) ? null : nextIndex
-  };
-}
-
-export function getPrevAndNextTitles(
-  prevIndex: number | null,
-  nextIndex: number | null,
-  haystack: string[],
-  curriculum: CurriculumVitaeInterface
-): {
-  prev: string | null,
-  next: string | null
-} | null {
-  const prevKey = prevIndex ? haystack[prevIndex] : null;
-  const nextKey = nextIndex ? haystack[nextIndex] : null;
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const prev = prevKey ? curriculum[prevKey].title : null;
-
-  // eslint-disable-next-line @typescript-eslint/ban-ts-comment
-  // @ts-expect-error
-  const next = nextKey ? curriculum[nextKey].title : null;
-
-  return { prev, next };
 }
 
 const months = [

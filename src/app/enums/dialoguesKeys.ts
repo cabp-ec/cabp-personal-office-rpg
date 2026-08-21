@@ -21,7 +21,8 @@ export const dialoguesKeys = {
   myHobbies: 'myHobbies',
   guestBook: 'guestBook',
   bonus: 'bonus',
-  exit: 'exit'
+  exit: 'exit',
+  statValue: 'statValue'
 };
 
 export type DialoguesKeysType = typeof dialoguesKeys[keyof typeof dialoguesKeys];

@@ -5,6 +5,8 @@ export const uiInitialState: UiStateInterface = {
   mapTriggersLocked: true,
   splashScreenOn: false,
   playerDialogueOn: false,
+  guestBookSigned: false,
+  visitorRole: 'nn',
   currentDialogueKey: dialoguesKeys.introductions,
   currentOption: null,
 };

@@ -34,8 +34,8 @@ export function downloadVcf() {
 
 export function downloadResume() {
   const link = document.createElement('a');
-  link.href = '/CarlosBucheliResume.pdf';
-  link.download = 'CarlosBucheliResume.pdf';
+  link.href = '/CarlosBucheli_Resume_EN.pdf';
+  link.download = 'CarlosBucheli_Resume_EN.pdf';
 
   document.body.appendChild(link);
   link.click();

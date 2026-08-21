@@ -3,7 +3,8 @@ export interface VisitorDialogueOptionInterface {
   text: string;
   statValue: string;
   continueDialogue?: boolean;
-  blockMapTriggers?: boolean;
+  blockMapTriggers: boolean;
+  visitorRole?: string;
   // ---
   targetTile?: number[];
   targetScene?: string;

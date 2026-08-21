@@ -135,13 +135,11 @@ export class MapScene extends BaseScene {
     const targetX = Math.floor(targetXY.x / 32);
     const targetY = Math.floor(targetXY.y / 32);
 
-    console.warn('TRIGGER', target.name);
-
     this.pathFinder.findPath(fromX, fromY, targetX, targetY, (path) => {
       if (path === null) {
-        console.warn('Path was not found.');
+        // console.warn('Path was not found.');
       } else {
-        console.warn('PATH', path);
+        // console.warn('PATH', path);
         this.#moveCharacter(path);
       }
     });
@@ -166,7 +164,6 @@ export class MapScene extends BaseScene {
       uiState.playerDialogueOn = true;
       uiState.mapTriggersLocked = true;
       FApp.store.ui.set(uiState);
-      console.warn('SHOW PLAYER DIALOGUE OPTIONS');
     }
   }
 
@@ -174,9 +171,6 @@ export class MapScene extends BaseScene {
     const tilemaps: Record<string, Tilemaps.Tilemap> = {};
 
     for (const key in requiredMaps) {
-      const requiredMap = requiredMaps[key];
-      console.log('Create Map', requiredMap);
-
       tilemaps[key] = this.make.tilemap({
         key,
         tileWidth: this.tileSize,
@@ -205,7 +199,6 @@ export class MapScene extends BaseScene {
 
   #createMapTriggers(): void {
     const triggersLayer = this.map.getObjectLayer('triggers')!;
-    console.warn('TRIGGERS', triggersLayer.objects);
 
     triggersLayer.objects.forEach(tiledObj => {
       const { x = 0, y = 0, width = 0, height = 0 } = tiledObj;

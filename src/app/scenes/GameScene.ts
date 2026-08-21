@@ -92,8 +92,6 @@ export class GameScene extends MapScene {
   }
 
   async #createCharacter(): Promise<void> {
-    console.log('Create Character');
-
     this.#createCharacterAnimations();
     this.character = new CharacterModel('mc', this, FApp.store, dialoguesSet);
     const tile = this.map.getTileAt(2, 3, false, 'floor')!;
@@ -103,8 +101,6 @@ export class GameScene extends MapScene {
   }
 
   public create() {
-    console.warn('CREATE');
-
     this.createMaps();
     this.createPathFinder();
     this.centerViewPort();

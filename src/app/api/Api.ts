@@ -16,8 +16,20 @@ export class Api {
 
   async postGuestEntry(data: GuestInterface): Promise<void> {
     try {
-      // TODO: implement
-      console.warn('GUEST SIGNED', data);
+      const headers = new Headers();
+      headers.append('Accept', 'application/json');
+      headers.append('Content-Type', 'application/json');
+
+      const requestOptions = {
+        method: 'POST',
+        headers,
+        body: JSON.stringify(data)
+      };
+
+      fetch('/', requestOptions)
+        .then((response) => response.text())
+        .then(() => {})
+        .catch((error) => console.error(error));
     } catch (error) {
       console.error(error);
     }

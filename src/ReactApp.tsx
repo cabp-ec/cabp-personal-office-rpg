@@ -28,22 +28,20 @@ function ReactApp() {
   const [currentDialogKey, setCurrentDialogKey] = useState<DialoguesKeysType | null>(null);
   const [currentDetailKey, setCurrentDetailKey] = useState<DialoguesKeysType | null>(null);
   const [showDetailModal, setShowDetailModal] = useState<boolean>(false);
-  const [guestBookSigned, setGuestBookSigned] = useState<boolean>(false);
 
   const onDialogueOptionClick = async (value: VisitorDialogueOptionInterface): Promise<void> => {
-    console.clear();
-    console.warn('PLAYER', value);
-
     const uiState = FApp.store.ui.value<UiStateInterface>();
     uiState.playerDialogueOn = false;
     uiState.currentOption = value;
+
+    if (value.visitorRole && value.visitorRole.length) {
+      uiState.visitorRole = value.visitorRole;
+    }
+
     FApp.store.ui.set(uiState);
     setCurrentDialogKey(null);
 
-    console.warn('ACTION', value.targetAction);
-
     if (value.targetAction && value.targetAction === 'downloadResume') {
-      console.warn('DOWNLOAD!');
       FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
       downloadResume();
       return;
@@ -61,15 +59,14 @@ function ReactApp() {
       return;
     }
 
-    if (value.blockMapTriggers !== true) {
-      FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
-    }
+    FApp.store.ui.setProperty<boolean>('mapTriggersLocked', value.blockMapTriggers);
   };
 
   const onDetailCloseClick = (e: MouseEvent<HTMLAnchorElement>): void => {
     e.preventDefault();
     setShowDetailModal(false);
     setCurrentDetailKey(null);
+    FApp.store.ui.setProperty<boolean>('mapTriggersLocked', false);
   };
 
   const getShowShortVersion = (): boolean => {

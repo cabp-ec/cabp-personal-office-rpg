@@ -31,8 +31,9 @@ export class GameService implements ServiceInterface {
     }
 
     this.#gameConfig.parent = el;
-    this.#gameConfig.width = el.offsetWidth;
-    this.#gameConfig.height = el.offsetHeight;
+    this.#gameConfig.input = {
+      windowEvents: false
+    };
     this.#gameConfig.scene = [
       new PreloadScene(),
       new GameScene()
@@ -42,7 +43,6 @@ export class GameService implements ServiceInterface {
     this.#game.scene.stop(PreloadScene.key);
 
     this.#initialized = true;
-    console.log('Game Service initialized');
   }
 
   getScene<T>(key: string): T {

@@ -6,6 +6,7 @@ export interface UiStateInterface {
   splashScreenOn: boolean;
   playerDialogueOn: boolean;
   guestBookSigned: boolean;
+  visitorRole: string;
   currentDialogueKey: DialoguesKeysType | null;
   currentOption: VisitorDialogueOptionInterface | null;
 }

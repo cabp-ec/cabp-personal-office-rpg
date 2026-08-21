@@ -45,7 +45,6 @@ const FunctionalApp = function (): AppInterface {
     public launch(): void {
       this.#initialize()
         .then(() => {
-          console.log('Render React...!');
           renderReactApp();
         })
         .catch((error: unknown) => {
