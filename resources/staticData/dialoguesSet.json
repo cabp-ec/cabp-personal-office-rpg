@@ -42,7 +42,9 @@
   },
   "welcome": {
     "mc": [
-      "Welcome to my little office...!"
+      "Welcome to my little office...!",
+      "Here you'll get to know me a little.",
+      "Just tell me what you want to know about (click something), and I'll show you..."
     ],
     "nn": []
   },
@@ -85,8 +87,7 @@
       "My hobbies, or things I do in my spare time.",
       "Family guy, first and foremost.",
       "I like legos, also the Serious Play Method.",
-      "Also learning. I'm currently using Phaser 4.",
-      "Swimming, reading."
+      "Also learning, swimming, reading."
     ],
     "nn": []
   },
@@ -97,13 +98,13 @@
       "Drop an e-mail at contact@carlos-bucheli.com",
       "Follow me on LinkedIn: /in/cabp-ec",
       "My website: https://carlos-bucheli.com",
-      "Here, take my business card."
+      "Here, take my contact card."
     ],
     "nn": []
   },
   "internetSpeed": {
     "mc": [
-      "My internet connection, 333.72 Mbps for download and 248.97 Mbps for upload"
+      "My internet connection, 333.72 Mbps for download and 248.97 Mbps for upload."
     ],
     "nn": []
   },
@@ -178,7 +179,7 @@
   "recentHistory": {
     "mc": [
       "Those are my recent projects.",
-      "There are personal, freelance and contractor projects over there.",
+      "Either as a contractor or as employee.",
       "Do you want to take a look at those...?"
     ],
     "nn": [
