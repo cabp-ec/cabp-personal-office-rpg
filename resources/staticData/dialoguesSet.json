@@ -68,7 +68,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": false,
         "statValue": "Ignored as not relevant"
       },
@@ -77,15 +77,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": false,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "book",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -131,7 +122,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -140,15 +131,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "professionalHistory",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -181,7 +163,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -190,15 +172,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "whatImDoingNow",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -219,7 +192,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -228,15 +201,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "recentHistory",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -257,7 +221,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -266,15 +230,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "professionalAchievements",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -295,7 +250,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -304,15 +259,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "productsAndServices",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -338,7 +284,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Ignored as not relevant"
       },
@@ -347,15 +293,6 @@
         "text": "Nah, that's useless",
         "blockMapTriggers": true,
         "statValue": "Ignored as useless"
-      },
-      {
-        "id": 4,
-        "text": "Just a short version",
-        "blockMapTriggers": true,
-        "targetModal": true,
-        "modalKey": "myStyle",
-        "showShortVersion": true,
-        "statValue": "Accepted a short version"
       }
     ]
   },
@@ -374,7 +311,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": true,
         "statValue": "Rejected to sign the guest book"
       }
@@ -430,7 +367,7 @@
       },
       {
         "id": 2,
-        "text": "That's not relevant for me",
+        "text": "That's not relevant",
         "blockMapTriggers": false,
         "statValue": "Rejected to sign the guest book"
       }

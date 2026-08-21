@@ -109,6 +109,10 @@ body {
   padding: 2em;
 }
 
+.pr-1 {
+  padding-right: 1em;
+}
+
 /* FONT */
 .fs-12 {
   font-size: 12px;
@@ -116,6 +120,11 @@ body {
 
 .fs-13 {
   font-size: 13px;
+}
+
+/* BORDERS */
+.border-bottom {
+  border-bottom: 1px solid #ccc;
 }
 
 /* TEXT */
