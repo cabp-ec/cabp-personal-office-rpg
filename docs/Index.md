@@ -1,6 +1,6 @@
 #cabp #officeRpgCv
 
-1. [[Overview]]
+1. [[What it is]]
 2. [[The Office]]
 3. [[The Hero's Journey]]
 4. How To Use
@@ -46,9 +46,7 @@ We aren't making candidates jump through hoops; we are making the _**resume revi
 
 Here is how making the recruiter the player directly creates an **anti-bias (ATI-Fair)** and **anti-fraud** ecosystem:
 
-1. **Disrupting the "6-Second Review" Bias**
-	
-	On average, recruiters spend only _**6 seconds**_ scanning a static resume, leading to rapid, unconscious bias based on formatting, name, or pedigree. By transforming the review process into an interactive gameplay mechanic, we physically _**slow down the reader and increase cognitive engagement**_. Because the data is delivered through structured game loops, recruiters focus on core competencies and verified skills rather than surface-level heuristics.
+1. 
 	
 2. **Built-In Bot & Scraping Defenses (Anti-Fraud)**
 	
@@ -72,5 +70,11 @@ Here are the 3 most impactful bullet points summarizing the core innovations of 
 - **Institution:** University Name
 - **Date/Period:** Graduation Year (e.g., May 2026)
 - **Basis/Criteria:** Achieved a cumulative GPA of 9.9/10.0 and ranked in the top **1%** of the graduating class through advanced coursework in [Computer Science](https://en.wikipedia.org/wiki/Computer_science) and an honors thesis in [Software Engineering](https://en.wikipedia.org/wiki/Software_engineering).
+
+---
+## Website
+
+- For investors
+- For developers
 
 ---
