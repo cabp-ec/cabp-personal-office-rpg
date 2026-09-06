@@ -3,16 +3,6 @@
 
 Nowadays job hunting is challenging enough. Sadly, it's not always clear on the side of hiring organizations (HO) why customization makes it even more. We'll explain here exactly why.
 
-We can group pains like so
-
-| Group                  | Pains                      |
-| ---------------------- | -------------------------- |
-| Application Exhaustion | Keyword Matching           |
-|                        | A long story short is hard |
-|                        | The Paywall                |
-|                        | Global Competition         |
-|                        | Fake Jobs & Scammers       |
-
 ---
 ## Keyword Matching
 

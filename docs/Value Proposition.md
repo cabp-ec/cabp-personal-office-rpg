@@ -15,21 +15,43 @@ The advent of Application Tracking Systems (ATS) has risen the need to customize
 
 **Application Exhaustion** is the most direct of [[Candidate Pains]] related to customization, for which we provide the following pain relievers.
 
-#### An Enhanced XYZ
+#### A Complete XYZ Curriculum Vitae
 
-By providing the candidate with methods to input his/her _full professional and educational history_ as a _"experiences dataset"_, **ONCE**. To that effect, we apply the _"XYZ formula"_ popularized by Laszlo Bock, Google's former Senior Vice President of People Operations.
+We use the same mechanism for describing professional and educational experiences (with a few tweaks). Such mechanism is the _"XYZ formula"_, popularized by Laszlo Bock, Google's former Senior Vice President of People Operations.
 
-> We _"enhance"_ the XYZ formula by appending what we call _"professional metadata"_ to it. This allows the candidate or the recruiter to filter _resume bullet points_ relevant for one role or another, without needs of customization.
+Having to create a complete CV is challenging, we know. However, the use of the "XYZ formula" enables the candidate to input/import bullet points small enough to (in short time) describe his/her entire history.
 
-#### An Standardized Curriculum
+In order to standardize things even more, we _"enhance"_ the XYZ formula by appending _"professional metadata"_ to it.
 
-We promote an **_standardized curriculum vitae_** for candidates. That's right, the whole CV, this is important for job hunting purposes and automation alike.
+**The Gains**
+
+- The candidate is able to input/import his/her experiences ONCE (i.e. reduced burnout)
+- The recruiter is able to filter resume bullet points relevant for one role or another.
+- Customization is no longer necessary.
+
+#### A Common Narrative
+
+The application of gamification already helps us to standardize the reading process. But it's not enough.
+
+A good video game requires a good story, there's no better way to describe a story than _"The Hero's Journey"_ (used for stories such as Star Wars or The Lord of The Rings movie trilogy). Specifically, we apply Christopher Vogler's _"The Writer's Journey"_ (a.k.a. 12-step hero's journey).
+
+**The Gains**
+
+- Transforms the recruiter into a hero and the candidate into a mentor.
+- Shifts the relationship from negotiation to collaboration and transparency.
+
+The first step into standardization, however, is not to customize our professional history many times but ONCE. Then use it's individual components to **highlight** relevant information in a document.
 
 > By applying a structured writing framework in the gamification of both job hunting and hiring, we immediately standardize the resume creation and the reading experiences.
 
 #### Zero Keyword Matching
 
 We don't match candidates with keywords, in fact, we don't match candidates with recruiters or HOs at all, that happens by means of mutual interaction in the RPG experience.
+
+**The Gains**
+
+- There's no need for the candidate to customize his/her résumé (reduced burnout).
+- Catalyzes the recruiter for the search of actual talent.
 
 > By leveraging mutual interaction between recruiters and candidates, we make the _"signs of interest"_ from each side transparent and measurable.
 
